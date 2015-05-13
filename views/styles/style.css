@@ -1,8 +1,11 @@
 
 .main{
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
-	text-align: center;
+	padding: 0 20px;
+	background: rgba(130, 132, 157, 0.5);
+	border-right: 10px solid rgba(169, 172, 204, 0.9);
+	border-left: 10px solid rgba(169, 172, 204, 0.9);
 	overflow: hidden;
 }
 
@@ -13,7 +16,14 @@ HEADER----------------*/
 }
 
 /*----------------------
-HEADER SIGN IN/UP----------------*/
+HOME------------------*/
+.wrapper-caroussel {
+	width: 95%;
+	margin: 30px auto 80px;
+}
+
+/*----------------------
+HEADER SIGN IN/UP-------*/
 .header .inscr, .header .log {
 	border: 1px solid black;
 	padding: 20px;
