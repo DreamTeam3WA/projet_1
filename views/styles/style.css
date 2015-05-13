@@ -1,4 +1,6 @@
-
+body {
+	background: url(../../views/images/bg22.jpg) no-repeat top fixed;
+}
 .main{
 	width: 70%;
 	margin: 0 auto;
@@ -43,7 +45,7 @@ h1 {
 /*----------------------
 HOME------------------*/
 .wrapper-caroussel {
-	width: 95%;
+	width: 50%;
 	margin: 30px auto 80px;
 }
 
@@ -53,6 +55,8 @@ HEADER SIGN IN/UP-------*/
 	border: 1px solid black;
 	padding: 20px;
 	margin: 10px 0;
+	background: #415A70;
+	/*background: #A9ACCC;*/
 	background: #A9ACCC;
 	text-align: center;
 }
@@ -101,12 +105,12 @@ HEADER SIGN IN/UP-------*/
 	border-radius:5px;
 }
 
-.header .notvisible {
+.header .notvisiblein {
 	display: none;
 }
 
-.header .visible {
-	display: block;
+.header .notvisiblelog {
+	display: none;
 }
 
 /*----------------------

@@ -1,9 +1,12 @@
-$('.signin').click(function(){
-	$('.log').removeClass('notvisible');
-	$('.log').addClass('visible');
-})
+$('document').ready(function()
+{
+	$('.header .signin').click(function(){
+		$('.notvisiblein').css('display','block');
+		$('.notvisiblelog').css('display','none');
+	});
 
-$('.signup').click(function(){
-	alert('blabla');
-	$('.notvisible').toogleClass('visible');
-})
+	$('.header .signup').click(function(){
+		$('.notvisiblelog').css('display','block');
+		$('.notvisiblein').css('display','none');
+	});
+});
