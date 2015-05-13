@@ -1,13 +1,12 @@
 body {
-	background: url(../../views/images/bg22.jpg) no-repeat top fixed;
+	background: url(../../views/images/bg.jpg) no-repeat top fixed;
 }
 .main{
 	width: 70%;
 	margin: 0 auto;
 	padding: 0 20px;
-	background: rgba(130, 132, 157, 0.5);
-	border-right: 10px solid rgba(169, 172, 204, 0.9);
-	border-left: 10px solid rgba(169, 172, 204, 0.9);
+	background: rgba(0, 0, 0, 0.2);
+	/*background: rgba(130, 132, 157, 0.5);*/
 	overflow: hidden;
 }
 
@@ -18,14 +17,16 @@ h1 {
 	font-size: 50px;
 	text-align: center;
 	font-weight: bold;
-	color: #333D7B;
+	color: #fff;
+	/*color: #333D7B;*/
 }
 .nav_top li {
 	display: inline-block;
 }
 
 .nav_top {
-	background: #3D4050;
+	background: rgba(38, 53, 66, 0.6);
+	/*background: #3D4050;*/
 	border-radius: 5px;
 }
 
@@ -33,13 +34,16 @@ h1 {
 	margin: 10px 10px;
 	padding: 5px 0;
 	display: block;
-	font-size: 18px;
+	font-size: 16px;
+	letter-spacing: 0.05em;
 	text-decoration: none;
 	color: white;
+	text-transform: uppercase;
 }
 
 .nav_top li a:hover {
-	color: #525DCC;
+	color: #6B879F;
+	/*color: #525DCC;*/
 }
 
 /*----------------------
