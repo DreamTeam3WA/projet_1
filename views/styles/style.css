@@ -75,15 +75,80 @@ HEADER SIGN IN/UP-------*/
 	border-radius:5px;
 }
 
+/* livre d'or css  */
 
+.wrapperldo
+{
+	background: white url("../images/livredorbg.jpeg") no-repeat;
+	background-size: 100% 100%; 
+	font-family: Tangerine;
+}
+
+.wrapperldotxt
+{
+	width:90%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 100px 10px;
+}
+
+h1
+{
+	font-size: 60px;
+}
+
+.spanldo
+{
+	display:block;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
 
 
 /*----------------------
 FOOTER----------------*/
 .footer .col-md-6{
-	background-color: blue;
+	background-color: ;
 }
 
 .footer nav ul{
 	list-style: none;
+}
+.footer a:link 
+{ 
+ text-decoration:none; 
+}
+.tac
+{
+	text-align: center;
+}
+.ldo
+{
+	font-weight: 700;
+	font-size:20px;
+	color:#FCA916;
+}
+.preview
+{
+	font-size:10px;
+}
+.preview h3
+{
+	font-size: 14px;
 }
