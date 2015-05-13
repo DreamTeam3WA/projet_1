@@ -118,3 +118,22 @@ FOOTER----------------*/
 .footer nav ul{
 	list-style: none;
 }
+
+
+/*----------------------
+TCHAT----------------*/
+
+.tchat{
+	position: fixed;
+	bottom : -260px;
+	height : 300px;
+	width: 250px;
+}
+.tchat h3{
+	background: #3D4050;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin:0;
+	font-size: 20px;
+}
