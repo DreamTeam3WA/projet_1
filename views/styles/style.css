@@ -101,12 +101,12 @@ HEADER SIGN IN/UP-------*/
 	border-radius:5px;
 }
 
-.header .notvisible {
+.header .notvisiblein {
 	display: none;
 }
 
-.header .visible {
-	display: block;
+.header .notvisiblelog {
+	display: none;
 }
 
 /*----------------------
