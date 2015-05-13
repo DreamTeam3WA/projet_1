@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	    <meta charset="utf-8">
+	    <title>PHP - Jour 2 - MVC</title>
+	    <link rel="stylesheet" href="views/styles/style.css">
+	    <link rel="stylesheet" href="views/styles/reset.css">
+	    <link rel="stylesheet" href="views/styles/bootstrap.min.css">
+	    <script type="text/javascript" src="apps/scripts/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+			<?php require('apps/header.php'); ?>
+			</div>
+		</header>
+		<div class="container">
+			<img src="url.jpeg" alt="image">
+			<div class="centre">
+			<aside>
+				<?php require('apps/menu.php'); ?>
+			</aside>
+			<section>
+				<?php require('apps/content.php'); ?>
+			</section>
+			</div>
+		</div>
+		<footer>
+			<div class="container">
+			<?php require('apps/footer.php'); ?>
+			</div>
+		</footer>
+	</body>
+</html>
