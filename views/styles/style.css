@@ -16,11 +16,65 @@ HEADER----------------*/
 }
 
 /*----------------------
-HOME----------------*/
+HOME------------------*/
 .wrapper-caroussel {
 	width: 95%;
 	margin: 30px auto 80px;
 }
+
+/*----------------------
+HEADER SIGN IN/UP-------*/
+.header .inscr, .header .log {
+	border: 1px solid black;
+	padding: 20px;
+	margin: 10px 0;
+	background: #A9ACCC;
+}
+
+.lienbutton {
+	margin: 10px 5px;
+	padding: 10px 20px;
+	color: #FFF;
+    background-color: #569E3D;
+    background-image: linear-gradient(#6C75CC, #525DCC);
+    border-color: #4A993E;
+    border-radius: 5px;
+    border: none;
+}
+
+.header .inscr p, .header .log p {
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	text-transform: uppercase;
+
+}
+
+.header .inscr label, .header .log label {
+	display: block;
+}
+
+.header .inscr button, .header .log button {
+	display: block;
+	margin: 10px auto;
+	padding: 10px;
+	color: #FFF;
+    background-color: #569E3D;
+    background-image: linear-gradient(#6C75CC, #525DCC);
+    border-color: #4A993E;
+    border-radius: 5px;
+    border: none;
+}
+
+.header .inscr input, .header .log input {
+	margin: 10px 0;
+	padding: 7px;
+	background: #F8F8F8;
+	border: none;
+	border-radius:5px;
+}
+
+
 
 
 /*----------------------
