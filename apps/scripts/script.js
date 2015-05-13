@@ -1,9 +1,17 @@
-$('.signin').click(function(){
-	$('.log').removeClass('notvisible');
-	$('.log').addClass('visible');
-})
+$('document').ready(function()
+{
+	$('.header .signin').click(function(){
+		$('.notvisiblein').css('display','none');
+		$('.notvisiblelog').css('display','block');
+	});
 
-$('.signup').click(function(){
-	alert('blabla');
-	$('.notvisible').toogleClass('visible');
-})
+	$('.header .signup').click(function(){
+		$('.notvisiblelog').css('display','none');
+		$('.notvisiblein').css('display','block');
+	});
+
+	$('.fermer').click(function(){
+		$('.notvisiblein').css('display','none');
+		$('.notvisiblelog').css('display','none');
+	})
+});

@@ -63,6 +63,7 @@ HEADER SIGN IN/UP-------*/
 	/*background: #A9ACCC;*/
 	background: #A9ACCC;
 	text-align: center;
+	position: relative;
 }
 
 .lienbutton {
@@ -109,12 +110,28 @@ HEADER SIGN IN/UP-------*/
 	border-radius:5px;
 }
 
-.header .notvisible {
+.header .notvisiblein {
 	display: none;
 }
 
-.header .visible {
-	display: block;
+.header .notvisiblelog {
+	display: none;
+}
+
+.fermer {
+	display: inline-block;
+	border-radius: 50%;
+	font-weight: bold;
+	color: #A9ACCC;
+	cursor: pointer;
+	position: absolute;
+	top: 2%;
+	right: 1%;
+	height: 30px;
+	width: 30px;
+	background: white;
+	font-size: 20px;
+
 }
 
 /*----------------------
@@ -125,4 +142,23 @@ FOOTER----------------*/
 
 .footer nav ul{
 	list-style: none;
+}
+
+
+/*----------------------
+TCHAT----------------*/
+
+.tchat{
+	position: fixed;
+	bottom : -260px;
+	height : 300px;
+	width: 250px;
+}
+.tchat h3{
+	background: #3D4050;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin:0;
+	font-size: 20px;
 }
