@@ -5,6 +5,7 @@
 
 	    <title>Dreamteam - apprendre le travail collaboratif par Git</title>
 	    <link rel="stylesheet" href="views/styles/reset.css">
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="views/styles/jquery.bxslider.css">
 	    <link rel="stylesheet" href="views/styles/bootstrap.min.css">
 	    <link rel="stylesheet" href="views/styles/style.css">
@@ -25,7 +26,7 @@
 		<div class="tchat">
 			<h3>Tchat Room</h3>
 			<?php require('apps/tchat.php'); ?>
-			<form action="POST" class="tchat-form">
+			<form method="POST" class="tchat-form" action="apps/tchat-form.php">
 				<input type="text" name="tchat">
 				<button>Envoyer</button>
 			</form>			
@@ -36,7 +37,6 @@
 			</div>
 		</footer>
 			<!-- jQuery library (served from Google) -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script type="text/javascript" src="apps/scripts/jquery.bxslider.min.js"></script>
 		<script>
 			$(document).ready(function(){ /*Que l'on peut résumer par : $(function(){ */

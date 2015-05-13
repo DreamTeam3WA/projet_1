@@ -1,20 +1,19 @@
 <div class="header">
 	<h1>DreamTeam 1</h1>
-	<nav class="nav_top">
-		<ul>
+	<nav class="nav_top clearfix">
+		<ul class="pull-left">
 			<li><a href="index.php?page=home">Home</a></li>
-			<li><a href="index.php?page=article">Article</a></li>
+			<li><a href="index.php?page=article">Articles</a></li>
 			<li><a href="index.php?page=about">A propos</a></li>
 			<li><a href="index.php?page=news">News</a></li>
 			<li><a href="index.php?page=forum">Forum</a></li>
 			<li><a href="index.php?page=contact">Contacts</a></li>
 		</ul>
+	<button class="signup lienbutton pull-right">Sign up</button>
+	<button class="signin lienbutton pull-right">Sign in</button>
 	</nav>
-	<button class="lienbutton">Sign up</button>
-	<button class="lienbutton">Sign in</button>
 
-
-	<form action="" method="POST" class="inscr">
+	<form action="" method="POST" class="notvisible inscr">
 		<p>Create your personnal account</p>
 		<label for="username">Username :</label>
 		<input id="username" type="text">
@@ -26,7 +25,7 @@
 		<input id="mdpconf" type="text">
 		<button>Create an account :</button>
 	</form>
-	<form action="" method="POST" class="log">
+	<form action="" method="POST" class="notvisible log">
 		<p>Sign in</p>
 		<label for="pseudo">Username or Email :</label>
 		<input id="pseudo" type="text">
