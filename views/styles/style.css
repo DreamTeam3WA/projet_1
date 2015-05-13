@@ -59,6 +59,7 @@ HEADER SIGN IN/UP-------*/
 	/*background: #A9ACCC;*/
 	background: #A9ACCC;
 	text-align: center;
+	position: relative;
 }
 
 .lienbutton {
@@ -111,6 +112,22 @@ HEADER SIGN IN/UP-------*/
 
 .header .notvisiblelog {
 	display: none;
+}
+
+.fermer {
+	display: inline-block;
+	border-radius: 50%;
+	font-weight: bold;
+	color: #A9ACCC;
+	cursor: pointer;
+	position: absolute;
+	top: 2%;
+	right: 1%;
+	height: 30px;
+	width: 30px;
+	background: white;
+	font-size: 20px;
+
 }
 
 /*----------------------
