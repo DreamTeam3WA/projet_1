@@ -5,3 +5,9 @@
 	text-align: center;
 	overflow: hidden;
 }
+
+/*----------------------
+HEADER----------------*/
+.nav_top li {
+	display: inline-block;
+}
