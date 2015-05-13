@@ -11,8 +11,33 @@
 
 /*----------------------
 HEADER----------------*/
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+	font-weight: bold;
+	color: #333D7B;
+}
 .nav_top li {
 	display: inline-block;
+}
+
+.nav_top {
+	background: #3D4050;
+	border-radius: 5px;
+}
+
+.nav_top li a {
+	margin: 10px 10px;
+	padding: 5px 0;
+	display: block;
+	font-size: 18px;
+	text-decoration: none;
+	color: white;
+}
+
+.nav_top li a:hover {
+	color: #525DCC;
 }
 
 /*----------------------
@@ -29,6 +54,7 @@ HEADER SIGN IN/UP-------*/
 	padding: 20px;
 	margin: 10px 0;
 	background: #A9ACCC;
+	text-align: center;
 }
 
 .lienbutton {
@@ -75,8 +101,13 @@ HEADER SIGN IN/UP-------*/
 	border-radius:5px;
 }
 
+.header .notvisible {
+	display: none;
+}
 
-
+.header .visible {
+	display: block;
+}
 
 /*----------------------
 FOOTER----------------*/
