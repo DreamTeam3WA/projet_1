@@ -11,3 +11,16 @@ HEADER----------------*/
 .nav_top li {
 	display: inline-block;
 }
+
+
+
+
+/*----------------------
+FOOTER----------------*/
+.footer .col-md-6{
+	background-color: blue;
+}
+
+.footer nav ul{
+	list-style: none;
+}
