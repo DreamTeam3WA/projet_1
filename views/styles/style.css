@@ -42,6 +42,7 @@ HEADER SIGN IN/UP----------------*/
 
 .header .inscr label, .header .log label {
 	display: block;
+	font-size: 15px;
 }
 
 .header .inscr button, .header .log button {
