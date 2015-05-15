@@ -296,9 +296,19 @@ FOOTER----------------*/
 	margin: 30px auto 80px;
 }
 
+footer a:link
+{
+	text-decoration: none;
+}
 
-
-
+footer p
+{
+	color: white;
+}
+.livredorlien
+{
+	color:#F8C636;
+}
 
 
 
