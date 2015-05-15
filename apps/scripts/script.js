@@ -28,6 +28,21 @@ $('document').ready(function()
 	$('.navforum .newsujet').click(function(){
 		$('.forum').css('display','none');
 		$('.sujetforum').css('display','none');
+		$('.newsujetforum').css('display','block');
+	})
+
+	$('.sujetforum .newsujet').click(function(){
+		$('.forum').css('display','none');
+		$('.sujetforum').css('display','none');
+		$('.newsujetforum').css('display','block');
+	})
+
+	$('.navforum .actualiserforum').click(function(){
+		void window.location.reload();
+	})
+	$('.newsujetforum .returnforum').click(function(){
+		$('.forum').css('display','block');
+		$('.newsujetforum').css('display','none')
 	})
 });
 

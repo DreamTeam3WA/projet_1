@@ -3,38 +3,37 @@
 	<nav class="nav_top clearfix">
 		<ul class="pull-left">
 			<li><a href="index.php?page=home">Home</a></li>
-			<li><a href="index.php?page=article">Articles</a></li>
+			<li><a href="index.php?page=article">News</a></li>
 			<li><a href="index.php?page=about">A propos</a></li>
-			<li><a href="index.php?page=news">News</a></li>
 			<li><a href="index.php?page=forum">Forum</a></li>
 			<li><a href="index.php?page=contact">Contacts</a></li>
 		</ul>
-	<button class="signup lienbutton pull-right">Sign up</button>
-	<button class="signin lienbutton pull-right">Sign in</button>
+	<button class="signup lienbutton pull-right">S'inscrire</button>
+	<button class="signin lienbutton pull-right">Se connecter</button>
 	<button class="newarticle lienbutton pull-right">Créer un article</button>
 	</nav>
 
 	<form action="" method="POST" class="inscr">
 		<div class="fermer">X</div>
-		<p>Create your personnal account</p>
-		<label for="username">Username :</label>
+		<p>Creez votre espace personnel</p>
+		<label for="username">Nom d'utilisateur :</label>
 		<input id="username" type="text">
-		<label for="email">Email Adress :</label>
+		<label for="email">Adresse email :</label>
 		<input id="email" type="text">
-		<label for="mdp">Password :</label>
+		<label for="mdp">Mot de passe :</label>
 		<input id="mdp" type="password">
-		<label for="mdpconf">Confirm your password :</label>
+		<label for="mdpconf">Confirmer le mot de passe :</label>
 		<input id="mdpconf" type="password">
-		<button>Create an account :</button>
+		<button>Creer un compte</button>
 	</form>
 	<form action="" method="POST" class="log">
 		<div class="fermer"> X </div>
-		<p>Sign in</p>
-		<label for="pseudo">Username or Email :</label>
+		<p>Se connecter</p>
+		<label for="pseudo">Nom ou Email :</label>
 		<input id="pseudo" type="text">
-		<label for="mdp">Password <a href="">(forgot password)</a> :</label>
+		<label for="mdp">Mot de passe <a href="">(mot de passe oublié)</a> :</label>
 		<input type="password" id="mdp">
-		<button>Sign in</button>
+		<button>Connexion</button>
 	</form>
 	<?php require('apps/add-article.php'); ?>
 </div>
