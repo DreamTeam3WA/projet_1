@@ -1,7 +1,7 @@
 body {
 	background: url(../../views/images/bg.jpg) no-repeat top fixed;
 }
-.main{
+.container{
 	width: 70%;
 	margin: 0 auto;
 	padding: 0 20px;
@@ -9,6 +9,19 @@ body {
 	/*background: rgba(130, 132, 157, 0.5);*/
 	overflow: hidden;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------
 HEADER----------------*/
@@ -46,16 +59,23 @@ h1 {
 	/*color: #525DCC;*/
 }
 
-/*----------------------
-HOME------------------*/
-.wrapper-caroussel {
-	width: 50%;
-	margin: 30px auto 80px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------
 HEADER SIGN IN/UP-------*/
 .header .inscr, .header .log {
+	display: none;
 	border: 1px solid black;
 	padding: 20px;
 	margin: 10px 0;
@@ -109,9 +129,113 @@ HEADER SIGN IN/UP-------*/
 	border: none;
 	border-radius:5px;
 }
+.fermer {
+	display: inline-block;
+	border-radius: 50%;
+	font-weight: bold;
+	color: #A9ACCC;
+	cursor: pointer;
+	position: absolute;
+	top: 2%;
+	right: 1%;
+	line-height: 1.5;
+	height: 30px;
+	width: 30px;
+	background: white;
+	font-size: 20px;
 
-<<<<<<< HEAD
-/* livre d'or css  */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------
+HOME------------------*/
+.wrapper-caroussel {
+	width: 50%;
+	margin: 30px auto 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------
+TCHAT----------------*/
+
+.tchat-wd {
+	display: none;
+	position: fixed;
+	bottom: 37px;
+	height: 400px;
+	width: 250px;
+	background: rgba(38, 53, 66, 0.6);
+}
+.tchat h3{
+	position: fixed;
+	bottom: 0;
+	background: #3D4050;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin:0;
+	font-size: 16px;
+	width: 250px;
+}
+.tchat h3:hover{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------
+LIVRE D'OR-------*/
 
 .wrapperldo
 {
@@ -154,31 +278,28 @@ h1
 
 :-ms-input-placeholder {  
    text-align: center; 
-=======
-.header .notvisiblein {
-	display: none;
-}
 
-.header .notvisiblelog {
-	display: none;
->>>>>>> cae326612f6f8da6ff835db50b0ecba5519516d2
-}
 
-.fermer {
-	display: inline-block;
-	border-radius: 50%;
-	font-weight: bold;
-	color: #A9ACCC;
-	cursor: pointer;
-	position: absolute;
-	top: 2%;
-	right: 1%;
-	height: 30px;
-	width: 30px;
-	background: white;
-	font-size: 20px;
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------
 FOOTER----------------*/
@@ -212,24 +333,7 @@ FOOTER----------------*/
 {
 	font-size: 14px;
 }
-=======
 
 
-/*----------------------
-TCHAT----------------*/
 
-.tchat{
-	position: fixed;
-	bottom : -260px;
-	height : 300px;
-	width: 250px;
-}
-.tchat h3{
-	background: #3D4050;
-	color: white;
-	text-align: center;
-	padding: 10px;
-	margin:0;
-	font-size: 20px;
-}
->>>>>>> cae326612f6f8da6ff835db50b0ecba5519516d2
+

@@ -14,25 +14,27 @@
 	</head>
 	<body>
 		<header>
-			<div class="container main">
+			<div class="container">
 				<?php require('apps/header.php'); ?>
 			</div>
 		</header>
-		<div class="container main">
+		<div class="container">
 			<section>
 				<?php require('apps/content.php'); ?>
 			</section>
 		</div>
 		<div class="tchat">
-			<h3>Tchat Room</h3>
-			<?php require('apps/tchat.php'); ?>
-			<form method="POST" class="tchat-form" action="apps/tchat-form.php">
-				<input type="text" name="tchat">
-				<button>Envoyer</button>
-			</form>			
+			<div class="tchat-wd">
+				<?php require('apps/tchat.php'); ?>
+				<form method="POST" class="tchat-form" action="apps/tchat-form.php">
+					<input type="text" name="tchat">
+					<button>Envoyer</button>
+				</form>	
+			</div>
+			<h3>Tchat Room</h3>		
 		</div>
 		<footer>
-			<div class="container main">
+			<div class="container">
 				<?php require('apps/footer.php'); ?>
 			</div>
 		</footer>
