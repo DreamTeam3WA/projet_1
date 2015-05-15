@@ -28,10 +28,10 @@ body {
 HEADER----------------*/
 
 h1{
-	font-size: 50px;
+	font-size: 50px !important;
 	text-align: center;
-	font-weight: bold;
-	color: #fff;
+	font-weight: bold !important;
+	color: #fff !important;
 	/*color: #333D7B;*/
 }
 .nav_top li {
@@ -324,18 +324,6 @@ FORUM----------------*/
 	border: none;
 	border-radius: 5px;
 }
-/*----------------------
-FOOTER----------------*/
-
-.footer .col-md-6{
-	background-color: blue;
-}
-
-footer a:link
-{
-	text-decoration: none;
-}
-
 
 /*----------------------
 TCHAT----------------*/
