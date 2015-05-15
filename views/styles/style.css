@@ -392,7 +392,10 @@ TCHAT----------------*/
 	font-style: italic;
 	overflow: hidden;
 }
-
+.tchat-content{
+	height:  350px;
+	overflow-y: scroll;
+}
 .tchat-wd p{
 	font-size: 12px;
 	color: #fff;
