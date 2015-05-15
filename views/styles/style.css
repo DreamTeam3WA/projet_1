@@ -328,7 +328,7 @@ FORUM----------------*/
 FOOTER----------------*/
 
 .footer .col-md-6{
-	background-color: blue;
+	background-color: rgba(38, 53, 66, 0.6);
 }
 
 footer a:link
