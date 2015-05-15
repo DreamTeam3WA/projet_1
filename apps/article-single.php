@@ -2,7 +2,6 @@
 
 $db = new PDO("mysql:dbname=filrouge;host=127.0.0.1", 'root', 'troiswa');
 $tab = $db->query("SELECT * FROM articles")->fetchAll(PDO::FETCH_ASSOC);
-var_dump($tab);
 
 $i=0;
 while ($i<4){
