@@ -163,11 +163,12 @@ HEADER SIGN IN/UP-------*/
 /*----------------------
 BXSLIDER --------------*/
 .bx-viewport {
-	height: 250px !important;
+/*	height: 500px !important;*/
 }
 
 .bx-viewport img {
 	width: 100%;
+	max-height: 100%;
 }
 
 .bx-wrapper .bx-viewport {
@@ -306,10 +307,6 @@ FORUM----------------*/
 FOOTER----------------*/
 .footer .col-md-6{
 	background-color: blue;
-}
-.wrapper-caroussel {
-	width: 50%;
-	margin: 30px auto 80px;
 }
 
 footer a:link
@@ -465,7 +462,7 @@ FOOTER----------------*/
 .footer nav ul{
 	list-style: none;
 }
-<<<<<<< HEAD
+
 .footer a:link 
 { 
  text-decoration:none; 
