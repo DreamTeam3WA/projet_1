@@ -226,8 +226,16 @@ p.date-article{
 
 
 
+/* A propos */
 
+.apropos{
+	text-align: center;
+	margin: 50px 0;
+}
 
+.apropos p {
+	color: white;
+}
 
 
 
@@ -460,10 +468,4 @@ footer p
 }
 
 
-/* A propos */
 
-.wrapperapropos
-{
-	width:90%;
-	text-align: center;
-}
