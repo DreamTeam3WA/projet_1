@@ -466,6 +466,12 @@ LIVRE D'OR-------*/
 
 /*----------------------
 FOOTER----------------*/
+
+footer a:hover
+{
+	text-decoration: none;
+}
+
 .footer {
 	background: rgba(38, 53, 66, 0.6);
 	margin-left: -15px;
