@@ -516,6 +516,13 @@ FOOTER----------------*/
 .preview h3
 {
 	font-size: 14px;
+	color: white;
+	font-weight: bold;
+}
+
+.preview p {
+	padding: 0px 20px;
+	text-align: justify;
 }
 .footerldo
 {
