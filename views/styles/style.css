@@ -307,18 +307,6 @@ FORUM----------------*/
 	border: none;
 	border-radius: 5px;
 }
-/*----------------------
-FOOTER----------------*/
-
-.footer .col-md-6{
-	background-color: blue;
-}
-
-footer a:link
-{
-	text-decoration: none;
-}
-
 
 
 
@@ -460,10 +448,7 @@ FOOTER----------------*/
 .footer nav ul{
 	list-style: none;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 2365d3df0b32dbd705b77fe22c8c46aac607b394
 .footer a:link 
 { 
  text-decoration:none; 
