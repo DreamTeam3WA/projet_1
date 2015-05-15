@@ -1,8 +1,9 @@
 body {
 	background: url(../../views/images/bg.jpg) no-repeat top fixed;
+	font-size: 16px !important;
 }
-.container{
-	width: 70%;
+.main{
+	max-width: 80% !important;
 	margin: 0 auto;
 	padding: 0 20px;
 	background: rgba(0, 0, 0, 0.2);
@@ -26,7 +27,7 @@ body {
 /*----------------------
 HEADER----------------*/
 
-h1 {
+h1{
 	font-size: 50px;
 	text-align: center;
 	font-weight: bold;
@@ -64,8 +65,8 @@ h1 {
 
 /*----------------------
 HEADER SIGN IN/UP-------*/
-.header .inscr, .header .log, .header .article {
 
+.header .inscr, .header .log, .header .article {
 	display: none;
 	border: 1px solid black;
 	padding: 20px;
@@ -180,46 +181,58 @@ BXSLIDER --------------*/
 }
 
 /*----------------------
-HEAD
+
 ARTICLE----------------*/
 .article-liste {
-	margin: 50px auto;
 	text-align: center;
-	background: #818299;
+}
+
+.art {
+	margin: 50px auto;
 	overflow: hidden;
+	margin-bottom: 50px;
+	background: #818299;
+	position: relative;
 }
-
-.titrearticle {
-	border:1px solid black;
+.art h3 {
+	margin: 0;
+	padding: 10px 0;
+/*	border:1px solid black;*/
 	background: #ABADCB;
-}
-
-.titrearticle h2 {
 	font-weight: bold;
 	font-size: 25px;
 }
 
-.article-liste img {
+.art img {
 	width: 100%;
 	float: left;
 	width: 40%;
-	margin-right: 10px;
-}
-.contenuarticle {
-	overflow: hidden;
-}
-.textearticle {
-	/*float: left;*/
-	/*width: 60%;*/
-}
-.textearticle p{
-	text-align: justify;
+	margin-right: 15px;
 }
 
-.descarticle {
-	font-size: 20px;
-	margin: 10px 20px;
+p.desc-article {
+	text-align: justify;
+	margin: 0px 20px 20px 0px;
+	padding: 10px 0;
 }
+p.date-article{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 0.9em;
+	padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------
 FORUM----------------*/
