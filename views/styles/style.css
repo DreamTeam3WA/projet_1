@@ -337,6 +337,7 @@ TCHAT----------------*/
 .tchat-wd {
 	display: none;
 	position: fixed;
+	right: 0;
 	bottom: 37px;
 	height: 400px;
 	width: 250px;
@@ -345,6 +346,7 @@ TCHAT----------------*/
 .tchat h3{
 	position: fixed;
 	bottom: 0;
+	right: 0;
 	background: #3D4050;
 	color: white;
 	text-align: center;
@@ -441,7 +443,7 @@ h1
 /*----------------------
 FOOTER----------------*/
 .footer .col-md-6{
-	background-color: ;
+	color: #fff;
 }
 
 .footer nav ul{
