@@ -162,13 +162,16 @@ HEADER SIGN IN/UP-------*/
 
 /*----------------------
 BXSLIDER --------------*/
-.bx-viewport {
-/*	height: 500px !important;*/
+
+.wrapper-caroussel {
+	margin: 20px 0;
+}
+.bx-wrapper{
+	width: 50% !important;
 }
 
 .bx-viewport img {
 	width: 100%;
-	max-height: 100%;
 }
 
 .bx-wrapper .bx-viewport {
