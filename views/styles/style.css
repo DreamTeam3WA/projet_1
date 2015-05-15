@@ -172,23 +172,8 @@ HEADER SIGN IN/UP-------*/
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------
-<<<<<<< HEAD
+HEAD
 ARTICLE----------------*/
 .article-liste {
 	margin: 50px auto;
@@ -263,6 +248,15 @@ FORUM----------------*/
 	margin: 50px auto;
 	text-align: center;
 }
+
+.sujetforum button {
+	background: #6C7984;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+}
 .textesujetforum {
 	overflow: hidden;
 	border: 1px solid black;
@@ -279,6 +273,26 @@ FORUM----------------*/
 	text-align: center;
 }
 .navforum button {
+	background: #6C7984;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+}
+
+.newsujetforum {
+	margin: 50px auto;
+	text-align: center;
+	border: 1px solid black;
+	background: white;
+	overflow: hidden;
+	background: #E0E0E0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.newsujetforum button {
 	background: #6C7984;
 	padding: 10px;
 	color: white;
