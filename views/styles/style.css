@@ -194,17 +194,21 @@ ARTICLE----------------*/
 	font-size: 25px;
 }
 
-img {
+.article-liste img {
 	width: 100%;
 	float: left;
 	width: 40%;
+	margin-right: 10px;
 }
 .contenuarticle {
 	overflow: hidden;
 }
 .textearticle {
-	float: left;
-	width: 60%;
+	/*float: left;*/
+	/*width: 60%;*/
+}
+.textearticle p{
+	text-align: justify;
 }
 
 .descarticle {
@@ -304,27 +308,18 @@ FORUM----------------*/
 }
 /*----------------------
 FOOTER----------------*/
+
 .footer .col-md-6{
 	background-color: blue;
 }
-/*.wrapper-caroussel {
-	width: 50%;
-	margin: 30px auto 80px;
-}*/
+
 
 footer a:link
 {
 	text-decoration: none;
 }
 
-footer p
-{
-	color: white;
-}
-.livredorlien
-{
-	color:#F8C636;
-}
+
 
 
 
@@ -433,7 +428,7 @@ h1
 
 :-ms-input-placeholder {  
    text-align: center; 
-
+}
 
 
 
@@ -465,7 +460,6 @@ FOOTER----------------*/
 .footer nav ul{
 	list-style: none;
 }
-<<<<<<< HEAD
 .footer a:link 
 { 
  text-decoration:none; 
@@ -489,6 +483,13 @@ FOOTER----------------*/
 	font-size: 14px;
 }
 
-
+footer p
+{
+	color: white;
+}
+.livredorlien
+{
+	color:#F8C636;
+}
 
 
