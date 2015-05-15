@@ -22,7 +22,7 @@ $('document').ready(function()
 	})
 
 	$('.tchat h3').click(function(){
-		 $( "div.tchat-wd" ).toggle( 500);
+		 $( "div.tchat-wd" ).toggle(500);
 	});
 
 	$('.navforum .newsujet').click(function(){
