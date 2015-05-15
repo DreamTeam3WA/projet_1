@@ -311,25 +311,17 @@ FORUM----------------*/
 	border: none;
 	border-radius: 5px;
 }
+/*----------------------
+FOOTER----------------*/
 
+.footer .col-md-6{
+	background-color: blue;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer a:link
+{
+	text-decoration: none;
+}
 
 
 /*----------------------
@@ -359,18 +351,6 @@ TCHAT----------------*/
 .tchat h3:hover{
 	cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -430,17 +410,6 @@ h1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------
 FOOTER----------------*/
 .footer .col-md-6{
@@ -472,6 +441,10 @@ FOOTER----------------*/
 .preview h3
 {
 	font-size: 14px;
+}
+.footerldo
+{
+	height: 100%;
 }
 
 footer p
