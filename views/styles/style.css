@@ -420,12 +420,23 @@ FOOTER----------------*/
 
 .footer nav ul{
 	list-style: none;
+	text-align: center;
 }
 
-.footer a:link 
-{ 
- text-decoration:none; 
+.footer li a {
+	display: block;
 }
+.footer li:hover
+{ 
+	text-decoration: none;
+	background-color: #337ab7;
+	border-radius: 5px;
+
+ }
+ .footer li:hover a{
+ 	color: white;
+ 	text-decoration: none;
+ }
 .tac
 {
 	text-align: center;
