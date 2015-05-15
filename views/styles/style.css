@@ -1,8 +1,9 @@
 body {
 	background: url(../../views/images/bg.jpg) no-repeat top fixed;
+	font-size: 16px !important;
 }
-.container{
-	width: 70%;
+.main{
+	max-width: 80% !important;
 	margin: 0 auto;
 	padding: 0 20px;
 	background: rgba(0, 0, 0, 0.2);
@@ -26,11 +27,11 @@ body {
 /*----------------------
 HEADER----------------*/
 
-h1 {
-	font-size: 50px;
+h1{
+	font-size: 50px !important;
 	text-align: center;
-	font-weight: bold;
-	color: #fff;
+	font-weight: bold !important;
+	color: #fff !important;
 	/*color: #333D7B;*/
 }
 .nav_top li {
@@ -64,8 +65,8 @@ h1 {
 
 /*----------------------
 HEADER SIGN IN/UP-------*/
-.header .inscr, .header .log, .header .article {
 
+.header .inscr, .header .log, .header .article {
 	display: none;
 	border: 1px solid black;
 	padding: 20px;
@@ -180,46 +181,76 @@ BXSLIDER --------------*/
 }
 
 /*----------------------
-HEAD
+
 ARTICLE----------------*/
 .article-liste {
-	margin: 50px auto;
 	text-align: center;
-	background: #818299;
+}
+
+.art {
+	margin: 50px auto;
 	overflow: hidden;
+	margin-bottom: 50px;
+	background: #818299;
+	position: relative;
 }
-
-.titrearticle {
-	border:1px solid black;
+.art h3 {
+	margin: 0;
+	padding: 10px 0;
+/*	border:1px solid black;*/
 	background: #ABADCB;
-}
-
-.titrearticle h2 {
 	font-weight: bold;
 	font-size: 25px;
 }
 
-.article-liste img {
+.art img {
 	width: 100%;
 	float: left;
 	width: 40%;
-	margin-right: 10px;
-}
-.contenuarticle {
-	overflow: hidden;
-}
-.textearticle {
-	/*float: left;*/
-	/*width: 60%;*/
-}
-.textearticle p{
-	text-align: justify;
+	margin-right: 15px;
 }
 
-.descarticle {
-	font-size: 20px;
-	margin: 10px 20px;
+p.desc-article {
+	text-align: justify;
+	margin: 0px 20px 20px 0px;
+	padding: 10px 0;
 }
+p.date-article{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 0.9em;
+	padding-right: 20px;
+}
+
+
+
+
+/* A propos */
+
+.apropos{
+	text-align: center;
+	margin: 50px 0;
+}
+
+.apropos p {
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------
 FORUM----------------*/
@@ -313,36 +344,22 @@ FORUM----------------*/
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------
 TCHAT----------------*/
-
+.tchat{
+	position: relative;
+	z-index: 10;	
+}
 .tchat-wd {
 	display: none;
 	position: fixed;
+	z-index: 10;
 	right: 0;
 	bottom: 37px;
 	height: 400px;
 	width: 250px;
-	background: rgba(38, 53, 66, 0.6);
+	background: rgba(38, 53, 66, 0.8);
+	padding: 5px;
 }
 .tchat h3{
 	position: fixed;
@@ -360,12 +377,38 @@ TCHAT----------------*/
 	cursor: pointer;
 }
 
-
-
-
-
-
-
+.tchat textarea{
+	max-height: 50px;
+	width: 100%;
+	resize: none;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	background: #6C7984;
+	border: none;
+	color: #fff;
+	padding:5px 10px;
+	font-size: 12px;
+	font-style: italic;
+	overflow: hidden;
+}
+.tchat-content{
+	height:  350px;
+	overflow-y: scroll;
+}
+.tchat-wd p{
+	font-size: 12px;
+	color: #fff;
+	padding: 5px;
+	margin: 0;
+}
+.tchat-wd p.tchat-impair{
+	text-align: right;
+	padding-left: 35px;
+}
+.tchat-wd p.tchat-pair{
+	padding-right: 35px;
+}
 
 
 
@@ -390,11 +433,6 @@ LIVRE D'OR-------*/
 	margin: 0 auto;
 	text-align: center;
 	padding: 100px 10px;
-}
-
-h1
-{
-	font-size: 60px;
 }
 
 .spanldo
@@ -430,31 +468,37 @@ h1
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------
 FOOTER----------------*/
+.footer {
+	background: rgba(38, 53, 66, 0.6);
+	margin-left: -15px;
+	margin-right: -15px;
+	padding: 20px 0;
+}
 .footer .col-md-6{
 	color: #fff;
 }
 
 .footer nav ul{
 	list-style: none;
+	text-align: center;
 }
 
-.footer a:link 
-{ 
- text-decoration:none; 
+.footer li a {
+	display: block;
 }
+.footer li:hover
+{ 
+	text-decoration: none;
+	background-color: #337ab7;
+	border-radius: 5px;
+
+ }
+ .footer li:hover a{
+ 	color: white;
+ 	text-decoration: none;
+ }
 .tac
 {
 	text-align: center;
@@ -473,6 +517,10 @@ FOOTER----------------*/
 {
 	font-size: 14px;
 }
+.footerldo
+{
+	height: 100%;
+}
 
 footer p
 {
@@ -483,4 +531,17 @@ footer p
 	color:#F8C636;
 }
 
+/* Nous contacter */
+
+.contacter
+{
+	text-align: center;
+}
+
+.googlemap
+{
+		margin: 20px 0;
+		width:80%;
+		height:500px;
+}
 
