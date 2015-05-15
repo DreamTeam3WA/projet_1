@@ -404,6 +404,10 @@ TCHAT----------------*/
 }
 .tchat-wd p.tchat-impair{
 	text-align: right;
+	padding-left: 35px;
+}
+.tchat-wd p.tchat-pair{
+	padding-right: 35px;
 }
 
 
