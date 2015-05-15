@@ -516,5 +516,17 @@ footer p
 	color:#F8C636;
 }
 
+/* Nous contacter */
 
+.contacter
+{
+	text-align: center;
+}
+
+.googlemap
+{
+		margin: 20px 0;
+		width:80%;
+		height:500px;
+}
 
