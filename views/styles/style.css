@@ -60,18 +60,6 @@ h1 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*----------------------
 HEADER SIGN IN/UP-------*/
 .header .inscr, .header .log, .header .article {
@@ -171,6 +159,20 @@ HEADER SIGN IN/UP-------*/
 
 }
 
+
+/*----------------------
+BXSLIDER --------------*/
+.bx-viewport {
+	height: 250px !important;
+}
+
+.bx-viewport img {
+	width: 100%;
+}
+
+.bx-wrapper .bx-viewport {
+	left: 0;
+}
 
 /*----------------------
 HEAD
