@@ -242,6 +242,16 @@ p.date-article{
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*----------------------
 FORUM----------------*/
 .forum {
@@ -336,15 +346,20 @@ FORUM----------------*/
 
 /*----------------------
 TCHAT----------------*/
-
+.tchat{
+	position: relative;
+	z-index: 10;	
+}
 .tchat-wd {
 	display: none;
 	position: fixed;
+	z-index: 10;
 	right: 0;
 	bottom: 37px;
 	height: 400px;
 	width: 250px;
-	background: rgba(38, 53, 66, 0.6);
+	background: rgba(38, 53, 66, 0.8);
+	padding: 5px;
 }
 .tchat h3{
 	position: fixed;
@@ -361,6 +376,37 @@ TCHAT----------------*/
 .tchat h3:hover{
 	cursor: pointer;
 }
+
+.tchat textarea{
+	max-height: 50px;
+	width: 100%;
+	resize: none;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	background: #6C7984;
+	border: none;
+	color: #fff;
+	padding:5px 10px;
+	font-size: 12px;
+	font-style: italic;
+	overflow: hidden;
+}
+
+.tchat-wd p{
+	font-size: 12px;
+	color: #fff;
+	padding: 5px;
+	margin: 0;
+}
+.tchat-wd p.tchat-impair{
+	text-align: right;
+}
+
+
+
+
+
 
 
 
