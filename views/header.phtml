@@ -11,6 +11,7 @@
 		</ul>
 	<button class="signup lienbutton pull-right">Sign up</button>
 	<button class="signin lienbutton pull-right">Sign in</button>
+	<button class="newarticle lienbutton pull-right">Créer un article</button>
 	</nav>
 
 	<form action="" method="POST" class="inscr">
@@ -21,9 +22,9 @@
 		<label for="email">Email Adress :</label>
 		<input id="email" type="text">
 		<label for="mdp">Password :</label>
-		<input id="mdp" type="text">
+		<input id="mdp" type="password">
 		<label for="mdpconf">Confirm your password :</label>
-		<input id="mdpconf" type="text">
+		<input id="mdpconf" type="password">
 		<button>Create an account :</button>
 	</form>
 	<form action="" method="POST" class="log">
@@ -32,7 +33,8 @@
 		<label for="pseudo">Username or Email :</label>
 		<input id="pseudo" type="text">
 		<label for="mdp">Password <a href="">(forgot password)</a> :</label>
-		<input type="text" id="mdp">
+		<input type="password" id="mdp">
 		<button>Sign in</button>
 	</form>
+	<?php require('apps/add-article.php'); ?>
 </div>
