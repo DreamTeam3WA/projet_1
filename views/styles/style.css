@@ -311,17 +311,6 @@ FORUM----------------*/
 	border: none;
 	border-radius: 5px;
 }
-/*----------------------
-FOOTER----------------*/
-
-.footer .col-md-6{
-	background-color: blue;
-}
-
-footer a:link
-{
-	text-decoration: none;
-}
 
 
 /*----------------------
@@ -457,3 +446,10 @@ footer p
 }
 
 
+/* A propos */
+
+.wrapperapropos
+{
+	width:90%;
+	text-align: center;
+}
