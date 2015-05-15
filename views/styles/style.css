@@ -1,0 +1,453 @@
+body {
+	background: url(../../views/images/bg.jpg) no-repeat top fixed;
+}
+.container{
+	width: 70%;
+	margin: 0 auto;
+	padding: 0 20px;
+	background: rgba(0, 0, 0, 0.2);
+	/*background: rgba(130, 132, 157, 0.5);*/
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------
+HEADER----------------*/
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+	font-weight: bold;
+	color: #fff;
+	/*color: #333D7B;*/
+}
+.nav_top li {
+	display: inline-block;
+}
+
+.nav_top {
+	background: rgba(38, 53, 66, 0.6);
+	/*background: #3D4050;*/
+	border-radius: 5px;
+}
+
+.nav_top li a {
+	margin: 10px 10px;
+	padding: 5px 0;
+	display: block;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+.nav_top li a:hover {
+	color: #6B879F;
+	/*color: #525DCC;*/
+}
+
+
+/*----------------------
+HEADER SIGN IN/UP-------*/
+.header .inscr, .header .log, .header .article {
+
+	display: none;
+	border: 1px solid black;
+	padding: 20px;
+	margin: 10px 0;
+	background: #415A70;
+	/*background: #A9ACCC;*/
+	background: #A9ACCC;
+	text-align: center;
+	position: relative;
+}
+
+.lienbutton {
+	margin: 10px 5px;
+	padding: 10px 20px;
+	color: #FFF;
+    background-color: #569E3D;
+    background-image: linear-gradient(#6C75CC, #525DCC);
+    border-color: #4A993E;
+    border-radius: 5px;
+    border: none;
+}
+
+.header .inscr p, .header .log p, .header .article p {
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	text-transform: uppercase;
+
+}
+
+.header .inscr label, .header .log label, .header .article label {
+	display: block;
+	font-size: 15px;
+}
+
+.header .inscr button, .header .log button, .header .article button {
+	display: block;
+	margin: 10px auto;
+	padding: 10px;
+	color: #FFF;
+    background-color: #569E3D;
+    background-image: linear-gradient(#6C75CC, #525DCC);
+    border-color: #4A993E;
+    border-radius: 5px;
+    border: none;
+}
+
+.header .inscr input, .header .log input, .header .article input {
+	margin: 10px 0;
+	padding: 7px;
+	background: #F8F8F8;
+	border: none;
+	border-radius:5px;
+	text-align: center;
+}
+
+.header .article textarea {
+	margin: 10px 0;
+	padding: 7px;
+	background: #F8F8F8;
+	border: none;
+	border-radius:5px;
+	text-align: center;
+}
+
+
+.header .notvisiblein {
+	display: none;
+}
+
+.header .notvisiblelog {
+	display: none;
+}
+
+.header .notvisibleart {
+	display: none;
+}
+
+.fermer {
+	display: inline-block;
+	border-radius: 50%;
+	font-weight: bold;
+	color: #A9ACCC;
+	cursor: pointer;
+	position: absolute;
+	top: 2%;
+	right: 1%;
+	line-height: 1.5;
+	height: 30px;
+	width: 30px;
+	background: white;
+	font-size: 20px;
+
+}
+
+
+/*----------------------
+BXSLIDER --------------*/
+.bx-viewport {
+/*	height: 500px !important;*/
+}
+
+.bx-viewport img {
+	width: 100%;
+	max-height: 100%;
+}
+
+.bx-wrapper .bx-viewport {
+	left: 0;
+}
+
+/*----------------------
+HEAD
+ARTICLE----------------*/
+.article-liste {
+	margin: 50px auto;
+	text-align: center;
+	background: #818299;
+	overflow: hidden;
+}
+
+.titrearticle {
+	border:1px solid black;
+	background: #ABADCB;
+}
+
+.titrearticle h2 {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.article-liste img {
+	width: 100%;
+	float: left;
+	width: 40%;
+	margin-right: 10px;
+}
+.contenuarticle {
+	overflow: hidden;
+}
+.textearticle {
+	/*float: left;*/
+	/*width: 60%;*/
+}
+.textearticle p{
+	text-align: justify;
+}
+
+.descarticle {
+	font-size: 20px;
+	margin: 10px 20px;
+}
+
+/*----------------------
+FORUM----------------*/
+.forum {
+	margin: 50px auto;
+	text-align: center;
+}
+
+.entete {
+	border: 1px solid black;
+	background: white;
+	overflow: hidden;
+	background: #E0E0E0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.entete p {
+	margin: 10px 0;
+}
+
+.pair {
+	overflow: hidden;
+	border: 1px solid black;
+	border-top:none;
+	background: #ADC5ED;
+}
+
+.impair {
+	overflow: hidden;
+	border: 1px solid black;
+	border-top:none;
+	background: white;
+}
+
+.sujetforum {
+	margin: 50px auto;
+	text-align: center;
+}
+
+.sujetforum button {
+	background: #6C7984;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+}
+.textesujetforum {
+	overflow: hidden;
+	border: 1px solid black;
+	border-top:none;
+	background: white;
+	padding: 20px;
+}
+
+.navforum {
+	margin: 30px 0;
+	border-bottom: 1px dotted black;
+	padding: 10px;
+	overflow: hidden;
+	text-align: center;
+}
+.navforum button {
+	background: #6C7984;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+}
+
+.newsujetforum {
+	margin: 50px auto;
+	text-align: center;
+	border: 1px solid black;
+	background: white;
+	overflow: hidden;
+	background: #E0E0E0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.newsujetforum button {
+	background: #6C7984;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+}
+/*----------------------
+FOOTER----------------*/
+
+.footer .col-md-6{
+	background-color: blue;
+}
+
+footer a:link
+{
+	text-decoration: none;
+}
+
+
+
+
+/*----------------------
+TCHAT----------------*/
+
+.tchat-wd {
+	display: none;
+	position: fixed;
+	right: 0;
+	bottom: 37px;
+	height: 400px;
+	width: 250px;
+	background: rgba(38, 53, 66, 0.6);
+}
+.tchat h3{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background: #3D4050;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin:0;
+	font-size: 16px;
+	width: 250px;
+}
+.tchat h3:hover{
+	cursor: pointer;
+}
+
+
+
+/*----------------------
+LIVRE D'OR-------*/
+
+.wrapperldo
+{
+	background: white url("../images/livredorbg.jpeg") no-repeat;
+	background-size: 100% 100%; 
+	font-family: Tangerine;
+}
+
+.wrapperldotxt
+{
+	width:90%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 100px 10px;
+}
+
+h1
+{
+	font-size: 60px;
+}
+
+.spanldo
+{
+	display:block;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------
+FOOTER----------------*/
+.footer .col-md-6{
+	color: #fff;
+}
+
+.footer nav ul{
+	list-style: none;
+}
+
+.footer a:link 
+{ 
+ text-decoration:none; 
+}
+.tac
+{
+	text-align: center;
+}
+.ldo
+{
+	font-weight: 700;
+	font-size:20px;
+	color:#FCA916;
+}
+.preview
+{
+	font-size:10px;
+}
+.preview h3
+{
+	font-size: 14px;
+}
+
+footer p
+{
+	color: white;
+}
+.livredorlien
+{
+	color:#F8C636;
+}
+
+
