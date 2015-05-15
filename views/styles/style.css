@@ -41,9 +41,9 @@ h1{
 .nav_top {
 	background: rgba(38, 53, 66, 0.6);
 	/*background: #3D4050;*/
-	border-radius: 5px;
-	margin-left: -15px;
-	margin-right: -15px;
+	/*border-radius: 5px;*/
+	margin-left: -20px;
+	margin-right: -20px;
 }
 
 .nav_top li a {
@@ -472,8 +472,8 @@ LIVRE D'OR-------*/
 FOOTER----------------*/
 .footer {
 	background: rgba(38, 53, 66, 0.6);
-	margin-left: -15px;
-	margin-right: -15px;
+	margin-left: -20px;
+	margin-right: -20px;
 	padding: 20px 0;
 }
 .footer .col-md-6{
