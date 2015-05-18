@@ -619,17 +619,15 @@ TABLETTE------*/
 }
 .nav_top .row .col-md-4 {
 	text-align: center;
+
 }
 .bx-wrapper {
 	max-width: 100% !important;
 }
 
-.footer li:hover
-{ 
+.footer li:hover{ 
 	border-radius: 0px;
 }
-}
-
 
 
 /*-------------------
