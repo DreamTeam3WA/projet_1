@@ -622,14 +622,11 @@ footer a:hover {
 	text-decoration: none;
 	background-color: #337ab7;
 	border-radius: 5px;
-<<<<<<< HEAD
-
  }
  .footer li:hover a {
  	color: white;
  	text-decoration: none;
  }
-=======
 }
 .footer li:hover a {
  	color: white;
@@ -647,7 +644,6 @@ footer a:hover {
 	color: #337ab7;
 }
 
->>>>>>> 77027c50c813a120ca02efb4f0c5862ef93f5900
 .tac {
 	text-align: center;
 }
