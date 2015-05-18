@@ -126,3 +126,11 @@ $('document').ready(function()
 	})
 });
 */
+
+
+// SCROLL TCHAT-----------------------------------------
+// $('document').ready(function(){
+// setInterval(function scrollTchat(){
+// 	$('.test').scrollTop($('.chat-content').outerHeight);
+// },1200);
+// });
