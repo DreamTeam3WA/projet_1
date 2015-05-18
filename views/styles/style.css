@@ -184,13 +184,13 @@ BXSLIDER --------------*/
 
 ARTICLE----------------*/
 h2 {
-	  font-size: 230px;
+	  font-size: 50px;
 	  text-transform: uppercase;
 	  font-weight: bold;
 	  letter-spacing: 0.4em;
 	  text-align: center;
 	  color: #fff;
-	  margin-left: -20px;
+	  margin: 0;
 }
 .article-liste {
 	text-align: center;
