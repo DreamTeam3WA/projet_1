@@ -354,6 +354,7 @@ FORUM----------------*/
 	margin: 0 10px;
 	padding: 30px 10px;
 	font-weight: normal;
+	border: 1px solid black;
 }
 
 #titresujet {
@@ -382,8 +383,39 @@ FORUM----------------*/
 .styletexte .gras, .styletexte .italic, .styletexte .souligne, .styletexte .citation, .styletexte .liste, .styletexte .parenthese, .styletexte .image {
 	cursor: pointer;
 }
+
+@keyframes animcol {
+	0%{
+	color: blue;
+}
+	12%{
+	color: #00E4FF;
+}
+	24%{
+	color: #00FF4D;
+}
+	36%{
+	color: green;
+}
+	48%{
+	color: grey;
+}
+	50%{
+	color: orange;
+}
+	62%{
+	color: red;
+}
+	74%{
+	color: pink;
+}
+	100%{
+	color: purple;
+}
+}
 .couleurpolice {
 	position: relative;
+	animation: animcol 3s linear infinite; 
 }
 
 .couleurpoliceblock {
@@ -423,8 +455,38 @@ FORUM----------------*/
 	text-align: center;
 }
 
+@keyframes animback {
+	0%{
+	background: blue;
+}
+	12%{
+	background: #00E4FF;
+}
+	24%{
+	background: #00FF4D;
+}
+	36%{
+	background: green;
+}
+	48%{
+	background: grey;
+}
+	50%{
+	background: orange;
+}
+	62%{
+	background: red;
+}
+	74%{
+	background: pink;
+}
+	100%{
+	background: purple;
+}
+}
 .couleurpolice2 {
 	position: relative;
+	animation: animback 3s linear infinite; 
 }
 
 .couleurpoliceblock2 {
@@ -536,6 +598,13 @@ FORUM----------------*/
 	font-weight: bold;
 	font-size: 25px;
 	cursor: pointer;
+}
+
+.smiley i::before {
+	color: #465C6E;
+}
+.smiley i:hover::before {
+	color: #438ED1;
 }
 
 .descriptionnewsujetforum {
