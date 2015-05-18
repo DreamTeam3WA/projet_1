@@ -11,33 +11,6 @@ body {
 	overflow: hidden;
 }
 
-@font-face {
-	font-family: "Flaticon";
-	src: url("../images/flaticon.eot");
-	src: url("../images/flaticon.eot#iefix") format("embedded-opentype"),
-	url("../images/flaticon.woff") format("woff"),
-	url("../images/flaticon.ttf") format("truetype"),
-	url("../images/flaticon.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
-}.flaticon-cellphone67:before {
-	content: "\e000";
-}
-.flaticon-email23:before {
-	content: "\e001";
-}
-
-
-
-
-
 /*----------------------
 HEADER----------------*/
 
@@ -382,6 +355,8 @@ FORUM----------------*/
 	width: 100%;
 	height: 300px;
 	margin: 0 10px;
+	padding: 10px;
+	font-weight: normal;
 }
 
 #titresujet {
@@ -406,15 +381,94 @@ FORUM----------------*/
 	border: 1px solid black;
 	padding: 2px 10px;
 }
+
+.styletexte .gras, .styletexte .italic, .styletexte .souligne, .styletexte .citation, .styletexte .liste, .styletexte .parenthese, .styletexte .image {
+	cursor: pointer;
+}
+.couleurpolice {
+	position: relative;
+}
+
+.couleurpoliceblock {
+	padding-top: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	z-index: 2;
+	background: white;
+	border: 1px solid black;
+	display: none;
+	cursor: pointer;
+}
+
+.couleurpoliceblock .fermercouleur {
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	border-radius: 50%;
+	background: #6C7984;
+	font-weight: bold;
+	color: white;
+	line-height: 1;
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	font-size: 20px;
+	margin: 0 auto;
+	padding: 5px;
+	cursor: pointer;
+}
+.couleurpoliceblock div {
+	padding: 15px 20px;
+	margin: 10px 10px;
+	display: inline-block;
+	text-align: center;
+}
+
+.couleurpoliceblock .bleu {
+	background: blue;
+}
+.couleurpoliceblock .bleuciel {
+	background: #00E4FF;
+}
+.couleurpoliceblock .vertflash{
+	background: #00FF4D;
+}
+.couleurpoliceblock .vert{
+	background: green;
+}
+.couleurpoliceblock .gris{
+	background: grey;
+}
+.couleurpoliceblock .orange{
+	background: orange;
+}
+.couleurpoliceblock .rouge{
+	background: red;
+}
+.couleurpoliceblock .rose{
+	background: pink;
+}
+.couleurpoliceblock .violet{
+	background: purple;
+}
 .smiley {
 	float: right;
 	width: 25%;
 	background: white;
 	border: 1px solid grey;
 	border-radius: 5px;
+	margin: 20px 0;
 	margin-right: 20px;
+	padding: 0 0 20px 0;
 }
 
+.smiley i, .smiley i::before {
+	margin: 0;
+	padding: 0 5px;
+	cursor: pointer;
+}
 /*----------------------
 TCHAT----------------*/
 .tchat{
@@ -432,7 +486,7 @@ TCHAT----------------*/
 	background: rgba(38, 53, 66, 0.8);
 	padding: 5px;
 }
-.tchat h3{
+.tchat h3 {
 	position: fixed;
 	bottom: 0;
 	right: 0;
@@ -463,21 +517,21 @@ TCHAT----------------*/
 	font-style: italic;
 	overflow: hidden;
 }
-.tchat-content{
+.tchat-content {
 	height:  350px;
 	overflow-y: scroll;
 }
-.tchat-wd p{
+.tchat-wd p {
 	font-size: 12px;
 	color: #fff;
 	padding: 5px;
 	margin: 0;
 }
-.tchat-wd p.tchat-impair{
+.tchat-wd p.tchat-impair {
 	text-align: right;
 	padding-left: 35px;
 }
-.tchat-wd p.tchat-pair{
+.tchat-wd p.tchat-pair {
 	padding-right: 35px;
 }
 
@@ -547,8 +601,7 @@ LIVRE D'OR-------*/
 /*----------------------
 FOOTER----------------*/
 
-footer a:hover
-{
+footer a:hover {
 	text-decoration: none;
 }
 
@@ -558,11 +611,11 @@ footer a:hover
 	margin-right: -20px;
 	padding: 20px 0;
 }
-.footer .col-md-6{
+.footer .col-md-6 {
 	color: #fff;
 }
 
-.footer nav ul{
+.footer nav ul {
 	list-style: none;
 	text-align: center;
 }
@@ -570,33 +623,28 @@ footer a:hover
 .footer li a {
 	display: block;
 }
-.footer li:hover
-{ 
+.footer li:hover { 
 	text-decoration: none;
 	background-color: #337ab7;
 	border-radius: 5px;
 
  }
- .footer li:hover a{
+ .footer li:hover a {
  	color: white;
  	text-decoration: none;
  }
-.tac
-{
+.tac {
 	text-align: center;
 }
-.ldo
-{
+.ldo {
 	font-weight: 700;
 	font-size:20px;
 	color:#FCA916;
 }
-.preview
-{
+.preview {
 	font-size:10px;
 }
-.preview h3
-{
+.preview h3 {
 	font-size: 14px;
 	color: white;
 	font-weight: bold;
@@ -606,17 +654,15 @@ footer a:hover
 	padding: 0px 20px;
 	text-align: justify;
 }
-.footerldo
-{
+
+.footerldo {
 	height: 100%;
 }
 
-footer p
-{
+footer p {
 	color: white;
 }
-.livredorlien
-{
+.livredorlien {
 	color:#F8C636;
 }
 

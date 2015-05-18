@@ -42,7 +42,65 @@ $('document').ready(function()
 	})
 	$('.newsujetforum .returnforum').click(function(){
 		$('.forum').css('display','block');
-		$('.newsujetforum').css('display','none')
+		$('.newsujetforum').css('display','none');
+	})
+	$('.descriptionnewsujetforum #message').click(function(){
+		$('#message').wrapInner('<p></p>');
+	})
+	$('.styletexte .gras').click(function(){
+		$('#message').css("font-weight","bold");
+	})
+	$('.styletexte .italic').click(function(){
+		$('#message').css("font-style","italic");
+	})
+	$('.styletexte .souligne').click(function(){
+		$('#message').css("text-decoration","underline");
+	})
+	$('.styletexte .citation').click(function(){
+		$('#message').append('" "');
+	})
+	$('.styletexte .liste').click(function(){
+		$('#message').append("<ul><li><li></ul>");
+	})
+	$('.styletexte .parenthese').click(function(){
+		$('#message').append('( )');
+	})
+	$('.styletexte .image').click(function(){
+		$('#message').css("font-style","italic");
+	})
+	$('.styletexte .couleurpolice').click(function(){
+		$('.couleurpoliceblock').css("display","block");
+	})
+	$('.fermercouleur').click(function(info){
+		$('.couleurpoliceblock').css("display","none");
+		info.stopPropagation();
+	})
+	$('.couleurpoliceblock .bleu').click(function(){
+		$('#message').css('color','blue');
+	})
+	$('.couleurpoliceblock .bleuciel').click(function(){
+		$('#message').css('color','#00E4FF');
+	})
+	$('.couleurpoliceblock .vertflash').click(function(){
+		$('#message').css('color','#00FF4D');
+	})
+	$('.couleurpoliceblock .vert').click(function(){
+		$('#message').css('color','green');
+	})
+	$('.couleurpoliceblock .gris').click(function(){
+		$('#message').css('color','grey');
+	})
+	$('.couleurpoliceblock .orange').click(function(){
+		$('#message').css('color','orange');
+	})
+	$('.couleurpoliceblock .rouge').click(function(){
+		$('#message').css('color','red');
+	})
+	$('.couleurpoliceblock .rose').click(function(){
+		$('#message').css('color','pink');
+	})
+	$('.couleurpoliceblock .violet').click(function(){
+		$('#message').css('color','purple');
 	})
 });
 
