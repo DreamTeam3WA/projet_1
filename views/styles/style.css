@@ -1,6 +1,7 @@
 body {
 	background: url(../../views/images/bg.jpg) no-repeat top fixed;
 	font-size: 16px !important;
+	color: white;
 }
 .main{
 	max-width: 80% !important;
@@ -59,9 +60,11 @@ h1{
 	margin-left: -20px;
 	margin-right: -20px;
 }
-
+.nav_top ul {
+	margin: 10px;
+}
 .nav_top li a {
-	margin: 10px 10px;
+	margin: 0px 10px;
 	padding: 5px 0;
 	display: block;
 	font-size: 16px;
@@ -86,18 +89,17 @@ HEADER SIGN IN/UP-------*/
 	padding: 20px;
 	margin: 10px 0;
 	background: #415A70;
-	/*background: #A9ACCC;*/
 	background: #A9ACCC;
 	text-align: center;
 	position: relative;
 }
 
 .lienbutton {
+	font-size: 14px;
 	margin: 10px 5px;
-	padding: 10px 20px;
+	padding: 5px 10px;
 	color: #FFF;
-    background-color: #569E3D;
-    background-image: linear-gradient(#6C75CC, #525DCC);
+    background: linear-gradient(#4B6B87, #3A5369);
     border-color: #4A993E;
     border-radius: 5px;
     border: none;
@@ -198,13 +200,13 @@ BXSLIDER --------------*/
 
 ARTICLE----------------*/
 h2 {
-	  font-size: 50px;
+	  /*font-size: 50px;*/
 	  text-transform: uppercase;
 	  font-weight: bold;
 	  letter-spacing: 0.2em;
 	  text-align: center;
 	  color: #fff;
-	  margin: 0;
+	  margin: 10px 0 0;
 }
 .article-liste {
 	text-align: center;
@@ -219,7 +221,7 @@ h2 {
 }
 .art h3 {
 	margin: 0;
-	padding: 10px 0;
+	padding: 10px 5px;
 /*	border:1px solid black;*/
 	background: #ABADCB;
 	font-weight: bold;
@@ -234,6 +236,7 @@ h2 {
 
 p.desc-article {
 	text-align: justify;
+	color: #333;
 	margin: 0px 20px 20px 20px;
 	padding: 10px 0px;
 }
@@ -263,14 +266,6 @@ HOME - ARTICLE----------------*/
 	text-align: center;
 	margin: 50px 0;
 }
-
-.apropos p {
-	color: white;
-}
-
-
-
-
 
 
 
@@ -579,8 +574,104 @@ footer p
 
 .googlemap
 {
-		margin: 20px 0;
-		width:80%;
-		height:500px;
+		width:120%;
+		height:300px;
+		margin-left: -20px;
 }
 
+
+
+
+
+
+
+
+
+
+/*-------------------
+MEDIA QUERIES------*/
+
+
+
+
+/*-------------------
+TABLETTE------*/
+
+@media screen and (max-width:768px){
+
+.nav_top ul {
+	text-align: center;
+}
+.nav_top .row .col-md-4 {
+	text-align: center;
+}
+.bx-wrapper {
+	max-width: 100% !important;
+}
+
+.footer li:hover
+{ 
+	border-radius: 0px;
+}
+}
+
+
+
+/*-------------------
+PHONE------*/
+
+@media screen and (max-width:612px){
+
+h1 {
+	font-size: 30px !important;
+}
+h2 {
+	font-size: 1.5em;
+}
+.nav_top .row .col-md-8 ul {
+	margin: 0;
+}
+.nav_top .row .col-md-8 li {
+	display: block;
+}
+.nav_top .row .col-md-8 li:hover {
+	background: #303F4D;
+}
+.nav_top li a {
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+.lienbutton {
+	font-size: 12px;
+	margin: 15px 1px;
+	padding: 2px 5px;
+}
+.art img {
+    float: none;
+    width: 100%;
+}
+.art h3 {
+	font-size: 15px;
+	text-align: center;
+}
+p.desc-article {
+	font-size: 12px;
+}
+p.date-article {
+    font-size: 0.6em;
+}
+.apropos, .contacter {
+	font-size: 0.9em;
+}
+.tchat-wd {
+	right: 10%;
+	bottom: 21px;
+	width: 80%;
+}
+.tchat h3 {
+	font-size: 12px;
+	width: 100%;
+	padding: 4px;
+	right: 0;
+}
+}
