@@ -45,12 +45,13 @@ h1{
 	color: white;
 	text-transform: uppercase;
 }
-
 .nav_top li a:hover {
 	color: #6B879F;
 	/*color: #525DCC;*/
 }
-
+.nav_top .row .login {
+	text-align: right;
+}
 
 /*----------------------
 HEADER SIGN IN/UP-------*/
@@ -75,6 +76,11 @@ HEADER SIGN IN/UP-------*/
     border-color: #4A993E;
     border-radius: 5px;
     border: none;
+}
+.lienbutton:hover {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 10px;
 }
 
 .header .inscr p, .header .log p, .header .article p {
@@ -200,7 +206,6 @@ h2 {
 	font-size: 25px;
 	text-align: left;
 }
-
 .art img {
 	float: left;
 	width: 40%;
@@ -217,7 +222,7 @@ p.date-article{
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	padding-right: 20px;
 }
 
@@ -711,6 +716,18 @@ MEDIA QUERIES------*/
 
 
 
+/*-------------------
+SMALL DESKTOP------*/
+
+/*@media screen and (max-width:991px){
+
+.nav_top .row .col-sm-6 {
+	font-size: 10px;
+}
+.nav_top li a {
+	margin: 0px 0px;
+	font-size: 14px;
+}*/
 
 /*-------------------
 TABLETTE------*/
@@ -720,7 +737,7 @@ TABLETTE------*/
 .nav_top ul {
 	text-align: center;
 }
-.nav_top .row .col-md-4 {
+.nav_top .row .col-sm-6 {
 	text-align: center;
 
 }
@@ -760,6 +777,11 @@ h2 {
 .lienbutton {
 	font-size: 12px;
 	margin: 15px 1px;
+	padding: 2px 5px;
+}
+.lienbutton:hover {
+	color: #fff;
+	text-decoration: none;
 	padding: 2px 5px;
 }
 .art img {
