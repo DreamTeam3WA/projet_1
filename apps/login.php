@@ -10,13 +10,14 @@ $tab = $db->query("SELECT * FROM user WHERE login = '$user'")->fetchAll(PDO::FET
 
 if ($tab !=null){
 	if ($tab[0]['password'] == $pass){
-	$_SESSION['id'] = $tab[0]['id'];
-	header('Location: index.php');
-
+		$_SESSION['id'] = $tab[0]['id'];
+		header('Location: index.php');
 	}
-
+	require('views/erreur.phtml');
 }
-
+else{
+	require('views/erreur.phtml');
+}
 
 
 ?>
