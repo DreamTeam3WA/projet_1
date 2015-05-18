@@ -363,6 +363,7 @@ FORUM----------------*/
 	background: #E0E0E0;
 	text-transform: uppercase;
 	font-weight: bold;
+	position: relative;
 }
 
 .newsujetforum button {
@@ -371,7 +372,10 @@ FORUM----------------*/
 	color: white;
 	font-weight: bold;
 	border: none;
-	border-radius: 5px;
+	border-radius: 0 0 0 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 #message {
