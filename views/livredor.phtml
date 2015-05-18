@@ -1,14 +1,21 @@
 		<div class="wrapperldo">
 			<div class="wrapperldotxt">
-				<h1>Livre d'or</h1>
+				<h2>Livre d'or</h2>
 
 
 				<form action="get">
 					<div class="formldo">
 						<label><span class="spanldo">Nom :</span><input type="text" placeholder="votre nom"></label>
 					</div>
+
 					<div class="formldo">
-						<label><span class="spanldo">Votre commentaire :</span><textarea name="message" placeholder="votre commentaire"></textarea></label>
+						<label><span class="spanldo">Titre :</span>
+							<input type="text" placeholder="Titre">
+						</label>
+					</div>
+
+					<div class="formldo">
+						<label><span class="spanldo">Votre commentaire :</span><textarea name="message" placeholder="votre commentaire max 300 caractères" maxlength="300"></textarea></label>
 					</div>
 					<div class="boutonldo">
 						<input type="submit" value="Send">
@@ -16,21 +23,10 @@
 				</form>
 
 				<section class="sectionldo">
-						<h2>Excellent!!!!</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eaque perferendis mollitia numquam quae harum voluptatum veritatis magnam, dicta aspernatur quia delectus beatae! Eaque consequatur, expedita quidem nostrum dolor veniam!</p>
-					</article>
 					<article>
-						<h2>Les meilleurs</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, numquam alias officiis minima eveniet aut quibusdam tempora quaerat inventore, suscipit laboriosam quia, iste aperiam, tenetur deserunt voluptatibus dignissimos nesciunt distinctio?</p>
+						<?php require('apps/livredor-single.php') ?>
 					</article>
-					<article>
-						<h2>Best of the best</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo dicta veniam labore nam ea odio, excepturi hic quis culpa recusandae. Facilis laborum eveniet nihil eligendi unde. Non illo quidem, unde?</p>
-					</article>
-					<article>
-						<h2>Dreamteam !!!</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero sapiente illo ratione earum numquam libero quas facere natus deleniti pariatur minus, nam dolore quos suscipit porro necessitatibus, quia maxime unde.</p>
-					</article>
+					
 				</section>
 			</div>		
 		</div>

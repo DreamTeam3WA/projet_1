@@ -387,7 +387,7 @@ TCHAT----------------*/
 	background: rgba(38, 53, 66, 0.8);
 	padding: 5px;
 }
-.tchat h3{
+.tchat h3 {
 	position: fixed;
 	bottom: 0;
 	right: 0;
@@ -418,21 +418,21 @@ TCHAT----------------*/
 	font-style: italic;
 	overflow: hidden;
 }
-.tchat-content{
+.tchat-content {
 	height:  350px;
 	overflow-y: scroll;
 }
-.tchat-wd p{
+.tchat-wd p {
 	font-size: 12px;
 	color: #fff;
 	padding: 5px;
 	margin: 0;
 }
-.tchat-wd p.tchat-impair{
+.tchat-wd p.tchat-impair {
 	text-align: right;
 	padding-left: 35px;
 }
-.tchat-wd p.tchat-pair{
+.tchat-wd p.tchat-pair {
 	padding-right: 35px;
 }
 
@@ -448,7 +448,7 @@ LIVRE D'OR-------*/
 
 .wrapperldo
 {
-	background: white url("../images/livredorbg.jpeg") no-repeat;
+	background-color: #5C7589;
 	background-size: 100% 100%; 
 	font-family: Tangerine;
 }
@@ -459,6 +459,11 @@ LIVRE D'OR-------*/
 	margin: 0 auto;
 	text-align: center;
 	padding: 100px 10px;
+}
+
+.wrapperldotxt > h2
+{
+	color:#F8C636;
 }
 
 .spanldo
@@ -496,17 +501,22 @@ LIVRE D'OR-------*/
 
 /*----------------------
 FOOTER----------------*/
+
+footer a:hover {
+	text-decoration: none;
+}
+
 .footer {
 	background: rgba(38, 53, 66, 0.6);
 	margin-left: -20px;
 	margin-right: -20px;
 	padding: 20px 0;
 }
-.footer .col-md-6{
+.footer .col-md-6 {
 	color: #fff;
 }
 
-.footer nav ul{
+.footer nav ul {
 	list-style: none;
 	text-align: center;
 }
@@ -514,53 +524,47 @@ FOOTER----------------*/
 .footer li a {
 	display: block;
 }
-.footer li:hover
-{ 
+.footer li:hover { 
 	text-decoration: none;
 	background-color: #337ab7;
 	border-radius: 5px;
 
  }
- .footer li:hover a{
+ .footer li:hover a {
  	color: white;
  	text-decoration: none;
  }
-.tac
-{
+.tac {
 	text-align: center;
 }
-.ldo
-{
+.ldo {
 	font-weight: 700;
 	font-size:20px;
 	color:#FCA916;
 }
-.preview
-{
+.preview {
 	font-size:10px;
 }
-.preview h3
-{
+.preview h3 {
 	font-size: 14px;
 	color: white;
 	font-weight: bold;
+	margin-top: 0;
 }
 
 .preview p {
 	padding: 0px 20px;
 	text-align: justify;
 }
-.footerldo
-{
+
+.footerldo {
 	height: 100%;
 }
 
-footer p
-{
+footer p {
 	color: white;
 }
-.livredorlien
-{
+.livredorlien {
 	color:#F8C636;
 }
 
