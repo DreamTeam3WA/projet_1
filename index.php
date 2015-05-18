@@ -1,7 +1,7 @@
 <?php
-/*
-Faire la connection a la base de données ici plutôt que dans les autre fichiers
-*/
+	$db = new PDO("mysql:dbname=filrouge;host=127.0.0.1", 'root', 'troiswa');
+	$db->exec("SET CHARACTER SET utf8");
+	
 	$page = 'home';
 	if (isset($_GET['page']))
 		$page = $_GET['page'];
