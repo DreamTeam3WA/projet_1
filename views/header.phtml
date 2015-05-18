@@ -26,13 +26,13 @@
 		<input id="mdpconf" type="password">
 		<button>Creer un compte</button>
 	</form>
-	<form action="" method="POST" class="log">
+	<form action="apps/login.php" method="POST" class="log">
 		<div class="fermer"> X </div>
 		<p>Se connecter</p>
 		<label for="pseudo">Nom ou Email :</label>
-		<input id="pseudo" type="text">
-		<label for="mdp">Mot de passe <a href="">(mot de passe oublié)</a> :</label>
-		<input type="password" id="mdp">
+		<input id="pseudo" type="text" name="user" required>
+		<label for="mdp" >Mot de passe <a href="">(mot de passe oublié)</a> :</label>
+		<input type="password" id="mdp" name="pass" required>
 		<button>Connexion</button>
 	</form>
 	<?php require('apps/add-article.php'); ?>
