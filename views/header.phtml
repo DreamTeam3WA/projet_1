@@ -1,16 +1,22 @@
 <div class="header">
 	<h1>DreamTeam 1</h1>
 	<nav class="nav_top clearfix">
-		<ul class="pull-left">
-			<li><a href="index.php?page=home">Home</a></li>
-			<li><a href="index.php?page=article">News</a></li>
-			<li><a href="index.php?page=apropos">A propos</a></li>
-			<li><a href="index.php?page=forum">Forum</a></li>
-			<li><a href="index.php?page=contact">Contacts</a></li>
-		</ul>
-	<button class="signup lienbutton pull-right">S'inscrire</button>
-	<button class="signin lienbutton pull-right">Se connecter</button>
-	<button class="newarticle lienbutton pull-right">Créer un article</button>
+		<div class="row">
+			<div class="col-md-8">
+				<ul>
+					<li><a href="index.php?page=home">Home</a></li>
+					<li><a href="index.php?page=article">News</a></li>
+					<li><a href="index.php?page=apropos">A propos</a></li>
+					<li><a href="index.php?page=forum">Forum</a></li>
+					<li><a href="index.php?page=contact">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<button class="signup lienbutton">S'inscrire</button>
+				<button class="signin lienbutton">Se connecter</button>
+				<button class="newarticle lienbutton">Créer un article</button>
+			</div>
+		</div>
 	</nav>
 
 	<form action="" method="POST" class="inscr">
@@ -26,13 +32,13 @@
 		<input id="mdpconf" type="password">
 		<button>Creer un compte</button>
 	</form>
-	<form action="" method="POST" class="log">
+	<form action="index.php?page=login" method="POST" class="log">
 		<div class="fermer"> X </div>
 		<p>Se connecter</p>
 		<label for="pseudo">Nom ou Email :</label>
-		<input id="pseudo" type="text">
-		<label for="mdp">Mot de passe <a href="">(mot de passe oublié)</a> :</label>
-		<input type="password" id="mdp">
+		<input id="pseudo" type="text" name="user" required>
+		<label for="mdp" >Mot de passe <a href="">(mot de passe oublié)</a> :</label>
+		<input type="password" id="mdp" name="pass" required>
 		<button>Connexion</button>
 	</form>
 	<?php require('apps/add-article.php'); ?>
