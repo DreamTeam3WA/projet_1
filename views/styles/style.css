@@ -221,8 +221,8 @@ h2 {
 
 p.desc-article {
 	text-align: justify;
-	margin: 0px 20px 20px 0px;
-	padding: 10px 0;
+	margin: 0px 20px 20px 20px;
+	padding: 10px 0px;
 }
 p.date-article{
 	position: absolute;
@@ -525,6 +525,13 @@ FOOTER----------------*/
 .preview h3
 {
 	font-size: 14px;
+	color: white;
+	font-weight: bold;
+}
+
+.preview p {
+	padding: 0px 20px;
+	text-align: justify;
 }
 .footerldo
 {
