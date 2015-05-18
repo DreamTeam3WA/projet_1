@@ -75,9 +75,18 @@ var endOff;
 		selection = getSelectionHtml();
 });
    	$('.styletexte .gras').click(function(){
+   		if ( $('selection').hasClass('gras') == false)
+   		{
    		var content = $('#message').html();
    		content = content.substring(0, startOff)+'<span class="gras">' + selection +'</span>'+content.substr(endOff);
 		$('#message').html(content);
+		}
+		else 
+		{
+			var content = $('#message').html();
+   			content = content.substring(0, startOff)+selection.css("font-weigth","none")+content.substr(endOff);
+		$('selection').classList.remove("gras");
+		}
 	});
 
 	$('.styletexte .italic').click(function(){
