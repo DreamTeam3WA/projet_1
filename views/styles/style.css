@@ -11,14 +11,28 @@ body {
 	overflow: hidden;
 }
 
-
-
-
-
-
-
-
-
+@font-face {
+	font-family: "Flaticon";
+	src: url("../images/flaticon.eot");
+	src: url("../images/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../images/flaticon.woff") format("woff"),
+	url("../images/flaticon.ttf") format("truetype"),
+	url("../images/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-cellphone67:before {
+	content: "\e000";
+}
+.flaticon-email23:before {
+	content: "\e001";
+}
 
 
 
@@ -183,6 +197,15 @@ BXSLIDER --------------*/
 /*----------------------
 
 ARTICLE----------------*/
+h2 {
+	  font-size: 50px;
+	  text-transform: uppercase;
+	  font-weight: bold;
+	  letter-spacing: 0.2em;
+	  text-align: center;
+	  color: #fff;
+	  margin: 0;
+}
 .article-liste {
 	text-align: center;
 }
@@ -204,7 +227,6 @@ ARTICLE----------------*/
 }
 
 .art img {
-	width: 100%;
 	float: left;
 	width: 40%;
 	margin-right: 15px;
@@ -212,8 +234,8 @@ ARTICLE----------------*/
 
 p.desc-article {
 	text-align: justify;
-	margin: 0px 20px 20px 0px;
-	padding: 10px 0;
+	margin: 0px 20px 20px 20px;
+	padding: 10px 0px;
 }
 p.date-article{
 	position: absolute;
@@ -222,6 +244,15 @@ p.date-article{
 	font-size: 0.9em;
 	padding-right: 20px;
 }
+
+/*----------------------
+
+HOME - ARTICLE----------------*/
+
+
+
+
+
 
 
 
@@ -475,6 +506,12 @@ LIVRE D'OR-------*/
 
 /*----------------------
 FOOTER----------------*/
+
+footer a:hover
+{
+	text-decoration: none;
+}
+
 .footer {
 	background: rgba(38, 53, 66, 0.6);
 	margin-left: -20px;
