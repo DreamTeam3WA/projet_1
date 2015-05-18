@@ -489,7 +489,7 @@ LIVRE D'OR-------*/
 
 .wrapperldo
 {
-	background: white url("../images/livredorbg.jpeg") no-repeat;
+	background-color: #5C7589;
 	background-size: 100% 100%; 
 	font-family: Tangerine;
 }
@@ -500,6 +500,11 @@ LIVRE D'OR-------*/
 	margin: 0 auto;
 	text-align: center;
 	padding: 100px 10px;
+}
+
+.wrapperldotxt > h2
+{
+	color:#F8C636;
 }
 
 .spanldo
