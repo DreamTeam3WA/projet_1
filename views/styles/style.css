@@ -334,7 +334,7 @@ FORUM----------------*/
 	border-bottom: 1px dotted black;
 	padding: 10px;
 	overflow: hidden;
-	text-align: center;
+
 }
 .navforum button {
 	background: #6C7984;
@@ -365,6 +365,34 @@ FORUM----------------*/
 	border-radius: 5px;
 }
 
+#message {
+	width: 500px;
+	height: 300px;
+}
+
+#titresujet {
+	width: 500px;
+}
+
+.descriptionnewsujetforum, .titrenewsujetforum, .styletexte {
+	float: left;
+	width: 60%;
+	margin: 20px 0;
+}
+
+.styletexte > *{
+	display: inline-block;
+	margin-right: 10px;
+	background: white;
+	border: 1px solid black;
+}
+.smiley {
+	float: left;
+	width: 38%;
+	background: white;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
 
 /*----------------------
 TCHAT----------------*/
