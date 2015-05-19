@@ -8,7 +8,9 @@
 	<div class="textesujetforum">
 			<?=$description?>
 	</div>
-
+	<div class="commentaires">
+		<?php require('apps/forum-commentaires.php') ?>
+	</div>
 	<div class="reponse-forum">
 		<form action="index.php?page=forum-reponse" method="POST">
 			<div class="clearfix"></div>
