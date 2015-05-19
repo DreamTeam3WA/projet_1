@@ -9,9 +9,7 @@ if ($_POST['password'] === $_POST['password2'])
 	}
 
 	$req = substr($req,0,-2);
-	// var_dump($req);
 	$db-> exec("INSERT INTO user $req");
-
 	require('views/inscription-ok.phtml');
 }
 else {

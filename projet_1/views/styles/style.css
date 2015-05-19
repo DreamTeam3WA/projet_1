@@ -286,6 +286,13 @@ FORUM----------------*/
 	margin: 10px 0;
 }
 
+
+.nombreSujet {
+	overflow: hidden;
+	border: 1px solid black;
+	border-top:none;
+	background: #ADC5ED;
+}
 .pair {
 	overflow: hidden;
 	border: 1px solid black;

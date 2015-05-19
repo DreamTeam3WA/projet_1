@@ -1,3 +1,8 @@
 <?php
-require('views/forum.phtml');
+	if(isset($sujetid)){
+		require('apps/forum-sujet.php');
+	}
+	else {
+		require('views/forum-base.phtml');
+	}
 ?>
