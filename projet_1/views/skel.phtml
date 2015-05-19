@@ -41,6 +41,14 @@
 				<?php require('apps/footer.php'); ?>
 			</div>
 		</footer>
+		<script type="text/javascript" src="./views/tinymce/tinymce.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){ /*Que l'on peut résumer par : $(function(){ */
+				tinymce.init({
+				    selector: "textarea.mce"
+				 });
+				});
+		</script>
 			<!-- jQuery library (served from Google) -->
 		<script type="text/javascript" src="apps/scripts/jquery.bxslider.min.js"></script>
 		<script>
