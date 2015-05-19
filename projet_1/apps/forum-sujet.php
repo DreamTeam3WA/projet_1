@@ -4,7 +4,6 @@ $tab = $db->query("SELECT * FROM forum WHERE id= '$sujetid' ")->fetchAll(PDO::FE
 	$sujet = $tab[0]['sujet'];
 	$date = $tab[0]['date'];
 	$description = $tab[0]['description'];
-	$commentaire = $tab[0]['commentaire'];
 	
 	require('views/forum-sujet.phtml');
 

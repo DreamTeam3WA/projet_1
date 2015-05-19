@@ -7,7 +7,6 @@ foreach ($tab as $tab2) {
 	$sujet = $tab2['sujet'];
 	$date = $tab2['date'];
 	$description = $tab2['description'];
-	$commentaire = $tab2['commentaire'];
 	
 	require('views/forum-liste.phtml');
 }
