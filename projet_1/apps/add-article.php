@@ -1,3 +1,4 @@
-<?php
-require('views/add-article.phtml');
+<?php 
+
+require ('./views/add-article.phtml');
 ?>
