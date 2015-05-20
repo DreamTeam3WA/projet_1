@@ -6,6 +6,10 @@ if($_SESSION!= null){
 	$user = $tab[0]['login'];
 	if(isset($tab[0]['droits']) && $tab[0]['droits'] == 1)
 	{
+		require('views/header-super-admin.phtml');
+	}
+	if(isset($tab[0]['droits']) && $tab[0]['droits'] == 2)
+	{
 		require('views/header-admin.phtml');
 	}
 	else {

@@ -56,7 +56,7 @@ h1{
 /*----------------------
 HEADER SIGN IN/UP-------*/
 
-.header .inscr, .header .log, .header .article {
+.header .inscr, .header .log, .header .article, .header .modifArticle, .header .supprArticle {
 	display: none;
 	padding: 20px;
 	margin: 10px 0;
@@ -89,19 +89,19 @@ HEADER SIGN IN/UP-------*/
 	text-align: right;
 	padding-right: 5px;
 }
-.header .inscr p, .header .log p, .header .article p {
+.header .inscr p, .header .log p, .header .article p, .header .modifArticle p, .header .supprArticle p{
 	font-weight: bold;
 	font-size: 20px;
 	color: white;
 	text-transform: uppercase;
 }
 
-.header .inscr label, .header .log label, .header .article label {
+.header .inscr label, .header .log label, .header .article label, .header .modifArticle label, .header .supprArticle label {
 	display: block;
 	font-size: 15px;
 }
 
-.header .inscr button, .header .log button, .header .article button {
+.header .inscr button, .header .log button, .header .article button, .header .modifArticle button, .header .supprArticle button {
 	display: block;
 	font-size: 14px;
 	margin: 10px auto;
@@ -112,7 +112,7 @@ HEADER SIGN IN/UP-------*/
     border: none;
 }
 
-.header .inscr input, .header .log input, .header .article input {
+.header .inscr input, .header .log input, .header .article input, .header .modifArticle input, .header .supprArticle input {
 	margin: 10px 0;
 	padding: 7px;
 	background: #F8F8F8;
@@ -121,7 +121,7 @@ HEADER SIGN IN/UP-------*/
 	text-align: center;
 }
 
-.header .article textarea {
+.header .article textarea, .header .modifArticle textarea {
 	margin: 10px 0;
 	padding: 7px;
 	background: #F8F8F8;
@@ -347,8 +347,7 @@ margin-top: 20px;
 
 .nombreSujet {
 overflow: hidden;
-border: 1px solid black;
-border-top:none;
+border-bottom: 1px solid black;
 background: #ADC5ED;
 }
 .pair {

@@ -6,19 +6,40 @@ $('document').ready(function()
 		 $( ".inscr" ).toggle(500);
 		 $('.log').css('display','none');
 		 $('.article').css('display','none');
+		 $('.modifArticle').css('display','none');
+		 $('supprArticle').css('display','none');
 	});
 
 	$('.header .signin, .log .fermer').click(function(){
 		 $( ".log" ).toggle(500);
 		 $('.inscr').css('display','none');
-		 $('.article').css('display','none');
+		 $('.article').css('display','none')
+		 $('.modifArticle').css('display','none');;
+		 $('supprArticle').css('display','none');
 	});
 
 	$('.header .newarticle, .article .fermer').click(function(){
 		$( ".article" ).toggle(500);
 		 $('.log').css('display','none');
 		 $('.inscr').css('display','none');
+		 $('.modifArticle').css('display','none');
+		 $('supprArticle').css('display','none');
 	});
+
+	$('.cliqueModifArticle').click(function(){
+		$('.modifArticle').toggle(500);
+		$( '.article').css('display','none');
+		 $('.log').css('display','none');
+		 $('.inscr').css('display','none');
+		 $('supprArticle').css('display','none');
+	})
+	$('.cliqueSupprArticle').click(function(){
+		$('.supprArticle').toggle(500);
+		$('.modifArticle').css('display','none');
+		$( '.article').css('display','none');
+		 $('.log').css('display','none');
+		 $('.inscr').css('display','none');
+	})
 
 	$('.tchat h3').click(function(){
 		 $( "div.tchat-wd" ).toggle(500);
