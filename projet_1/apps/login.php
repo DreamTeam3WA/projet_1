@@ -2,11 +2,14 @@
 
 $login = $_POST;
 $user = $login['user'];
-$pass = $login['pass'];
+$pass = $login[pass];
+
+$_SESSION['id'] = 1;
 
 
+// echo $pass;
 
-$tab = $db->query("SELECT * FROM user WHERE login = '$user'")->fetchAll(PDO::FETCH_ASSOC);
+$tab = $db->query("SELECT * FROM user WHERE login = ".$db->quote($user))->fetchAll(PDO::FETCH_ASSOC);
 
 if ($tab !=null){
 	if ($tab[0]['password'] == $pass){
