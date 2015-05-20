@@ -1,0 +1,41 @@
+<div class="content">
+	<div class="forum ">
+	<nav class="navforum">
+		<button class="newsujet col-md-3">Nouveau sujet</button>
+		<span class="col-md-6">
+		<input type="text" placeholder="Rechercher dans le forum">
+		<select name="search" id="search">
+          	 <option value="sujet">Sujet</option>
+          	 <option value="auteur">Auteur</option>
+      	 </select>
+		<button>Chercher</button>
+		</span>
+		<button class="actualiserforum col-md-3">Actualiser</button>
+	</nav>
+		<div class="entete">
+			<p class="col-md-6">Sujet</p>
+			<p class="col-md-2">Auteur</p>
+			<p class="col-md-2">Nombre commentaires</p>
+			<p class="col-md-2">Dernière réponse</p>
+		</div>
+		<?php require('apps/forum-condition.php'); ?>
+	</div>
+	<div class="newsujetforum">
+		<button class="returnforum">Retourner sur le forum</button>
+
+
+		<form action="index.php?page=forum-sujet-submit" method="POST">
+			<div class="titrenewsujetforum">
+				<input name="sujet" type="text" class="titresujet" placeholder="Sujet" required>
+			</div>
+			<div class="clearfix"></div>
+
+			<div class="wrapper-mce clearfix">
+				<textarea name="description" class="mce" ></textarea>
+			</div>
+			<button type="submit">CREER SUJET</button>
+		</form>
+	</div>
+</div>
+<div>
+</div>
