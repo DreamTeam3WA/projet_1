@@ -1,4 +1,3 @@
-test
 <?php
 	$req = "SET ";
 	foreach($_POST as $key => $val){
@@ -7,7 +6,7 @@ test
 	}
 	// $req .= "id_forum='".$sujetid."'";
 	$req = substr($req,0,-2);
-	$db->exec("INSERT INTO commentaires ".$req);
+	$db-> exec("INSERT INTO commentaires ".$req);
 
 	require('views/sujet-ok.phtml');
 ?>
