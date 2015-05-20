@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST))
+if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
 {
 	$req = "";
 	foreach($_POST as $key => $val)

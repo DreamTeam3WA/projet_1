@@ -3,7 +3,7 @@
 $login = $_POST;
 $user = $login['user'];
 $pass = $login['pass'];
-
+$_SESSION['id'] = 3; // supprimer ligne quand connexion fonctionne 
 echo $_POST['user'];
 
 $tab = $db->query("SELECT * FROM user WHERE login = ".$db->quote($user))->fetchAll(PDO::FETCH_ASSOC);
