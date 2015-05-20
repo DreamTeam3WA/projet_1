@@ -58,15 +58,16 @@ HEADER SIGN IN/UP-------*/
 
 .header .inscr, .header .log, .header .article {
 	display: none;
-	border: 1px solid black;
 	padding: 20px;
 	margin: 10px 0;
-	background: #415A70;
 	background: #A9ACCC;
 	text-align: center;
 	position: relative;
 }
-
+.log a {
+	display: block;
+	font-size: 12px;
+}
 .lienbutton {
 	font-size: 14px;
 	margin: 10px 5px;
@@ -82,13 +83,17 @@ HEADER SIGN IN/UP-------*/
 	text-decoration: none;
 	padding: 5px 10px;
 }
-
+.header .welcome {
+	color: #fff;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 5px;
+}
 .header .inscr p, .header .log p, .header .article p {
 	font-weight: bold;
 	font-size: 20px;
 	color: white;
 	text-transform: uppercase;
-
 }
 
 .header .inscr label, .header .log label, .header .article label {
@@ -98,12 +103,11 @@ HEADER SIGN IN/UP-------*/
 
 .header .inscr button, .header .log button, .header .article button {
 	display: block;
+	font-size: 14px;
 	margin: 10px auto;
-	padding: 10px;
+	padding: 5px 10px;
 	color: #FFF;
-    background-color: #569E3D;
-    background-image: linear-gradient(#6C75CC, #525DCC);
-    border-color: #4A993E;
+    background: linear-gradient(#4B6B87, #3A5369);
     border-radius: 5px;
     border: none;
 }
@@ -154,6 +158,9 @@ HEADER SIGN IN/UP-------*/
 	background: white;
 	font-size: 20px;
 
+}
+.fermer:hover {
+	background: #4B6B87;
 }
 
 
@@ -740,6 +747,14 @@ TABLETTE------*/
 .nav_top .row .col-sm-6 {
 	text-align: center;
 
+}
+.lienbutton {
+    font-size: 12px;
+    margin: 10px 5px;
+    padding: 5px 10px;
+}
+.header .welcome {
+	padding-right: 20px;
 }
 .bx-wrapper {
 	max-width: 100% !important;
