@@ -1,5 +1,6 @@
 <?php
-$tab = $db->query("SELECT * FROM forum ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
+$tab = $db->query("SELECT * FROM forum ORDER BY id DESC");
+$tab = $tab->fetchAll(PDO::FETCH_ASSOC);
 
 
 foreach ($tab as $tab2) {

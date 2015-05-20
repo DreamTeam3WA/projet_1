@@ -5,7 +5,7 @@ if (isset($_POST))
 	$req = "";
 	foreach($_POST as $key => $val)
 	{
-		$_POST[$key] = $db->quote($val);
+//		$_POST[$key] = $db->quote($val);
 		$req .= $key."=".$_POST[$key].", ";
 	}
 
