@@ -58,15 +58,16 @@ HEADER SIGN IN/UP-------*/
 
 .header .inscr, .header .log, .header .article {
 	display: none;
-	border: 1px solid black;
 	padding: 20px;
 	margin: 10px 0;
-	background: #415A70;
 	background: #A9ACCC;
 	text-align: center;
 	position: relative;
 }
-
+.log a {
+	display: block;
+	font-size: 12px;
+}
 .lienbutton {
 	font-size: 14px;
 	margin: 10px 5px;
@@ -82,13 +83,17 @@ HEADER SIGN IN/UP-------*/
 	text-decoration: none;
 	padding: 5px 10px;
 }
-
+.header .welcome {
+	color: #fff;
+	font-size: 12px;
+	text-align: right;
+	padding-right: 5px;
+}
 .header .inscr p, .header .log p, .header .article p {
 	font-weight: bold;
 	font-size: 20px;
 	color: white;
 	text-transform: uppercase;
-
 }
 
 .header .inscr label, .header .log label, .header .article label {
@@ -98,12 +103,11 @@ HEADER SIGN IN/UP-------*/
 
 .header .inscr button, .header .log button, .header .article button {
 	display: block;
+	font-size: 14px;
 	margin: 10px auto;
-	padding: 10px;
+	padding: 5px 10px;
 	color: #FFF;
-    background-color: #569E3D;
-    background-image: linear-gradient(#6C75CC, #525DCC);
-    border-color: #4A993E;
+    background: linear-gradient(#4B6B87, #3A5369);
     border-radius: 5px;
     border: none;
 }
@@ -154,6 +158,9 @@ HEADER SIGN IN/UP-------*/
 	background: white;
 	font-size: 20px;
 
+}
+.fermer:hover {
+	background: #4B6B87;
 }
 
 
@@ -274,19 +281,61 @@ FORUM----------------*/
 }
 
 .entete {
-	border: 1px solid black;
-	background: white;
+
+	color: white;
 	overflow: hidden;
-	background: #E0E0E0;
+	background: #3A5369;
 	text-transform: uppercase;
 	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+	letter-spacing: 1px;
 }
-
+.entete .col-md-2 {
+	text-transform: lowercase;
+}
 .entete p {
 	margin: 10px 0;
 }
 
+.entetecommentaire {
 
+	color: white;
+	overflow: hidden;
+	background: #3A5369;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 20px;
+	text-align: center;
+	padding: 5px;
+	letter-spacing: 1px;
+}
+
+.buttonReponseCommentaire {
+	margin-top: 20px;
+	background: #6C7984;
+	padding: 7px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	position: absolute;
+	bottom: -3.2%;
+	right: 0%;
+}
+
+.dateSujet {
+	font-size: 12px;
+	text-align: right;
+}
+
+.reponse-forum {
+	display: none;
+}
+
+.reponse-forum {
+	margin-top: 20px;
+}
 .nombreSujet {
 	overflow: hidden;
 	border: 1px solid black;
@@ -309,23 +358,41 @@ FORUM----------------*/
 
 .sujetforum {
 	margin: 50px auto;
-	text-align: center;
+	text-align: justify;
+	position: relative;
 }
 
-.sujetforum button {
+.repondre {
+	margin-top: 20px;
 	background: #6C7984;
-	padding: 10px;
+	padding: 7px;
 	color: white;
 	font-weight: bold;
 	border: none;
 	border-radius: 5px;
+	position: absolute;
+	bottom: -2.5%;
+	right: 0%;
+}
+
+.creerSujet{
+	margin-top: 20px;
+	background: #6C7984;
+	padding: 8px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px 5px 0 0;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
 }
 .textesujetforum {
 	overflow: hidden;
-	border: 1px solid black;
+
 	border-top:none;
 	background: white;
-	padding: 20px;
+	padding: 20px 40px;
 }
 
 .navforum {
@@ -369,6 +436,19 @@ FORUM----------------*/
 	right: 0;
 }
 
+.returnForumSujet {
+	margin-top: 20px;
+	background: #6C7984;
+	padding: 7px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	position: absolute;
+	top: -4.5%;
+	right: 0%;
+}
+
 #message {
 	width: 100%;
 	height: 300px;
@@ -379,7 +459,7 @@ FORUM----------------*/
 	text-align: justify;
 }
 
-#titresujet {
+.titresujet {
 	width: 100%;
 	margin: 0 10px;
 }
@@ -667,6 +747,14 @@ TABLETTE------*/
 .nav_top .row .col-sm-6 {
 	text-align: center;
 
+}
+.lienbutton {
+    font-size: 12px;
+    margin: 10px 5px;
+    padding: 5px 10px;
+}
+.header .welcome {
+	padding-right: 20px;
 }
 .bx-wrapper {
 	max-width: 100% !important;
