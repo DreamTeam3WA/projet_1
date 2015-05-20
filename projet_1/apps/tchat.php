@@ -2,7 +2,7 @@
 
 
 
-if (isset($_POST))
+if (isset($_POST) && isset($_POST['tchat']))
 {
 /*
 	$req = "";
@@ -20,7 +20,7 @@ if (isset($_POST))
 }
 
 $tab = $db->query("SELECT * FROM tchat")->fetchAll(PDO::FETCH_ASSOC);
-print_r($_POST);
+
 
 $i=0;
 while ($i<count($tab)){
