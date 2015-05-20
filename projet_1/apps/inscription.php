@@ -4,13 +4,15 @@ if ($_POST['password'] === $_POST['password2'])
 {
 	$req = "SET ";
 	foreach($_POST as $key => $val){
-		$_POST[$key] = $db -> quote($val);
-		$req.= $key."=".$_POST[$key].", ";
+		if($key!="password2"){
+			$_POST[$key] = $db -> quote($val);
+			$req.= $key."=".$_POST[$key].", ";
+		}
 	}
 
 	$req = substr($req,0,-2);
 
-	var_dump($req);
+
 	$db-> exec("INSERT INTO user $req");
 	
 	require('views/inscription-ok.phtml');
