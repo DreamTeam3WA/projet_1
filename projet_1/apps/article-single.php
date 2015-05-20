@@ -4,7 +4,7 @@ $tab = $db->query("SELECT * FROM articles ORDER BY date DESC")->fetchAll(PDO::FE
 
 
 $i=0;
-while ($i<3){
+while ($i<4){
 	$titre = $tab[$i]['titre'];
 	$date = $tab[$i]['date'];
 	$user = $tab[$i]['user'];
