@@ -3,15 +3,13 @@
 $tab = $db->query("SELECT * FROM articles ORDER BY date DESC")->fetchAll(PDO::FETCH_ASSOC);
 
 
-$i=0;
-while ($i<3){
-	$titre = $tab[$i]['titre'];
-	$date = $tab[$i]['date'];
-	$user = $tab[$i]['user'];
-	$lien = $tab[$i]['lien'];
-	$description = $tab[$i]['description'];
+foreach ($tab as $key => $value) {
+	$titre = $tab[$key]['titre'];
+	$date = $tab[$key]['date'];
+	$user = $tab[$key]['user'];
+	$lien = $tab[$key]['lien'];
+	$description = $tab[$key]['description'];
 	require('views/article-single.phtml');
-	$i++;
 }
 
 ?>

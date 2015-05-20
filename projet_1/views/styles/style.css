@@ -289,19 +289,61 @@ FORUM----------------*/
 }
 
 .entete {
-	border: 1px solid black;
-	background: white;
+
+	color: white;
 	overflow: hidden;
-	background: #E0E0E0;
+	background: #3A5369;
 	text-transform: uppercase;
 	font-weight: bold;
+	padding: 5px;
+	text-align: center;
+	letter-spacing: 1px;
 }
-
+.entete .col-md-2 {
+	text-transform: lowercase;
+}
 .entete p {
 	margin: 10px 0;
 }
 
+.entetecommentaire {
 
+	color: white;
+	overflow: hidden;
+	background: #3A5369;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 20px;
+	text-align: center;
+	padding: 5px;
+	letter-spacing: 1px;
+}
+
+.buttonReponseCommentaire {
+	margin-top: 20px;
+	background: #6C7984;
+	padding: 7px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	position: absolute;
+	bottom: -3.2%;
+	right: 0%;
+}
+
+.dateSujet {
+	font-size: 12px;
+	text-align: right;
+}
+
+.reponse-forum {
+	display: none;
+}
+
+.reponse-forum {
+	margin-top: 20px;
+}
 .nombreSujet {
 	overflow: hidden;
 	border: 1px solid black;
@@ -324,25 +366,50 @@ FORUM----------------*/
 
 .sujetforum {
 	margin: 50px auto;
-	text-align: center;
+	text-align: justify;
+	position: relative;
 }
 
-.sujetforum button {
+.repondre {
+	margin-top: 20px;
 	background: #6C7984;
-	padding: 10px;
+	padding: 7px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	position: absolute;
+	bottom: -2.5%;
+	right: 0%;
+}
+
+.creerSujet{
+	margin-top: 20px;
+	background: #6C7984;
+	padding: 8px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px 5px 0 0;
+	position: absolute;
+	bottom: 0%;
+	right: 0%;
+}
+.textesujetforum {
+	overflow: hidden;
+
+	border-top:none;
+	background: white;
+	padding: 20px 40px;
+}
+.navforum input {
+	background: #6C7984;
+	padding: 7px;
 	color: white;
 	font-weight: bold;
 	border: none;
 	border-radius: 5px;
 }
-.textesujetforum {
-	overflow: hidden;
-	border: 1px solid black;
-	border-top:none;
-	background: white;
-	padding: 20px;
-}
-
 .navforum {
 	margin: 30px 0;
 	border-bottom: 1px dotted black;
@@ -352,13 +419,31 @@ FORUM----------------*/
 }
 .navforum button {
 	background: #6C7984;
-	padding: 10px;
+	padding: 7px;
 	color: white;
 	font-weight: bold;
 	border: none;
 	border-radius: 5px;
 }
 
+#categoriesearch {
+	background: #6C7984;
+	padding: 7px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	margin-right: 40px;
+}
+
+#search {
+	background: #6C7984;
+	padding: 7px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+}
 .newsujetforum {
 	margin: 50px auto;
 	text-align: center;
@@ -384,6 +469,19 @@ FORUM----------------*/
 	right: 0;
 }
 
+.returnForumSujet {
+	margin-top: 20px;
+	background: #6C7984;
+	padding: 7px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	position: absolute;
+	top: -4.5%;
+	right: 0%;
+}
+
 #message {
 	width: 100%;
 	height: 300px;
@@ -394,7 +492,7 @@ FORUM----------------*/
 	text-align: justify;
 }
 
-#titresujet {
+.titresujet {
 	width: 100%;
 	margin: 0 10px;
 }
