@@ -83,13 +83,16 @@ HEADER SIGN IN/UP-------*/
 	text-decoration: none;
 	padding: 5px 10px;
 }
-
+.header .welcome {
+	color: #fff;
+	font-size: 12px;
+	padding-right: 5px;
+}
 .header .inscr p, .header .log p, .header .article p {
 	font-weight: bold;
 	font-size: 20px;
 	color: white;
 	text-transform: uppercase;
-
 }
 
 .header .inscr label, .header .log label, .header .article label {
