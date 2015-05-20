@@ -668,6 +668,23 @@ TABLETTE------*/
 	text-align: center;
 
 }
+
+.nav_top li a {
+	margin: 0px 1px;
+	padding: 0;
+	font-size: 0.6em;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+.lienbutton {
+    font-size: 12px;
+    margin: 10px 5px;
+    padding: 5px 10px;
+}
+.header .welcome {
+	padding-right: 20px;
+}
+
 .bx-wrapper {
 	max-width: 100% !important;
 }
@@ -675,7 +692,9 @@ TABLETTE------*/
 .footer li:hover{ 
 	border-radius: 0px;
 }
-
+.footer .social {
+	text-align: center;
+}
 
 /*-------------------
 PHONE------*/
@@ -698,8 +717,9 @@ h2 {
 	background: #303F4D;
 }
 .nav_top li a {
-    margin: 0;
-    letter-spacing: 0.1em;
+	padding: 5px;
+	font-size: 0.7em;
+	letter-spacing: 0.3em;
 }
 .lienbutton {
 	font-size: 12px;
@@ -738,5 +758,12 @@ p.date-article {
 	width: 100%;
 	padding: 4px;
 	right: 0;
+}
+.footer .social i:before{
+	font-size: 30px;
+	margin: 0px 10px;
+}
+.footer .social {
+	margin-bottom: 15px;
 }
 }
