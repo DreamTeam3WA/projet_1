@@ -18,8 +18,8 @@
 			</div>
 		</div>
 	</nav>
-	<?php require('apps/inscription.php') ?>
-	<!-- <form action="index.php?page=inscription" method="POST" class="inscr">
+
+	<form action="index.php?page=inscription" method="POST" class="inscr">
 		<div class="fermer">X</div>
 		<p>Creez votre espace personnel</p>
 		<label for="username">Nom d'utilisateur :</label>
@@ -31,15 +31,15 @@
 		<label for="mdpconf">Confirmer le mot de passe :</label>
 			<input id="mdpconf" type="password" name="password2" required>
 		<button>Creer un compte</button>
-	</form> -->
+	</form>
 	<form action="index.php?page=login" method="POST" class="log">
 		<div class="fermer"> X </div>
 		<p>Se connecter</p>
-		<label for="pseudo">Nom ou E-mail :</label>
+		<label for="pseudo">Nom ou Email :</label>
 		<input id="pseudo" type="text" name="user" required>
 		<label for="mdp" >Mot de passe :</label>
 		<input type="password" id="mdp" name="pass" required>
-		<a href="">[ mot de passe oublié ? ]</a>
+		<a href="">(mot de passe oublié)</a>
 		<button>Connexion</button>
 	</form>
 	<?php require('apps/add-article.php'); ?>

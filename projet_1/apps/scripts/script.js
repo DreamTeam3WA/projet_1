@@ -43,10 +43,7 @@ $('document').ready(function()
 		$('.forum').css('display','block');
 		$('.newsujetforum').css('display','none');
 	});
-	$('.buttonReponseCommentaire').click(function(){
-		$('.reponse-forum').css('display','block');
-		$('.buttonReponseCommentaire').css('display','none');
-	})
+
 
 });
 
