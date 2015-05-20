@@ -46,8 +46,10 @@ $('document').ready(function()
 	$('.buttonReponseCommentaire').click(function(){
 		$('.reponse-forum').css('display','block');
 		$('.buttonReponseCommentaire').css('display','none');
-	})
-
+	});
+	setInterval(function scrollTchat(){
+		$('.tchat-content').scrollTop(5000)},100);
+	
 });
 
 /*
