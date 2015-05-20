@@ -13,6 +13,11 @@
 	<div class="commentaires">
 		<?php require('apps/forum-commentaires.php') ?>
 	</div>
+
+
+
+ <?php if(isset($_SESSION['id']) && $_SESSION['id']>0) : ?>
+
 	<button class="buttonReponseCommentaire" type="submit">Répondre</button>
 	<div class="reponse-forum">
 		<form action="index.php?page=forum-reponse" method="POST">
@@ -24,6 +29,5 @@
 			<input type="hidden" value="<?= $sujetid; ?>" name="id_forum">
 		</form>
 	</div>
-		</form>
-	</div>
+<?php endif; ?>
 </div>
