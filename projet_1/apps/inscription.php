@@ -1,4 +1,5 @@
 <?php 
+
 if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
 	if ($_POST['password'] === $_POST['password2'])
 	{
@@ -25,5 +26,4 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
 	}
 }
 require('./views/inscription.phtml');
-
 ?>

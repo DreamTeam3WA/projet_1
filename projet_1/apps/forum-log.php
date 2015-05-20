@@ -4,17 +4,13 @@ if($_SESSION!= null){
 	$id = $_SESSION['id'];
 	$tab = $db->query("SELECT * FROM user WHERE id = '$id'")->fetchAll(PDO::FETCH_ASSOC);
 	$user = $tab[0]['login'];
-	if(isset($tab[0]['droits']) && $tab[0]['droits'] == 1)
+	if($tab[0]['droits'] == 1)
 	{
-		require('views/header-admin.phtml');
+		require('views/forum-admin.phtml');
 	}
 	else {
-		require('views/header-user.phtml');
+		require('views/forum-user.phtml');
 	}
-}
-
-else {
-	require('views/header-log-off.phtml');
 }
 
 ?>
