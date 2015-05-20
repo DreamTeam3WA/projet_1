@@ -162,7 +162,15 @@ HEADER SIGN IN/UP-------*/
 .fermer:hover {
 	background: #4B6B87;
 }
-
+.incr_ok {
+	text-align: center !important;
+	color: rgb(255, 255, 255);
+	padding: 30px;
+	margin-bottom: 0px;
+	background: none repeat scroll 0% 0% rgb(38, 53, 66);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
 
 /*----------------------
 BXSLIDER --------------*/
