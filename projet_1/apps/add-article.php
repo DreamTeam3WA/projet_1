@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_POST))
 {
 	$req = "";
@@ -12,6 +13,7 @@ if (isset($_POST))
 	// var_dump($req);
 	$db->exec("INSERT INTO articles SET $req");
 }
+
 	require('./views/add-article.phtml');
 ?>
 
