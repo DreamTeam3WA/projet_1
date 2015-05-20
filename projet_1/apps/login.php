@@ -2,7 +2,7 @@
 
 $login = $_POST;
 $user = $login['user'];
-$pass = $login["pass"];
+$pass = $login['pass'];
 
 $tab = $db->query("SELECT * FROM user WHERE login = ".$db->quote($user))->fetchAll(PDO::FETCH_ASSOC);
 
