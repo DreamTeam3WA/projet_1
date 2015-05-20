@@ -5,7 +5,7 @@ $user = $login['user'];
 $pass = $login['pass'];
 
 
-
+echo $user." ".$pass;
 $tab = $db->query("SELECT * FROM user WHERE login = '$user'")->fetchAll(PDO::FETCH_ASSOC);
 
 if ($tab !=null){
