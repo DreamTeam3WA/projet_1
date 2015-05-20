@@ -1,9 +1,9 @@
 <div class="sujetforum">
-	<a href="index.php?page=forum" class="returnForumSujet">Retourner au forum</a> 
+	<a href="index.php?page=forum" class="newsujet">Retourner au forum</a> 
 		<div class="entete">
 			<p class="col-md-2">Auteur</p>
-			<p class="col-md-7"><?=$sujet?></p>
-			<p class="col-md-3 dateSujet"><?=$date?></p>
+			<p class="col-md-8"><?=$sujet?></p>
+			<p class="col-md-2"><?=$date?></p>
 	</div>
 	<div class="textesujetforum">
 			<?=$description?>
@@ -11,15 +11,19 @@
 	<div class="commentaires">
 		<?php require('apps/forum-commentaires.php') ?>
 	</div>
-	<button class="buttonReponseCommentaire" type="submit">Répondre</button>
 	<div class="reponse-forum">
 		<form action="index.php?page=forum-reponse" method="POST">
 			<div class="clearfix"></div>
 			<div class="wrapper-mce clearfix">
 				<textarea name="description" class="mce" ></textarea>
 			</div>
-			<input type="hidden" value="<?= $sujetid; ?>" name="id_forum">
+<<<<<<< HEAD
+			<input type="hidden" value="<?=$sujetid; ?>" name="id_forum">
 			<button class="repondre" type="submit">Répondre</button>
+=======
+			<input type="hidden" value="<?= $sujetid; ?>" name="id_forum">
+			<button type="submit">Répondre</button>
+>>>>>>> 52b9ecda9fd7d27647d3fd62c196288a5494b8e5
 		</form>
 	</div>
 		</form>

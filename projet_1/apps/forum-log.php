@@ -6,15 +6,11 @@ if($_SESSION!= null){
 	$user = $tab[0]['login'];
 	if($tab[0]['droits'] == 1)
 	{
-		require('views/header-admin.phtml');
+		require('views/forum-admin.phtml');
 	}
 	else {
-		require('views/header-user.phtml');
+		require('views/forum-user.phtml');
 	}
-}
-
-else {
-	require('views/header-log-off.phtml');
 }
 
 ?>
