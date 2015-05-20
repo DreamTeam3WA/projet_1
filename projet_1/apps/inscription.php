@@ -1,7 +1,9 @@
 <?php 
 if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
+
+
 	if ($_POST['password'] === $_POST['password2'])
-	{
+		{
 		$req = "SET ";
 
 		$exclude_key = array("password2", "action");
