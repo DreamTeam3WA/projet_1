@@ -24,18 +24,8 @@
 				<?php require('apps/content.php'); ?>
 			</section>
 		</div>
-		<div class="tchat">
-			<div class="tchat-wd">
-				<div class="tchat-content">
-					<?php require('apps/tchat.php'); ?>
-				</div>
-				<form method="POST" class="tchat-form" action="apps/tchat-form.php">
-					<textarea name="tchat" placeholder="votre message" fixed></textarea>
-
-				</form>	
-			</div>
-			<h3>Tchat Room</h3>		
-		</div>
+		<?php require('apps/tchat.php'); ?>
+	
 		<footer>
 			<div class="container main">
 				<?php require('apps/footer.php'); ?>

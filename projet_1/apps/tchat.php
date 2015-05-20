@@ -1,17 +1,9 @@
  <?php
-$tab = $db->query("SELECT * FROM tchat")->fetchAll(PDO::FETCH_ASSOC);
+ 
+if (isset($_POST) && isset($_POST['tchat']) && !empty($_POST['tchat']))
+{
+	$db->exec('INSERT INTO tchat SET message='.$db->quote($_POST['tchat']));
 
-$i=0;
-while ($i<count($tab)){
-	$message = $tab[$i]['message'];
-		if($i%2 == 0){
-			$class='tchat-pair';
-		}
-		else{
-			$class='tchat-impair';
-		}
-	require('views/tchat.phtml');
-	$i++;
 }
-
+	require('views/tchat.phtml');
 ?>

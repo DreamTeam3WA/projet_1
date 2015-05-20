@@ -17,7 +17,7 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
 		echo "Le pseudo est déjà utilisé";
 	}else{ // si le pseudo n'est pas utilisé
 		// je check si l'email est deja renseigné... de la même façon qe pour le login...
-		$tab = $db->query("SELECT * from user WHERE email=".$email);
+		$tab = $db->query("SELECT * from user WHERE email=".$db->quote($email));
 		if($tab->rowCount() > 0){ // si l'email est déjà renseignée : ERREUR (compte de la colonne supérieur à 0)
 			echo "L'adresse mail est déjà utilisée !";
 		} else{ // si l'email n'est pas enregistré dans la table user
@@ -35,7 +35,7 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
 
 				// j'exécute mon insertion pour ajouter l'utilisateur
 				$db-> exec("INSERT INTO user $req");
-				print_r($db->errorInfo());
+				
 				require('views/inscription-ok.phtml');
 			}
 			else {
