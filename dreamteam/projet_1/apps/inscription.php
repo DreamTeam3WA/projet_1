@@ -26,9 +26,12 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
 			{
 				// je construis ma requête pour l'insertion
 				$req = "SET ";
+				$exclude_key = array("password2", "action");
 				foreach($_POST as $key => $val){
+					if(!in_array($key, $exclude_key)){
 					$_POST[$key] = $db -> quote($val);
 					$req.= $key."=".$_POST[$key].", ";
+					}
 				}
 
 				$req = substr($req,0,-2);

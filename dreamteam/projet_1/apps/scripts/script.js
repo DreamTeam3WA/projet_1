@@ -26,14 +26,14 @@ $('document').ready(function()
 		 $('supprArticle').css('display','none');
 	});
 
-	$('.cliqueModifArticle').click(function(){
+	$('.cliqueModifArticle, .modifArticle .fermer').click(function(){
 		$('.modifArticle').toggle(500);
 		$( '.article').css('display','none');
 		 $('.log').css('display','none');
 		 $('.inscr').css('display','none');
 		 $('supprArticle').css('display','none');
 	})
-	$('.cliqueSupprArticle').click(function(){
+	$('.cliqueSupprArticle, .supprArticle .fermer').click(function(){
 		$('.supprArticle').toggle(500);
 		$('.modifArticle').css('display','none');
 		$( '.article').css('display','none');

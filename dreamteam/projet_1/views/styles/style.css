@@ -56,7 +56,7 @@ h1{
 /*----------------------
 HEADER SIGN IN/UP-------*/
 
-.header .inscr, .header .log, .header .article, .header .modifArticle, .header .supprArticle {
+.header .inscr, .header .log, .header .article, .modifArticle, .supprArticle {
 	display: none;
 	padding: 20px;
 	margin: 10px 0;
@@ -70,7 +70,7 @@ HEADER SIGN IN/UP-------*/
 }
 .lienbutton {
 	font-size: 14px;
-	margin: 10px 5px;
+	margin: 10px 4px;
 	padding: 5px 10px;
 	color: #FFF;
     background: linear-gradient(#4B6B87, #3A5369);
@@ -89,19 +89,19 @@ HEADER SIGN IN/UP-------*/
 	text-align: right;
 	padding-right: 5px;
 }
-.header .inscr p, .header .log p, .header .article p, .header .modifArticle p, .header .supprArticle p{
+.header .inscr p, .header .log p, .header .article p, .modifArticle p, .supprArticle p{
 	font-weight: bold;
 	font-size: 20px;
 	color: white;
 	text-transform: uppercase;
 }
 
-.header .inscr label, .header .log label, .header .article label, .header .modifArticle label, .header .supprArticle label {
+.header .inscr label, .header .log label, .header .article label, .modifArticle label, .supprArticle label {
 	display: block;
 	font-size: 15px;
 }
 
-.header .inscr button, .header .log button, .header .article button, .header .modifArticle button, .header .supprArticle button {
+.header .inscr button, .header .log button, .header .article button, .modifArticle button, .supprArticle button {
 	display: block;
 	font-size: 14px;
 	margin: 10px auto;
@@ -112,7 +112,7 @@ HEADER SIGN IN/UP-------*/
     border: none;
 }
 
-.header .inscr input, .header .log input, .header .article input, .header .modifArticle input, .header .supprArticle input {
+.header .inscr input, .header .log input, .header .article input, .modifArticle input, .supprArticle input {
 	margin: 10px 0;
 	padding: 7px;
 	background: #F8F8F8;
@@ -121,13 +121,15 @@ HEADER SIGN IN/UP-------*/
 	text-align: center;
 }
 
-.header .article textarea, .header .modifArticle textarea {
+.header .article textarea, .modifArticle textarea {
 	margin: 10px 0;
 	padding: 7px;
 	background: #F8F8F8;
 	border: none;
 	border-radius:5px;
 	text-align: center;
+	width: 500px;
+	height: 250px;
 }
 
 
