@@ -14,5 +14,5 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
 	$db->exec("INSERT INTO articles SET $req");
 }
 
-	require('./views/suppr-article.phtml');
+	require('./views/article-suppr.phtml');
 ?>

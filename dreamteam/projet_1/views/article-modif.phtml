@@ -1,0 +1,14 @@
+<button class="cliqueModifArticle lienbutton">Modifier l'article</button>
+
+<form method="POST" action="" class="modifArticle notvisibleart">
+		<div class="fermer"> X </div>
+		<p>Mofidication d'un article</p>
+		<label for="title">Titre :</label>
+		<input id="title" name="titre" type="text" value="<?=$titre?>">
+		<label for="description">Description :</label>
+		<textarea id="description" name="description" ><?=$description?></textarea>
+		<label for="lien">Source :</label>
+		<input id="lien" name="lien" type="text" value="<?=$lien?>">
+		<input type="hidden" value="modifarticle" name="action">
+		<button type="submit">MODIFIER</button>
+	</form>
