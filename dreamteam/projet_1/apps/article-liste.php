@@ -9,7 +9,8 @@ foreach ($tab as $key => $value) {
 	$user = $tab[$key]['user'];
 	$lien = $tab[$key]['lien'];
 	$description = $tab[$key]['description'];
-	require('views/article-single.phtml');
+	$articleid = $tab[$key]['id'];
+	require('views/article-liste.phtml');
 }
 
 ?>

@@ -4,6 +4,9 @@
 	$db = new PDO("mysql:dbname=filrouge;host=127.0.0.1", 'root', 'troiswa');
 	$db->exec("SET CHARACTER SET utf8");
 	
+	if (isset($_GET['articleid'])){
+		$articleid = $_GET['articleid'];
+	}
 	if (isset($_GET['sujetid'])){
 		$sujetid = $_GET['sujetid'];
 	}
