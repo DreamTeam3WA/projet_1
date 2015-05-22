@@ -10,8 +10,7 @@
 
 		header('Location: index.php?page=home');	
 	}
-	
-<<<<<<< HEAD
+
 if (isset($_GET['ajax']))
 {
 	$page = $_GET['ajax'];
@@ -20,12 +19,9 @@ if (isset($_GET['ajax']))
 else
 {
 
-	if (isset($_GET['articleid'])){
-		$articleid = $_GET['articleid'];
-=======
 	if (isset($_GET['id_article'])){
 		$id_article = $_GET['id_article'];
->>>>>>> 8c07e1d27732403ddab9c12a9da3e4b5630b051e
+
 	}
 	if (isset($_GET['id_sujet'])){
 		$id_sujet = $_GET['id_sujet'];
