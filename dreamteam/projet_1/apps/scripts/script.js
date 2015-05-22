@@ -80,6 +80,31 @@ $('document').ready(function()
 	setInterval(function scrollTchat(){
 		$('.tchat-content').scrollTop(5000)},100);
 	
+// ---------------------------------------------------------
+//                      AJAX
+// ---------------------------------------------------------
+
+	$('#tchat').submit(function(info)
+		{
+			info.preventDefault();
+			$message = $(this).find('#tchat_message').val();
+			$.post($(this).attr('action'),{"message":$message}); 
+			// function(data)
+			// {
+			// 	$('body').html(data);
+			// });
+			$('#tchat_message').val(' ');
+			return false;
+		});
+
+	setInterval(function()
+	{
+		$.get('index.php?ajax=tchat-liste',function(data)
+			{
+				$('#tchat-content').html(data);
+			});
+	},500);
+
 });
 
 /*
@@ -112,3 +137,6 @@ $('document').ready(function()
 // 	$('.test').scrollTop($('.chat-content').outerHeight);
 // },1200);
 // });
+
+
+
