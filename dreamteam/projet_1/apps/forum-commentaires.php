@@ -1,5 +1,5 @@
 <?php 
-	$tab = $db->query("SELECT * FROM commentaires WHERE id_forum=$sujetid ORDER BY id")->fetchAll(PDO::FETCH_ASSOC);
+	$tab = $db->query("SELECT * FROM commentaires WHERE id_forum=$id_sujet ORDER BY id")->fetchAll(PDO::FETCH_ASSOC);
 
 
 foreach ($tab as $tab2) {

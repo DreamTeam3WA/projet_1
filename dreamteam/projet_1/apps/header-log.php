@@ -1,8 +1,8 @@
 <?php
 
 if($_SESSION!= null){
-	$id = $_SESSION['id'];
-	$tab = $db->query("SELECT * FROM user WHERE id = '$id'")->fetchAll(PDO::FETCH_ASSOC);
+	$id_user = $_SESSION['id'];
+	$tab = $db->query("SELECT * FROM user WHERE id = '$id_user'")->fetchAll(PDO::FETCH_ASSOC);
 	$user = $tab[0]['login'];
 	if(isset($tab[0]['droits']) && $tab[0]['droits'] == 1)
 	{

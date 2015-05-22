@@ -1,8 +1,6 @@
 <button class="cliqueSupprArticle lienbutton">Supprimer un article</button>
-<form method="POST" action="index.php?page=article" class="supprArticle notvisibleart">
 		<div class="fermer"> X </div>
 		<p>Suppression d'un article</p>
 		<p>Voulez-vous supprimer cette article ?</p>
-		<button type="submit">OUI</button>
+		<a href="index.php?page=article-suppr&id_article=<?=$id_article?>">OUI</a>
 		<button type="submit">NON</button>
-	</form>

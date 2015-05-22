@@ -8,5 +8,5 @@
 	$req = substr($req,0,-2);
 	$db-> exec("INSERT INTO forum $req");
 
-	require('views/sujet-ok.phtml');
+	require('views/forum-base.phtml');
 ?>

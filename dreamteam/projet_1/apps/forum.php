@@ -1,5 +1,5 @@
 <?php
-	if(isset($sujetid)){
+	if(isset($id_sujet)){
 		require('apps/forum-sujet.php');
 	}
 	else {
