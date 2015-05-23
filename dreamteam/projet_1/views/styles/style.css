@@ -56,7 +56,7 @@ h1{
 /*----------------------
 HEADER SIGN IN/UP-------*/
 
-.header .inscr, .header .log, .modifArticle, .supprArticle {
+.header .inscr, .header .log, .modifArticle, .supprArticle, .modifProfil, .supprProfil {
 	display: none;
 	padding: 20px;
 	margin: 10px 0;
@@ -97,19 +97,19 @@ HEADER SIGN IN/UP-------*/
 	text-align: right;
 	padding-right: 5px;
 }
-.header .inscr p, .header .log p, .article p, .modifArticle p, .supprArticle p, .administration-admin p{
+.header .inscr p, .header .log p, .article p, .modifArticle p, .supprArticle p, .administration-admin p, .modifProfil p, .supprProfil p{
 	font-weight: bold;
 	font-size: 20px;
 	color: white;
 	text-transform: uppercase;
 }
 
-.header .inscr label, .header .log label, .article label, .modifArticle label, .supprArticle label, .administration-admin label {
+.header .inscr label, .header .log label, .article label, .modifArticle label, .supprArticle label, .administration-admin label, .modifProfil label{
 	display: block;
 	font-size: 15px;
 }
 
-.header .inscr button, .header .log button, .article button, .modifArticle button, .supprArticle button, .administration-admin button {
+.header .inscr button, .header .log button, .article button, .modifArticle button, .supprArticle button, .administration-admin button, .modifProfil button, .supprProfil button  {
 	display: block;
 	font-size: 14px;
 	margin: 10px auto;
@@ -120,7 +120,7 @@ HEADER SIGN IN/UP-------*/
     border: none;
 }
 
-.header .inscr input, .header .log input,.article input, .modifArticle input, .supprArticle input, .administration-admin input {
+.header .inscr input, .header .log input,.article input, .modifArticle input, .supprArticle input, .administration-admin input, .modifProfil input{
 	margin: 10px 0;
 	padding: 7px;
 	background: #F8F8F8;
