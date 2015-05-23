@@ -547,7 +547,7 @@ TCHAT----------------*/
 	cursor: pointer;
 }
 
-.tchat textarea{
+#tchat_message{
 	max-height: 50px;
 	width: 100%;
 	resize: none;
@@ -561,6 +561,7 @@ TCHAT----------------*/
 	font-size: 12px;
 	font-style: italic;
 	overflow: hidden;
+	line-height: 20px;
 }
 .tchat-content {
 	height:  350px;
