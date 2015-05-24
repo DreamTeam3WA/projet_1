@@ -1,14 +1,16 @@
 
 <div class="userProfil">
-	<div class="article">
 	<h3>INFOS</h3>
+	<div class="floatLeftProfil">
 		<img src="<?=$avatar?>" alt="">
-		<p>Pseudo : <?=$login?></p>
-		<p>Adresse email : <?=$email?></p>
-		<p>Membre depuis : <?=$date_register?></p>
-		<p>Nom : <?=$nom?></p>
-		<p>Prenom : <?=$prenom?></p>
-		<p>Date de naissance : <?=$date_naissance?></p>
-		<p>Nombre de sujets crées : <?=$nbr_sujets?></p>
+		<p><span class="bold">Pseudo : </span><?=$login?></p>
+		<p><span class="bold">Adresse email : </span><?=$email?></p>
+		<p><span class="bold">Membre depuis : </span><?=$date_register?></p>
+	</div>
+	<div class="floatRightProfil">
+		<p><span class="bold">Nom : </span><?=$nom?></p>
+		<p><span class="bold">Prenom : </span><?=$prenom?></p>
+		<p><span class="bold">Date de naissance : </span><?=$date_naissance?></p>
+		<p><span class="bold">Nombre de sujets crées : </span><?=$nbr_sujets?></p>
 	</div>
 </div>

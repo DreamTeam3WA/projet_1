@@ -1,6 +1,7 @@
 <?php
 if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifProfil")
 {
+	
 	$req = "";
 	$exclude_key = array("action");
 	foreach($_POST as $key => $val)

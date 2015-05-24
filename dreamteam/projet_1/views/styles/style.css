@@ -290,12 +290,38 @@ HOME - ARTICLE----------------*/
 
 
 
+/*----------------------
+PROFIL-----------------*/
 
+.userProfil {
+	padding: 20px;
+	margin: 10px 0;
+	background: #A9ACCC;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+.userProfil h3 {
+	font-size: 40px;
+}
 
+.userProfil img {
+	height: 300px;
+	width: 300px;
+}
+.userProfil .floatLeftProfil {
+	float: left;
+	width: 50%;
+}
 
+.userProfil .floatRightProfil {
+	float: right;
+	width: 50%;
+}
 
-
-
+.userProfil .bold  {
+	font-weight: bold;
+}
 
 
 /*----------------------

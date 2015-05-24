@@ -1,5 +1,5 @@
 <?php
-$tab = $db->query("SELECT * FROM user WHERE id= '$id_user'")->fetchAll(PDO::FETCH_ASSOC);
+$tab = $db->query("SELECT user.*, COUNT(forum.id_user) as NbrSujets FROM user JOIN forum ON user.id = forum.id_user WHERE user.id= '$id_user'")->fetchAll(PDO::FETCH_ASSOC);
 	
 	$login = $tab[0]['login'];
 	$email = $tab[0]['email'];
@@ -9,6 +9,7 @@ $tab = $db->query("SELECT * FROM user WHERE id= '$id_user'")->fetchAll(PDO::FETC
 	$date_naissance = $tab[0]['date_naissance'];
 	$nbr_sujets = $tab[0]['nbr_sujets'];
 	$avatar = $tab[0]['avatar'];
+	$nbr_sujets= $tab[0]['NbrSujets'];
 
 if (empty($nom) == true ) {
 	$nom = 'Pas renseigné';
