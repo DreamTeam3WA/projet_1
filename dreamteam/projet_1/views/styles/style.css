@@ -637,18 +637,44 @@ LIVRE D'OR-------*/
 
 .wrapperldotxt
 {
-	width:90%;
+	width:100%;
+	float: left;
 	margin: 0 auto;
 	text-align: center;
 	padding: 20px 10px;
 }
+.formldo
+{
+	display: none;
+}
+.addldo:hover{
+	cursor: pointer;
+}
+
+.addldo
+{
+	width: 75px;
+	margin:10px auto;
+	font-size: 50px;
+	color:#fff;
+	font-weight: bold;
+	background-color: #F5A916;
+	border-radius: 50%;
+}
 
 .wrapperldotxt > h2
 {
-	color:#F8C636;
+	color: #fff;
 	font-size: 50px;
-	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	text-align: center;
+	  
+	margin: 10px 0 0;
 }
+
+
 
 .boutonldo
 {
