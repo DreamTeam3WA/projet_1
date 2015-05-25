@@ -84,7 +84,7 @@ HEADER SIGN IN/UP-------*/
 	font-size: 12px;
 }
 .lienbutton {
-	font-size: 14px;
+	font-size: 12px;
 	margin: 10px 4px;
 	padding: 5px 10px;
 	color: #FFF;
@@ -804,7 +804,7 @@ MEDIA QUERIES------*/
 /*-------------------
 SMALL DESKTOP------*/
 
-@media screen and (max-width:991px){
+@media screen and (max-width:875px){
 
 .nav_top .row .col-sm-6 {
 	font-size: 10px;
@@ -821,6 +821,15 @@ SMALL DESKTOP------*/
 .nav_top li:last-child a:after {
 	content: "";
 }
+.lienbutton {
+	font-size: 11px;
+	margin: 10px 2px;
+	padding: 2px 5px;
+    border-radius: 3px;
+}
+.lienbutton:hover {
+    padding: 2px 5px;
+}
 
 /*-------------------
 TABLETTE------*/
@@ -835,11 +844,6 @@ TABLETTE------*/
 }
 .nav_top li a {
 	font-size: 10px;
-}
-.lienbutton {
-    font-size: 12px;
-    margin: 10px 5px;
-    padding: 5px 10px;
 }
 .header .welcome {
 	padding-right: 5px;
@@ -865,6 +869,8 @@ PHONE Horizontal------*/
   	font-size: 30px;
   	margin: 0 8px;
 }
+.header .inscr p, .header .log p, .administration-admin p {
+	font-size: inherit;
 }
 .fermer {
     position: absolute;
@@ -874,6 +880,7 @@ PHONE Horizontal------*/
     width: 22px;
     font-size: 15px;
 }
+}
 
 /*-------------------
 PHONE------*/
@@ -881,15 +888,15 @@ PHONE------*/
 @media screen and (max-width:612px){
 
 h1 {
-	font-size: 30px !important;
+	font-size: 1.5em !important;
 }
 h2 {
 	font-size: 1.5em;
 }
 .header .imagelogo {
     margin: 0px 10px;
-    width: 48px;
-    height: 50px;
+    width: 20%;
+    height: 20%;
 }
 .nav_top .row .col-md-7 ul {
 	margin: 0;
@@ -911,15 +918,24 @@ h2 {
     padding: 5px 0;
     text-align: center;
 }
+.log input, .inscr input {
+	width: 90%;
+}
 .lienbutton {
-	font-size: 12px;
-	margin: 15px 1px;
-	padding: 2px 5px;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	background: #3A5369;
+	margin: 0px 1px;
+	padding: 4px 5px;
+	display: block;
+	border-radius: 0; 
 }
 .lienbutton:hover {
-	color: #fff;
+	color: #3A5369;
+	background: #fff;
 	text-decoration: none;
-	padding: 2px 5px;
+	padding: 4px 5px;
 }
 .art img {
     float: none;
