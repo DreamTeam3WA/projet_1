@@ -136,12 +136,14 @@ $('document').ready(function()
 			info.preventDefault();
 			$email = $(this).find('#contact-email').val();
 			$nom = $(this).find('#contact-nom').val();
+			$prenom = $(this).find('#contact-prenom').val();
 			$objet = $(this).find('#contact-objet').val();
 			$message = $(this).find('#contact-message').val();
 			$.post($(this).attr('action'),
 				{"message":$message ,
 				 "email":$email,
 				 "nom" : $nom,
+				 "prenom" : $prenom,
 				 "objet" :$objet
 				}); 
 

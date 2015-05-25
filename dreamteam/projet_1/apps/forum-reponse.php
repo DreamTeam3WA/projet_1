@@ -6,6 +6,7 @@
 	}
 	// $req .= "id_forum='".$sujetid."'";
 	$req = substr($req,0,-2);
+	/** Pascal : Pas sécurisé du tout bouhouhou **/
 	$db-> exec("INSERT INTO commentaires ".$req);
 
 	require('views/sujet-ok.phtml');

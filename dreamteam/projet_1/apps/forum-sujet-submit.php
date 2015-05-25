@@ -6,6 +6,7 @@
 	}
 
 	$req = substr($req,0,-2);
+	/** Pascal : Aucune sécurité, bouh **/
 	$db-> exec("INSERT INTO forum $req");
 
 	require('views/forum-base.phtml');
