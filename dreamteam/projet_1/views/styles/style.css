@@ -66,6 +66,12 @@ HEADER SIGN IN/UP-------*/
 	position: relative;
 }
 
+.header .imagelogo {
+	margin: 0 10px;
+	width: 65px;
+	height: 70px;
+}
+
 .article {
 	padding: 20px;
 	margin: 10px 0;
@@ -765,9 +771,6 @@ footer p {
 }
 .livredorlien {
 	color:#F8C636;
-}
-.flaticon-facebook29 {
-	font-size: 14px;
 }
 /* Nous contacter */
 
