@@ -878,6 +878,10 @@ TABLETTE------*/
 .header .welcome {
 	padding-right: 5px;
 }
+.log input, .inscr input, .article input, .article textarea {
+	width: 99%;
+	border-radius: 4px;
+}
 .bx-wrapper {
 	max-width: 100% !important;
 }
@@ -947,9 +951,6 @@ h2 {
 .header .welcome {
     padding: 5px 0;
     text-align: center;
-}
-.log input, .inscr input {
-	width: 90%;
 }
 .lienbutton {
 	font-size: 11px;
