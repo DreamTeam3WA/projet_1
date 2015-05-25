@@ -1,1 +1,0 @@
-ALTER TABLE `contact` ADD `prenom` VARCHAR( 128 ) NOT NULL AFTER `nom` ;

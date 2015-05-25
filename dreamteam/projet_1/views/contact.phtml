@@ -6,16 +6,20 @@
 			<p><i class="flaticon-telephone46"></i> Téléphone au 03 80 08 56 55</p>
 			<p><i class="flaticon-black218"></i> Mail : DreamTeam@gmail.com</p>
 			
-			<div class="divlogo3wa col-md-offset-4 col-md-4">
-				<img class="3wa" src="./views/images/logo3wa.png" alt="#">
-				<p class="dream">Dream</p>
-				<p class="team">Team</p>
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4 divlogo3wa">
+					<img class="3wa" src="./views/images/logo3wa.png" alt="#">
+					<p class="dream">Dream</p>
+					<p class="team">Team</p>
+				</div>
 			</div>
+			<div class="col-md-4"></div>
 		</div>
 		<div id="contact-content" class="col-md-6">	
 			<form action="index.php?ajax=contact-form" method="POST" id="contact-form" >
 				<div class="formcontact">
-					<label><span class="labeltxt" >Email :</span><input id="contact-email" class="inputstyle" type="text" name="email" placeholder="votre mail"></label>
+					<label><span class="labeltxt" >Email :</span><input id="contact-email" class="inputstyle" type="email" name="email" placeholder="votre mail"></label>
 				</div>
 				<div class="formcontact">
 					<label><span class="labeltxt">Nom :</span><input id="contact-nom" class="inputstyle" type="text" name="nom" placeholder="votre nom"></label>
