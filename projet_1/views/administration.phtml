@@ -1,0 +1,15 @@
+<div class="administration-admin">
+	<form method="POST" action="" class="modifAdmin notvisibleart">
+	<h3>Modification administration</h3>
+	<p>Changer role utilisateur pour :</p>
+	<select value="<?=$droits?>">
+  		<option value="1">SuperAdmin</option>
+  		<option value="2">Admin</option>
+  		<option value="3">User</option>
+	</select> 
+	<p>Description des roles :</p>
+	<p>Superadmin -> donne role + tout le reste</p>
+	<p>Admin/Modérateur -> créer article/forum /modifier/suppr + bannir user </p>
+	<p>Rédacteur -> créer article</p>
+	<button type="submit">MODIFIER</button>
+	</form>

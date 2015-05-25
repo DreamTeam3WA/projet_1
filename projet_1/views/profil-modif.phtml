@@ -1,0 +1,29 @@
+<button class="cliqueModifProfil lienbutton">Modifier profil</button> 
+<button class="cliqueSupprProfil lienbutton">Supprimer du Profil</button>
+<div class="supprProfil">
+		<div class="fermer"> X </div>
+		<h3>Suppression du profil</h3>
+		<p>Voulez-vous vraiment supprimer votre profil ? Vous ne pourrez plus revenir en arrière...</p>
+		<a class="lienbutton" href="index.php?page=profil-suppr">OUI</a>
+		<button class="nonPasSuppr lienbutton" type="submit">NON</button>
+</div>
+<div class="modifProfil">
+		<form method="POST" action="" class="modifProfil notvisibleart">
+			<div class="fermer"> X </div>
+			<h3>Mofidication du profil</h3>
+			<label for="avatar">URL de l'avatar :</label>
+			<input id="avatar" name="avatar" type="text" value="<?=$avatar?>">
+			<label for="pseudo">Pseudo :</label>
+			<input id="pseudo" name="login" type="text" value="<?=$login?>">
+			<label for="adresseemail">Email :</label>
+			<input id="adresseemail" name="email" type="text" value="<?=$email?>">
+			<label for="nom">Nom :</label>
+			<input id="nom" name="nom" type="text" value="<?=$nom?>">
+			<label for="prenom">Prenom :</label>
+			<input id="prenom" name="prenom" type="text" value="<?=$prenom?>">
+			<label for="datenaissance">Date de naissance :</label>
+			<input id="datenaissance" name="date_naissance" type="text" value="<?=$date_naissance?>">
+			<input type="hidden" value="modifProfil" name="action">
+			<button type="submit">MODIFIER</button>
+		</form>
+</div>
