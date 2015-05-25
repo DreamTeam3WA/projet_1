@@ -731,6 +731,96 @@ LIVRE D'OR-------*/
 
 
 /*----------------------
+CONTACT----------------*/
+
+.contactwrapper {
+	position:relative;
+}
+.divlogo3wa {
+	margin-top: 50px;
+}
+.3wa {
+	display:inline-block;
+	margin-left:40px;
+}
+.dream {
+	font-size: 16px !important;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0;
+ 	margin-top: 0;
+    position:absolute;
+    bottom:-22px;
+    left:20px;
+    color:white;
+    transform:rotate(18deg);
+}
+.team {
+	font-weight: bold;
+	font-size: 16px !important;
+	text-transform: uppercase;
+	color:white;
+	position:absolute;
+	bottom:-23px;
+	left:82px;
+	transform:rotate(-21deg);
+}
+
+.flati:before {
+	font-size:60px;
+}
+.col-gauche p {
+	margin-top:20px;
+	font-size: 20px;
+}
+.inputstyle {
+	width:100%;
+	display:inline-block;
+}
+
+.labeltxt {
+	display: block;	
+	vertical-align: top; 
+	width: 100%;
+}
+.formcontact label {
+	margin: 20px 0 0 0;
+	width: 100%;
+}
+
+.btn {
+	position:relative;
+	top:-1px;
+	background-color: #337ab7;
+	color:white;
+	margin-top:0px;
+	width : 100%;
+	margin: 0 auto 20px; 
+	border-radius: 0 0 5px 5px;
+	text-transform: uppercase;
+}
+.googlemap
+{
+		width:120%;
+		height:300px;
+		margin-left: -20px;
+}
+
+
+/*.contacter
+{
+	text-align: center;
+	color: #fff;
+}
+
+
+
+*/
+
+
+
+
+/*----------------------
 FOOTER----------------*/
 
 footer a:hover {
@@ -769,11 +859,11 @@ footer a:hover {
 	text-align: center;
 }
 
-.footer .social i:before{
+.footer .social i:before {
   	font-size: 50px;
   	margin: 0 15px;
 }
-.footer .social a{
+.footer .social a {
 	transition-property: color;
 	transition-duration: 0.5s;
 	color: #fff;
@@ -815,23 +905,6 @@ footer p {
 .livredorlien {
 	color:#F8C636;
 }
-/* Nous contacter */
-
-.contacter
-{
-	text-align: center;
-	color: #fff;
-}
-
-.googlemap
-{
-		width:120%;
-		height:300px;
-		margin-left: -20px;
-}
-
-
-
 
 
 
