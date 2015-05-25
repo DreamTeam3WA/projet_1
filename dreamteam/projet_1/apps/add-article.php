@@ -1,5 +1,6 @@
 <?php
-
+if(isset($tab[0]['droits']) && $tab[0]['droits'] == 1 || $tab[0]['droits'] == 2)
+{
 if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
 {
 	$req = "";
@@ -18,5 +19,9 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
 }
 
 	require('./views/add-article.phtml');
+}
+else {
+	require('./views/home.phtml');
+}
 ?>
 
