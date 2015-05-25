@@ -609,6 +609,7 @@ TCHAT----------------*/
 	color: #fff;
 	padding: 5px;
 	margin: 0;
+	word-wrap: break-word;
 }
 .tchat-wd p.tchat-impair {
 	text-align: right;
@@ -616,6 +617,9 @@ TCHAT----------------*/
 }
 .tchat-wd p.tchat-pair {
 	padding-right: 35px;
+}
+.tchat-impair:first-letter, .tchat-pair:first-letter {
+	text-transform: uppercase;
 }
 
 
@@ -804,14 +808,14 @@ MEDIA QUERIES------*/
 /*-------------------
 SMALL DESKTOP------*/
 
-@media screen and (max-width:875px){
+@media screen and (max-width:1075px){
 
 .nav_top .row .col-sm-6 {
 	font-size: 10px;
 }
 .nav_top li a {
 	margin: 0px 0px;
-	font-size: 12px;
+	font-size: 10px;
 }
 .nav_top li a:after {
 	color: #fff;
@@ -840,7 +844,7 @@ TABLETTE------*/
 	text-align: center;
 }
 .nav_top .row .col-sm-6 {
-	text-align: right;
+	text-align: center;
 }
 .nav_top li a {
 	font-size: 10px;
@@ -885,7 +889,7 @@ PHONE Horizontal------*/
 /*-------------------
 PHONE------*/
 
-@media screen and (max-width:612px){
+@media screen and (max-width:360px){
 
 h1 {
 	font-size: 1.5em !important;
@@ -926,6 +930,7 @@ h2 {
 	font-weight: bold;
 	letter-spacing: 0.1em;
 	background: #3A5369;
+	width: 100%;
 	margin: 0px 1px;
 	padding: 4px 5px;
 	display: block;
