@@ -106,7 +106,8 @@ $('document').ready(function()
 		{
 			info.preventDefault();
 			$message = $(this).find('#tchat_message').val();
-			$.post($(this).attr('action'),{"message":$message}); 
+			$id_user = $(this).find('#id_user').val();
+			$.post($(this).attr('action'),{"message":$message , "id_user":$id_user}); 
 			// function(data)
 			// {
 			// 	$('body').html(data);

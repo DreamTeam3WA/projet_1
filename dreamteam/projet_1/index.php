@@ -18,7 +18,10 @@ if (isset($_GET['ajax']))
 }
 else
 {
-
+	if (isset($_GET['id_user'])){
+		$id_user = $_GET['id_user'];
+		
+	}
 	if (isset($_GET['id_article'])){
 		$id_article = $_GET['id_article'];
 

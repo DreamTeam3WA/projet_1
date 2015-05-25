@@ -1,7 +1,9 @@
 <?php
-
-if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
+if(isset($tab[0]['droits']) && $tab[0]['droits'] == 1)
 {
+if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifProfil")
+{
+	
 	$req = "";
 	$exclude_key = array("action");
 	foreach($_POST as $key => $val)
@@ -9,13 +11,17 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
 		if(!in_array($key, $exclude_key)){
 		$_POST[$key] = $db->quote($val);
 		$req .= $key."=".$_POST[$key].", ";
-	}
+		}
 	}
 
 	$req = substr($req,0,-2);
-	//var_dump($req);
-	$db->exec("INSERT INTO articles SET $req");
+	$db->exec("UPDATE user SET $req WHERE id='$id_user'");
 }
 
+
 	require('./views/administration.phtml');
+}
+else {
+	require('./views/home.phtml');
+}
 ?>

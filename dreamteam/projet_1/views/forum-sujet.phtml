@@ -2,7 +2,7 @@
 	<a href="index.php?page=forum" class="returnForumSujet">Retourner au forum</a> 
 	<div class="sujet">
 	<div class="entete">
-		<p class="col-md-2"><?=$user_pseudo?></p>
+		<p class="col-md-2"><a href="index.php?page=profil-user&id_user=<?=$id_user?>"><?=$user_pseudo?></a></p>
 		<p class="col-md-7"><?=$sujet?></p>
 		<p class="col-md-3 dateSujet"><?=$date?></p>
 	</div>
@@ -27,6 +27,7 @@
 			</div>
 			<button class="repondre" type="submit">Répondre</button>
 			<input type="hidden" value="<?= $id_sujet; ?>" name="id_forum">
+			<input type="hidden" value="<?=$_SESSION['id'];?>" name="id_user">
 		</form>
 	</div>
 <?php endif; ?>

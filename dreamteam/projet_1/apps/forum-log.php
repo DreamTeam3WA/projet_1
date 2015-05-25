@@ -1,5 +1,8 @@
 <?php
-
+/*
+$_SESSION ne sera jamais égal a null :)
+Au pire ça sera égal a un tableau vide !
+*/
 if($_SESSION!= null){
 	$id = $_SESSION['id'];
 	$tab = $db->query("SELECT * FROM user WHERE id = '$id'")->fetchAll(PDO::FETCH_ASSOC);
