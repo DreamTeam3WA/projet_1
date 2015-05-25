@@ -17,7 +17,7 @@ if($_SESSION!= null){
 	$user_id = $_SESSION['id'];
 	$tab = $db->query("SELECT * FROM user WHERE id = '$user_id'")->fetchAll(PDO::FETCH_ASSOC);
 	$user = $tab[0]['login'];
-	if(isset($tab[0]['droits']) && ($tab[0]['droits'] == 1 || $tab[0]['droits'] == 2))
+	if(isset($_SESSION['droits']) && (($_SESSION['droits'] == 1 || $_SESSION['droits'] == 2) || ($id_user==$_SESSION['id'])))
 	{
 		require('apps/forum-modif.php');
 		require('views/forum-suppr.phtml');
