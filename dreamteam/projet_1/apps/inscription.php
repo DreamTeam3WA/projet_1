@@ -1,11 +1,12 @@
 <?php 
-
+/** Pascal : $_POST existera toujours et sera "au pire" un tableau vide **/
 if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
 
 
 	// $_POST['login'] => champ input de name login
 	// $db->quote(...) => permet de protéger les strings (en rajoutant des quotes avant et apres)
 	// ici je créé des variables qui préparent les informations à envoyer dans la future requète...
+	/** Pascal : Par contre là il faut faire un isset($_POST['login']) etc... **/
 	$login = $db->quote($_POST['login']);
 	$email = $db->quote($_POST['email']);
 	$date_naissance = $_POST['date_naissance'];
@@ -81,6 +82,7 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
 				$req = substr($req,0,-2);
 
 				// j'exécute mon insertion pour ajouter l'utilisateur
+				/** Pascal : Pas du tout sécurisé :o **/
 				$db-> exec("INSERT INTO user $req");
 				
 				require('views/inscription-ok.phtml');

@@ -1,4 +1,5 @@
 <?php
+/** Pascal : $_POST existera toujours et sera "au pire" un tableau vide **/
 if (isset($_POST))
 {
 	$req = "";
@@ -10,6 +11,7 @@ if (isset($_POST))
 
 	$req = substr($req,0,-2);
 	// var_dump($req);
+	/** Pascal : Pas du tout bien niveau sécurité :o **/
 	$db->exec("INSERT INTO livredor SET $req");
 }
 	require('./views/livredor.phtml');

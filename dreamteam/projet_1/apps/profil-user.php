@@ -1,5 +1,7 @@
 <?php
+/** Pascal : Et si $_GET['id_user'] n'est pas set ? ça bug :) **/
 $id_user = $_GET['id_user'];
+/** Pascal : CONCATENATION /!\ /!\ **/
 $tab = $db->query("SELECT user.*, COUNT(forum.id_user) as NbrSujets FROM user JOIN forum ON user.id = forum.id_user WHERE user.id= '$id_user'")->fetchAll(PDO::FETCH_ASSOC);
 	
 	$login = $tab[0]['login'];

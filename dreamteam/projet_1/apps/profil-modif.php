@@ -1,4 +1,5 @@
 <?php
+/** Pascal : $_POST sera tjs défini, comme un tableau vide **/
 if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifProfil")
 {
 	
@@ -13,6 +14,7 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifProfil")
 	}
 
 	$req = substr($req,0,-2);
+	/** Pascal : Très dangereux niveau sécurité + CONCATENATION BORDEL !!!! **/
 	$db->exec("UPDATE user SET $req WHERE id='$id_user'");
 }
 

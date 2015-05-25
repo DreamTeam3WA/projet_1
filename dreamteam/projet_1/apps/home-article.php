@@ -1,6 +1,6 @@
  <?php
 $tab = $db->query("SELECT * FROM articles ORDER BY id DESC ")->fetchAll(PDO::FETCH_ASSOC);
-
+/** Pascal : Et si y'a moins de deux articles ? **/
 $i=0;
 while ($i<2){
 	$titre = $tab[$i]['titre'];

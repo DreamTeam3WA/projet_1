@@ -1,5 +1,5 @@
 <?php 
-
+/** Pascal : Vous avez oublié le isset attention ! **/
 $login = $_POST;
 $user = $login['user'];
 $pass = $login['pass'];

@@ -1,4 +1,5 @@
 <?php 
+/** Pascal : CONCATENATION §§§§§§§ **/
 	$tab = $db->query("SELECT commentaires.*, user.login
 	 FROM commentaires 
 	JOIN user ON user.id=commentaires.id_user
