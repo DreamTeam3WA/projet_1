@@ -18,6 +18,7 @@ if (isset($_GET['ajax']))
 }
 else
 {
+	/** Pascal : Faire attention avec ça, ça peut être dangereux pour la suite (sécurité) **/
 	if (isset($_GET['id_user'])){
 		$id_user = $_GET['id_user'];
 		
