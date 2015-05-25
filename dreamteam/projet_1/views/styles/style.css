@@ -51,6 +51,7 @@ h1{
 }
 .nav_top .row .login {
 	text-align: right;
+	padding-top: 8px;
 }
 
 /*----------------------
@@ -63,6 +64,12 @@ HEADER SIGN IN/UP-------*/
 	background: #A9ACCC;
 	text-align: center;
 	position: relative;
+}
+
+.header .imagelogo {
+	margin: 0 10px;
+	width: 65px;
+	height: 70px;
 }
 
 .article {
@@ -95,7 +102,11 @@ HEADER SIGN IN/UP-------*/
 	color: #fff;
 	font-size: 12px;
 	text-align: right;
-	padding-right: 5px;
+	padding: 5px 5px 0 0;
+}
+.header .welcome a {
+	color: #fff;
+	text-transform: uppercase;
 }
 .header .inscr p, .header .log p, .article p, .modifArticle p, .supprArticle p, .administration-admin p, .modifProfil p, .supprProfil p{
 	font-weight: bold;
@@ -711,6 +722,9 @@ footer a:hover {
  	color: white;
  	text-decoration: none;
 }
+.social {
+	text-align: center;
+}
 
 .footer .social i:before{
   	font-size: 50px;
@@ -758,9 +772,6 @@ footer p {
 .livredorlien {
 	color:#F8C636;
 }
-.flaticon-facebook29 {
-	font-size: 14px;
-}
 /* Nous contacter */
 
 .contacter
@@ -793,15 +804,23 @@ MEDIA QUERIES------*/
 /*-------------------
 SMALL DESKTOP------*/
 
-/*@media screen and (max-width:991px){
+@media screen and (max-width:991px){
 
 .nav_top .row .col-sm-6 {
 	font-size: 10px;
 }
 .nav_top li a {
 	margin: 0px 0px;
-	font-size: 14px;
-}*/
+	font-size: 12px;
+}
+.nav_top li a:after {
+	color: #fff;
+	content: "|";
+	margin-left: 5px;
+}
+.nav_top li:last-child a:after {
+	content: "";
+}
 
 /*-------------------
 TABLETTE------*/
@@ -812,8 +831,10 @@ TABLETTE------*/
 	text-align: center;
 }
 .nav_top .row .col-sm-6 {
-	text-align: center;
-
+	text-align: right;
+}
+.nav_top li a {
+	font-size: 10px;
 }
 .lienbutton {
     font-size: 12px;
@@ -821,7 +842,7 @@ TABLETTE------*/
     padding: 5px 10px;
 }
 .header .welcome {
-	padding-right: 20px;
+	padding-right: 5px;
 }
 .bx-wrapper {
 	max-width: 100% !important;
@@ -831,6 +852,28 @@ TABLETTE------*/
 	border-radius: 0px;
 }
 
+
+/*-------------------
+PHONE Horizontal------*/
+
+@media screen and (max-width:640px){
+
+.nav_top .row .col-sm-6{
+	text-align: center;
+}
+.footer .social i:before{
+  	font-size: 30px;
+  	margin: 0 8px;
+}
+}
+.fermer {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    height: 22px;
+    width: 22px;
+    font-size: 15px;
+}
 
 /*-------------------
 PHONE------*/
@@ -843,18 +886,25 @@ h1 {
 h2 {
 	font-size: 1.5em;
 }
-.nav_top .row .col-md-8 ul {
+.nav_top .row .col-md-7 ul {
 	margin: 0;
 }
-.nav_top .row .col-md-8 li {
+.nav_top .row .col-md-7 li {
 	display: block;
 }
-.nav_top .row .col-md-8 li:hover {
+.nav_top .row .col-md-7 li:hover {
 	background: #303F4D;
 }
 .nav_top li a {
     margin: 0;
     letter-spacing: 0.1em;
+}
+.nav_top li a:after {
+	content: "";
+}
+.header .welcome {
+    padding: 5px 0;
+    text-align: center;
 }
 .lienbutton {
 	font-size: 12px;
