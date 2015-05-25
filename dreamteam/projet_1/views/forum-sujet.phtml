@@ -27,6 +27,7 @@
 			</div>
 			<button class="repondre" type="submit">Répondre</button>
 			<input type="hidden" value="<?= $id_sujet; ?>" name="id_forum">
+			<input type="hidden" value="<?=$_SESSION['id'];?>" name="id_user">
 		</form>
 	</div>
 <?php endif; ?>
