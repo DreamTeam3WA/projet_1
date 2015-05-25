@@ -564,6 +564,9 @@ margin: 20px 0;
 height: 250px !important;
 }
 
+.modifCommentaire, .supprCommentaire {
+	display: none;
+}
 /*----------------------
 TCHAT----------------*/
 .tchat{

@@ -59,6 +59,12 @@ $('document').ready(function()
 		 $('.inscr').css('display','none');
 		 $('.supprArticle').css('display','none');
 	})
+	$('.cliqueModifCommentaire').click(function(){
+		$(this).next('.modifCommentaire').toggle(500);
+	})
+	$('.cliqueSupprCommentaire').click(function(){
+		$(this).next('.supprCommentaire').toggle(500);
+	})
 	$('.creerArticleSend').click(function(){
 		$('.article').css('display','none');
 	})
