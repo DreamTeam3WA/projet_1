@@ -27,6 +27,9 @@ else
 		$id_article = $_GET['id_article'];
 
 	}
+	if (isset($_GET['id_commentaire'])){
+		$id_commentaire = $_GET['id_commentaire'];
+	}
 	if (isset($_GET['id_sujet'])){
 		$id_sujet = $_GET['id_sujet'];
 	}

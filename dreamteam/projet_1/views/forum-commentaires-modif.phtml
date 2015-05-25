@@ -1,0 +1,13 @@
+<button class="cliqueModifArticle lienbutton">Modifier le commentaire</button>
+
+<form action="" method="POST">
+			<div class="clearfix"></div>
+			<div class="wrapper-mce clearfix">
+				<textarea name="description" class="mce" ></textarea>
+			</div>
+			<button class="repondre" type="submit">Répondre</button>
+			<input type="hidden" value="<?=$id_commentaire;?>" name="id">
+			<input type="hidden" value="<?=$_SESSION['id'];?>" name="id_user">
+			<input type="hidden" value="modifCommentaire" name="action">
+			<button class="creerSujet" type="submit">MODIFIER COMMENTAIRE</button>
+</form>

@@ -22,7 +22,4 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifSujet")
 
 	require('./views/forum-modif.phtml');
 }
-else{
-	require('./views/home.phtml');
-}
 ?>

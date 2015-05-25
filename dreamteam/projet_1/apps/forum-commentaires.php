@@ -7,12 +7,18 @@
 
 
 foreach ($tab as $tab2) {
+	$id_commentaire=$tab2['id'];
 	$id_user=$tab2['id_user'];
 	$user_pseudo = $tab2['login'];
 	$date = $tab2['date'];
 	$description = $tab2['description'];
-	
+	if(isset($_SESSION['droits']) && (($_SESSION['droits'] == 1 || $_SESSION['droits'] == 2) || ($id_user==$_SESSION['id'])))
+	{
+		require('apps/forum-commentaires-modif.php');
+		require('views/forum-commentaires-suppr.phtml');
+	}
+
 	require('views/forum-commentaires.phtml');
-}
+	}
 
  ?>
