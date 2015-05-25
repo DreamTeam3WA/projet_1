@@ -305,17 +305,22 @@ HOME - ARTICLE----------------*/
 PROFIL-----------------*/
 
 .userProfil {
+	font-size: 14px;
+	text-align: center;
 	padding: 20px;
 	margin: 10px 0;
 	background: #A9ACCC;
-	text-align: center;
 	position: relative;
 	overflow: hidden;
 }
 .userProfil h3 {
 	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
-
+.avatar {
+	margin-bottom: 20px;
+}
 .userProfil img {
 	height: auto;
 	width: 300px;
@@ -326,13 +331,18 @@ PROFIL-----------------*/
 }
 
 .userProfil .floatRightProfil {
+	text-align: left;
 	float: right;
 	width: 50%;
 }
 
-.userProfil .bold  {
+.userProfil .infos  {
 	font-weight: bold;
+	text-transform: uppercase;
 }
+
+
+
 
 
 /*----------------------
