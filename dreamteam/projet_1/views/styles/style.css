@@ -66,6 +66,12 @@ HEADER SIGN IN/UP-------*/
 	position: relative;
 }
 
+.header .imagelogo {
+	margin: 0 10px;
+	width: 65px;
+	height: 70px;
+}
+
 .article {
 	padding: 20px;
 	margin: 10px 0;
