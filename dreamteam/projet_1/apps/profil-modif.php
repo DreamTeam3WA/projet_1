@@ -18,4 +18,5 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifProfil")
 
 
 	require('./views/profil-modif.phtml');
+
 ?>
