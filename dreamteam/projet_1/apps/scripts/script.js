@@ -94,7 +94,10 @@ $('document').ready(function()
 	});
 	setInterval(function scrollTchat(){
 		$('.tchat-content').scrollTop(5000)},100);
-	
+
+	$('.addldo').click(function(){
+		 $( '.formldo' ).toggle(500);
+	});
 // ---------------------------------------------------------
 //                      AJAX
 // ---------------------------------------------------------
@@ -121,6 +124,31 @@ $('document').ready(function()
 			});
 	},500);
 
+
+	$('#contact-form').submit(function(info)
+		{
+			info.preventDefault();
+			$email = $(this).find('#contact-email').val();
+			$nom = $(this).find('#contact-nom').val();
+			$objet = $(this).find('#contact-objet').val();
+			$message = $(this).find('#contact-message').val();
+			$.post($(this).attr('action'),
+				{"message":$message ,
+				 "email":$email,
+				 "nom" : $nom,
+				 "objet" :$objet
+				}); 
+
+			$.get('index.php?ajax=contact-ok',function(data)
+			{
+				$('#contact-content').html(data);
+			});
+			// function(data)
+			// {
+			// 	$('body').html(data);
+			// });
+			return false;
+		});
 });
 
 /*

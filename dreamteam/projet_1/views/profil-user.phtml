@@ -1,16 +1,20 @@
 
 <div class="userProfil">
-	<h3>INFOS</h3>
-	<div class="floatLeftProfil">
-		<img src="<?=$avatar?>" alt="">
-		<p><span class="bold">Pseudo : </span><?=$login?></p>
-		<p><span class="bold">Adresse email : </span><?=$email?></p>
-		<p><span class="bold">Membre depuis : </span><?=$date_register?></p>
-	</div>
-	<div class="floatRightProfil">
-		<p><span class="bold">Nom : </span><?=$nom?></p>
-		<p><span class="bold">Prenom : </span><?=$prenom?></p>
-		<p><span class="bold">Date de naissance : </span><?=$date_naissance?></p>
-		<p><span class="bold">Nombre de sujets crées : </span><?=$nbr_sujets?></p>
-	</div>
+	<h3>Infos</h3>
+		<div class="row">
+			<!-- <div class="floatLeftProfil"> -->
+			<div class="col-sm-6 profilLeft">
+				<img src="<?=$avatar?>" alt="" class="avatar">
+				<p class="pseudo"><span class="infos">Pseudo : </span><br><?=$login?></p>
+				<p><span class="infos">Adresse email : </span><br><?=$email?></p>
+				<p><span class="infos">Membre depuis : </span><br><?=$date_register?></p>
+			</div>
+			<!-- <div class="floatRightProfil"> -->
+			<div class="col-sm-6 profilRight">
+				<p><span class="infos">Nom : </span><br><?=$nom?></p>
+				<p><span class="infos">Prenom : </span><br><?=$prenom?></p>
+				<p><span class="infos">Date de naissance : </span><br><?=$date_naissance?></p>
+				<p><span class="infos">Nombre de sujets crées : </span><br><?=$nbr_sujets?></p>
+			</div>
+		</div>
 </div>

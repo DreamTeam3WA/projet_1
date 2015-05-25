@@ -305,34 +305,47 @@ HOME - ARTICLE----------------*/
 PROFIL-----------------*/
 
 .userProfil {
+	font-size: 14px;
+	text-align: center;
 	padding: 20px;
 	margin: 10px 0;
-	background: #A9ACCC;
-	text-align: center;
+	background: #fff;
 	position: relative;
 	overflow: hidden;
 }
 .userProfil h3 {
 	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
 }
-
+.avatar {
+	margin-bottom: 20px;
+	max-width: 80%;
+	max-height: 80%;
+}
 .userProfil img {
 	height: auto;
 	width: 300px;
 }
-.userProfil .floatLeftProfil {
-	float: left;
-	width: 50%;
+.userProfil .pseudo {
+    background: linear-gradient(#F7F7F7, #D9D9D9);
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    padding: 5px 0;
 }
 
-.userProfil .floatRightProfil {
-	float: right;
-	width: 50%;
+.userProfil .profilRight {
+	text-align: left;
 }
 
-.userProfil .bold  {
+.userProfil .infos  {
 	font-weight: bold;
+	text-transform: uppercase;
 }
+}
+
+
+
 
 
 /*----------------------
@@ -609,6 +622,7 @@ TCHAT----------------*/
 	color: #fff;
 	padding: 5px;
 	margin: 0;
+	word-wrap: break-word;
 }
 .tchat-wd p.tchat-impair {
 	text-align: right;
@@ -616,6 +630,9 @@ TCHAT----------------*/
 }
 .tchat-wd p.tchat-pair {
 	padding-right: 35px;
+}
+.tchat-impair:first-letter, .tchat-pair:first-letter {
+	text-transform: uppercase;
 }
 
 
@@ -637,18 +654,44 @@ LIVRE D'OR-------*/
 
 .wrapperldotxt
 {
-	width:90%;
+	width:100%;
+	float: left;
 	margin: 0 auto;
 	text-align: center;
 	padding: 20px 10px;
 }
+.formldo
+{
+	display: none;
+}
+.addldo:hover{
+	cursor: pointer;
+}
+
+.addldo
+{
+	width: 75px;
+	margin:10px auto;
+	font-size: 50px;
+	color:#fff;
+	font-weight: bold;
+	background-color: #F5A916;
+	border-radius: 50%;
+}
 
 .wrapperldotxt > h2
 {
-	color:#F8C636;
+	color: #fff;
 	font-size: 50px;
-	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	text-align: center;
+	  
+	margin: 10px 0 0;
 }
+
+
 
 .boutonldo
 {
@@ -683,6 +726,96 @@ LIVRE D'OR-------*/
 
 
 
+
+
+
+
+/*----------------------
+CONTACT----------------*/
+
+.contactwrapper {
+	position:relative;
+}
+.divlogo3wa {
+	margin-top: 50px;
+}
+.3wa {
+	display:inline-block;
+	margin-left:40px;
+}
+.dream {
+	font-size: 16px !important;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0;
+ 	margin-top: 0;
+    position:absolute;
+    bottom:-22px;
+    left:20px;
+    color:white;
+    transform:rotate(18deg);
+}
+.team {
+	font-weight: bold;
+	font-size: 16px !important;
+	text-transform: uppercase;
+	color:white;
+	position:absolute;
+	bottom:-23px;
+	left:82px;
+	transform:rotate(-21deg);
+}
+
+.flati:before {
+	font-size:60px;
+}
+.col-gauche p {
+	margin-top:20px;
+	font-size: 20px;
+}
+.inputstyle {
+	width:100%;
+	display:inline-block;
+}
+
+.labeltxt {
+	display: block;	
+	vertical-align: top; 
+	width: 100%;
+}
+.formcontact label {
+	margin: 20px 0 0 0;
+	width: 100%;
+}
+
+.btn {
+	position:relative;
+	top:-1px;
+	background-color: #337ab7;
+	color:white;
+	margin-top:0px;
+	width : 100%;
+	margin: 0 auto 20px; 
+	border-radius: 0 0 5px 5px;
+	text-transform: uppercase;
+}
+.googlemap
+{
+		width:120%;
+		height:300px;
+		margin-left: -20px;
+}
+
+
+/*.contacter
+{
+	text-align: center;
+	color: #fff;
+}
+
+
+
+*/
 
 
 
@@ -726,11 +859,11 @@ footer a:hover {
 	text-align: center;
 }
 
-.footer .social i:before{
+.footer .social i:before {
   	font-size: 50px;
   	margin: 0 15px;
 }
-.footer .social a{
+.footer .social a {
 	transition-property: color;
 	transition-duration: 0.5s;
 	color: #fff;
@@ -772,23 +905,6 @@ footer p {
 .livredorlien {
 	color:#F8C636;
 }
-/* Nous contacter */
-
-.contacter
-{
-	text-align: center;
-	color: #fff;
-}
-
-.googlemap
-{
-		width:120%;
-		height:300px;
-		margin-left: -20px;
-}
-
-
-
 
 
 
@@ -804,14 +920,14 @@ MEDIA QUERIES------*/
 /*-------------------
 SMALL DESKTOP------*/
 
-@media screen and (max-width:875px){
+@media screen and (max-width:1075px){
 
 .nav_top .row .col-sm-6 {
 	font-size: 10px;
 }
 .nav_top li a {
 	margin: 0px 0px;
-	font-size: 12px;
+	font-size: 10px;
 }
 .nav_top li a:after {
 	color: #fff;
@@ -840,7 +956,7 @@ TABLETTE------*/
 	text-align: center;
 }
 .nav_top .row .col-sm-6 {
-	text-align: right;
+	text-align: center;
 }
 .nav_top li a {
 	font-size: 10px;
@@ -848,10 +964,16 @@ TABLETTE------*/
 .header .welcome {
 	padding-right: 5px;
 }
+.log input, .inscr input, .article input, .article textarea {
+	width: 99%;
+	border-radius: 4px;
+}
 .bx-wrapper {
 	max-width: 100% !important;
 }
-
+.userProfil .profilRight {
+	text-align: center;
+}
 .footer li:hover{ 
 	border-radius: 0px;
 }
@@ -885,7 +1007,7 @@ PHONE Horizontal------*/
 /*-------------------
 PHONE------*/
 
-@media screen and (max-width:612px){
+@media screen and (max-width:360px){
 
 h1 {
 	font-size: 1.5em !important;
@@ -918,14 +1040,12 @@ h2 {
     padding: 5px 0;
     text-align: center;
 }
-.log input, .inscr input {
-	width: 90%;
-}
 .lienbutton {
 	font-size: 11px;
 	font-weight: bold;
 	letter-spacing: 0.1em;
 	background: #3A5369;
+	width: 100%;
 	margin: 0px 1px;
 	padding: 4px 5px;
 	display: block;
