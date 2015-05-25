@@ -317,7 +317,7 @@ PROFIL-----------------*/
 }
 
 .userProfil img {
-	height: 300px;
+	height: auto;
 	width: 300px;
 }
 .userProfil .floatLeftProfil {
