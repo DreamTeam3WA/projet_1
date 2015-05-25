@@ -8,6 +8,7 @@ $('document').ready(function()
 		 $('.article').css('display','none');
 		 $('.modifArticle').css('display','none');
 		 $('supprArticle').css('display','none');
+		 $('.administration-admin').css('display','none');
 	});
 
 	$('.header .signin, .log .fermer').click(function(){
@@ -16,14 +17,7 @@ $('document').ready(function()
 		 $('.article').css('display','none')
 		 $('.modifArticle').css('display','none');;
 		 $('supprArticle').css('display','none');
-	});
-
-	$('.header .newarticle, .article .fermer').click(function(){
-		$( ".article" ).toggle(500);
-		 $('.log').css('display','none');
-		 $('.inscr').css('display','none');
-		 $('.modifArticle').css('display','none');
-		 $('supprArticle').css('display','none');
+		 $('.administration-admin').css('display','none');
 	});
 
 	$('.cliqueModifArticle, .modifArticle .fermer').click(function(){
@@ -31,16 +25,46 @@ $('document').ready(function()
 		$( '.article').css('display','none');
 		 $('.log').css('display','none');
 		 $('.inscr').css('display','none');
-		 $('supprArticle').css('display','none');
+		 $('.supprArticle').css('display','none');
+		 $('.administration-admin').css('display','none');
 	})
 	$('.cliqueSupprArticle, .supprArticle .fermer').click(function(){
 		$('.supprArticle').toggle(500);
+		$( '.article').css('display','none');
 		$('.modifArticle').css('display','none');
 		$( '.article').css('display','none');
 		 $('.log').css('display','none');
 		 $('.inscr').css('display','none');
+		 $('.administration-admin').css('display','none');
 	})
-
+	$('.cliqueModifProfil, .modifProfil .fermer').click(function(){
+		$('.modifProfil').toggle(500);
+		$( '.supprProfil').css('display','none');
+		$( '.article').css('display','none');
+		 $('supprArticle').css('display','none');
+		 $('.administration-admin').css('display','none');
+	})
+	$('.cliqueSupprProfil, .supprProfil .fermer').click(function(){
+		$('.supprProfil').toggle(500);
+		$( '.modifProfil').css('display','none');
+		$( '.article').css('display','none');
+		 $('supprArticle').css('display','none');
+		 $('.administration-admin').css('display','none');
+	})
+	$('.administration, .fermer').click(function(){
+		$('.administration-admin').toggle(500);
+		$('.modifArticle').css('display','none');
+		$( '.article').css('display','none');
+		 $('.log').css('display','none');
+		 $('.inscr').css('display','none');
+		 $('.supprArticle').css('display','none');
+	})
+	$('.creerArticleSend').click(function(){
+		$('.article').css('display','none');
+	})
+	$('.nonPasSuppr').click(function(){
+		$('.supprArticle').css('display','none');
+	})
 	$('.tchat h3').click(function(){
 		 $( "div.tchat-wd" ).toggle(500);
 	});
@@ -71,6 +95,31 @@ $('document').ready(function()
 	setInterval(function scrollTchat(){
 		$('.tchat-content').scrollTop(5000)},100);
 	
+// ---------------------------------------------------------
+//                      AJAX
+// ---------------------------------------------------------
+
+	$('#tchat').submit(function(info)
+		{
+			info.preventDefault();
+			$message = $(this).find('#tchat_message').val();
+			$.post($(this).attr('action'),{"message":$message}); 
+			// function(data)
+			// {
+			// 	$('body').html(data);
+			// });
+			$('#tchat_message').val(' ');
+			return false;
+		});
+
+	setInterval(function()
+	{
+		$.get('index.php?ajax=tchat-liste',function(data)
+			{
+				$('#tchat-content').html(data);
+			});
+	},500);
+
 });
 
 /*
@@ -103,3 +152,6 @@ $('document').ready(function()
 // 	$('.test').scrollTop($('.chat-content').outerHeight);
 // },1200);
 // });
+
+
+

@@ -1,4 +1,4 @@
-<div>
+<div class="contactwrapper">
 	<div class="col-md-12">
 		<h2>Nous contacter</h2>
 	</div>
@@ -6,14 +6,14 @@
 		
 		<p><i class="flaticon-telephone46"></i> Téléphone au 03 80 08 56 55</p>
 		<p><i class="flaticon-black218"></i> Mail : DreamTeam@gmail.com</p>
-		<a href="#"><i class="flaticon-facebook29 flati"></i></a>
-		<a href="#"><i class="flaticon-linkedin12 flati"></i></a>
-		<a href="#"><i class="flaticon-photos12 flati"></i></a>
-		<a href="#"><i class="flaticon-twitter2 flati"></i></a>
-		<div>
-			<img src="./views/images/logo3wa.png" alt="#">
-			<p class="dream">dream</p>
-			<p cmass="team">team</p>
+		<a href="#"><i class="flaticon-facebook29 flati col-md-3"></i></a>
+		<a href="#"><i class="flaticon-linkedin12 flati col-md-3"></i></a>
+		<a href="#"><i class="flaticon-photos12 flati col-md-3"></i></a>
+		<a href="#"><i class="flaticon-twitter2 flati col-md-3"></i></a>
+		<div class="divlogo3wa col-md-offset-4 col-md-4">
+			<img class="3wa" src="./views/images/logo3wa.png" alt="#">
+			<p class="dream">Dream</p>
+			<p class="team">Team</p>
 		</div>
 	</div>	
 	<form action="" method="post" class="col-md-6" >
@@ -37,11 +37,46 @@
 </div>
 
 <style>
-.dream{
-    -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
-    -webkit-transform: matrix(1, -0.3, 0, 1, 0, 0); /* Safari */
-    transform: matrix(1, -0.3, 0, 1, 0, 0);
+
+.contactwrapper
+{
+	position:relative;
 }
+.divlogo3wa
+{
+	margin-top: 20px;
+}
+
+.3wa
+{
+	display:inline-block;
+	margin-left:40px;
+
+}
+.dream{
+	font-size: 16px !important;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0;
+ 	margin-top: 0;
+    position:absolute;
+    bottom:-22px;
+    left:20px;
+    color:white;
+    transform:rotate(18deg);
+}
+.team
+{
+	font-weight: bold;
+	font-size: 16px !important;
+	text-transform: uppercase;
+	color:white;
+	position:absolute;
+	bottom:-23px;
+	left:82px;
+	transform:rotate(-21deg);
+}
+
 .flati:before
 {
 	font-size:60px;

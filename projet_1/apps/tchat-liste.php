@@ -3,7 +3,8 @@ $tab = $db->query("SELECT * FROM tchat")->fetchAll(PDO::FETCH_ASSOC);
 
 $i=0;
 while ($i<count($tab)){
-	$message = $tab[$i]['message'];
+
+	$message = strip_tags ($tab[$i]['message']);
 		if($i%2 == 0){
 			$class='tchat-pair';
 		}

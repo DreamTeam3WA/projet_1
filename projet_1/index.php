@@ -10,18 +10,27 @@
 
 		header('Location: index.php?page=home');	
 	}
-	
+
+if (isset($_GET['ajax']))
+{
+	$page = $_GET['ajax'];
+	require('apps/'.$page.'.php');
+}
+else
+{
+
 	if (isset($_GET['id_article'])){
 		$id_article = $_GET['id_article'];
+
 	}
 	if (isset($_GET['id_sujet'])){
 		$id_sujet = $_GET['id_sujet'];
 	}
-
 	$page = 'home';
 	if (isset($_GET['page'])){
 		$page = $_GET['page'];
 	}
 
 	require('./views/skel.phtml');
+}
 ?>

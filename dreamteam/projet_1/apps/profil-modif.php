@@ -1,7 +1,7 @@
 <?php
-
-if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifarticle")
+if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifProfil")
 {
+	
 	$req = "";
 	$exclude_key = array("action");
 	foreach($_POST as $key => $val)
@@ -13,8 +13,9 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifarticle"
 	}
 
 	$req = substr($req,0,-2);
-	$db->exec("UPDATE articles SET $req WHERE id='$id_article'");
+	$db->exec("UPDATE user SET $req WHERE id='$id_user'");
 }
 
-	require('./views/article-modif.phtml');
+
+	require('./views/profil-modif.phtml');
 ?>
