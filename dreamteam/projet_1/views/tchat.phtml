@@ -4,9 +4,8 @@
 			<?php //require('apps/tchat-liste.php'); ?>
 		</div>
 		<form id="tchat" method="POST" action="index.php?ajax=tchat-form">
-				<input name="tchat" id="tchat_message" placeholder="votre message">
-				<!-- <input type="submit" value="Send"> -->
-
+				<input name="message" id="tchat_message" placeholder="votre message">
+				<input type="hidden" value="<?= $_SESSION['id']; ?>" name="id_user" id="id_user">
 		</form>	
 	</div>
 	<h3>Tchat Room</h3>		
