@@ -4,10 +4,6 @@ $login = $_POST;
 $user = $login['user'];
 $pass = $login['pass'];
 
-echo $_POST['user'];
-
-echo $user." ".$pass;
-
 $tab = $db->query("SELECT * FROM user WHERE login = ".$db->quote($user))->fetchAll(PDO::FETCH_ASSOC);
 
 if ($tab !=null){
