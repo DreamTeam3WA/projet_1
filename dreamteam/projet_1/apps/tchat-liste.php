@@ -10,7 +10,7 @@ while ($i<count($tab)){
 
 	$message = strip_tags ($tab[$i]['message']);
 	$user = $tab[$i]['login'];
-		if($tab[$i]['user_id'] == $_SESSION['id']){
+		if($_SESSION!= null && $tab[$i]['user_id'] == $_SESSION['id']){
 			$class='tchat-impair';
 		}
 		else{

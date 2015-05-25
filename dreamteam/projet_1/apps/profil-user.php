@@ -1,4 +1,5 @@
 <?php
+$id_user = $_GET['id_user'];
 $tab = $db->query("SELECT user.*, COUNT(forum.id_user) as NbrSujets FROM user JOIN forum ON user.id = forum.id_user WHERE user.id= '$id_user'")->fetchAll(PDO::FETCH_ASSOC);
 	
 	$login = $tab[0]['login'];
@@ -20,8 +21,10 @@ if (empty($prenom) == true ) {
 if (empty($avatar) == true ) {
 	$avatar = 'http://www.google.fr/url?source=imglanding&ct=img&q=http://2.bp.blogspot.com/-omUBwmauN5o/UzVo2kr-NaI/AAAAAAAAAD0/lHpilGBoKoU/s1600/profileholder.gif&sa=X&ei=19hgVbCyF8T6UvjFgNAF&ved=0CAkQ8wc&usg=AFQjCNEjhQzaRNZcHzHLJHf7vq7CJAZDlw';
 }
-
-require('apps/profil-modif.php');
+if(isset($_SESSION['droits']) && (($_SESSION['droits'] == 1 || $_SESSION['droits'] == 2) || ($id_user==$_SESSION['id'])))
+{
+	require('apps/profil-modif.php');
+	
+}
 require('./views/profil-user.phtml');
-
 ?>

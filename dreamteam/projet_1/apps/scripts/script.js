@@ -94,7 +94,10 @@ $('document').ready(function()
 	});
 	setInterval(function scrollTchat(){
 		$('.tchat-content').scrollTop(5000)},100);
-	
+
+	$('.addldo').click(function(){
+		 $( '.formldo' ).toggle(500);
+	});
 // ---------------------------------------------------------
 //                      AJAX
 // ---------------------------------------------------------
