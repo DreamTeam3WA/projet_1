@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifarticle")
+if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifSujet")
 {
 	$req = "";
 	$exclude_key = array("action");
@@ -13,8 +13,8 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifarticle"
 	}
 
 	$req = substr($req,0,-2);
-	$db->exec("UPDATE articles SET $req WHERE id='$id_article'");
+	$db->exec("UPDATE forum SET $req WHERE id='$id_sujet'");
 }
 
-	require('./views/article-modif.phtml');
+	require('./views/forum-modif.phtml');
 ?>

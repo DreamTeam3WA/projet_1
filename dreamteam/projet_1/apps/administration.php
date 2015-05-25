@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifarticle")
+if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
 {
 	$req = "";
 	$exclude_key = array("action");
@@ -9,12 +9,13 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifarticle"
 		if(!in_array($key, $exclude_key)){
 		$_POST[$key] = $db->quote($val);
 		$req .= $key."=".$_POST[$key].", ";
-		}
+	}
 	}
 
 	$req = substr($req,0,-2);
-	$db->exec("UPDATE articles SET $req WHERE id='$id_article'");
+	//var_dump($req);
+	$db->exec("INSERT INTO articles SET $req");
 }
 
-	require('./views/article-modif.phtml');
+	require('./views/administration.phtml');
 ?>
