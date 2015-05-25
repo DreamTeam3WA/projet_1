@@ -51,6 +51,7 @@ h1{
 }
 .nav_top .row .login {
 	text-align: right;
+	padding-top: 8px;
 }
 
 /*----------------------
@@ -95,7 +96,11 @@ HEADER SIGN IN/UP-------*/
 	color: #fff;
 	font-size: 12px;
 	text-align: right;
-	padding-right: 5px;
+	padding: 5px 5px 0 0;
+}
+.header .welcome a {
+	color: #fff;
+	text-transform: uppercase;
 }
 .header .inscr p, .header .log p, .article p, .modifArticle p, .supprArticle p, .administration-admin p, .modifProfil p, .supprProfil p{
 	font-weight: bold;
