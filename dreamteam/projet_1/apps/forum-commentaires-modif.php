@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifSujet")
+if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifCommentaire")
 {
 	$req = "";
 	$exclude_key = array("action");
@@ -12,8 +12,9 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifSujet")
 	}
 
 	$req = substr($req,0,-2);
-	$db->exec("UPDATE forum SET $req WHERE id='$id_sujet'");
+	$db->exec("UPDATE commentaires SET $req WHERE id='$id_commentaire'");
 }
-
-	require('./views/forum-modif.phtml');
+else{
+	require('views/forum-commentaires-modif.phtml');
+}
 ?>
