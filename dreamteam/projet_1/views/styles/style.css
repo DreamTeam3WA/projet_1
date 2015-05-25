@@ -309,7 +309,7 @@ PROFIL-----------------*/
 	text-align: center;
 	padding: 20px;
 	margin: 10px 0;
-	background: #A9ACCC;
+	background: #fff;
 	position: relative;
 	overflow: hidden;
 }
@@ -320,25 +320,28 @@ PROFIL-----------------*/
 }
 .avatar {
 	margin-bottom: 20px;
+	max-width: 80%;
+	max-height: 80%;
 }
 .userProfil img {
 	height: auto;
 	width: 300px;
 }
-.userProfil .floatLeftProfil {
-	float: left;
-	width: 50%;
+.userProfil .pseudo {
+    background: linear-gradient(#F7F7F7, #D9D9D9);
+    border: 1px solid #E3E3E3;
+    border-radius: 4px;
+    padding: 5px 0;
 }
 
-.userProfil .floatRightProfil {
+.userProfil .profilRight {
 	text-align: left;
-	float: right;
-	width: 50%;
 }
 
 .userProfil .infos  {
 	font-weight: bold;
 	text-transform: uppercase;
+}
 }
 
 
@@ -895,7 +898,9 @@ TABLETTE------*/
 .bx-wrapper {
 	max-width: 100% !important;
 }
-
+.userProfil .profilRight {
+	text-align: center;
+}
 .footer li:hover{ 
 	border-radius: 0px;
 }
