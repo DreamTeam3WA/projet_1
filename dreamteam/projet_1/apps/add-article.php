@@ -12,7 +12,7 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
 		if(!in_array($key, $exclude_key)){
 		$_POST[$key] = $db->quote($val);
 		$req .= $key."=".$_POST[$key].", ";
-	}
+		}
 	}
 
 	$req = substr($req,0,-2);
