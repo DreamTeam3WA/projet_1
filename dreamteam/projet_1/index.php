@@ -3,7 +3,7 @@
 	
 	$db = new PDO("mysql:dbname=filrouge;host=127.0.0.1", 'root', 'troiswa');
 	$db->exec("SET CHARACTER SET utf8");
-
+	require('./apps/function.php');
 	if(isset($_GET['logout']) && $_GET['logout']==1){
 		$_SESSION = array();
 		session_destroy();

@@ -15,7 +15,7 @@ foreach ($tab as $tab2) {
 	
 
 	require('views/forum-commentaires.phtml');
-	if(isset($_SESSION['droits']) && (($_SESSION['droits'] == 1 || $_SESSION['droits'] == 2) || ($id_user==$_SESSION['id'])))
+	if (droits() == 1 || droits() == 2 || droits() == 4)
 	{
 		require('apps/forum-commentaires-modif.php');
 		require('views/forum-commentaires-suppr.phtml');

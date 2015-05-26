@@ -20,8 +20,8 @@ if($_SESSION!= null){
 	/** Pascal : CONCATENATION BAHHHHHHHHHHHHHHHHHHHHHHHHHHHH **/
 	$tab = $db->query("SELECT * FROM user WHERE id = '$user_id'")->fetchAll(PDO::FETCH_ASSOC);
 	/** Pascal : Qui vous dis que l'id en question existe ? **/
-	$user = $tab[0]['login'];
-	if(isset($_SESSION['droits']) && (($_SESSION['droits'] == 1 || $_SESSION['droits'] == 2) || ($id_user==$_SESSION['id'])))
+	$user = $_SESSION['login'];
+	if (droits() == 1 || droits() == 2 || droits() == 4)
 	{
 		require('apps/forum-modif.php');
 		require('views/forum-suppr.phtml');

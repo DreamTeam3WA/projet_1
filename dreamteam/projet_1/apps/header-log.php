@@ -5,12 +5,12 @@ if($_SESSION!= null){
 	/** Pascal : CONCATENATIONNNNNNNNNNNNNNN **/
 	$tab = $db->query("SELECT * FROM user WHERE id = '$id_user'")->fetchAll(PDO::FETCH_ASSOC);
 	/** Pascal : Et si l'user existe pas ? **/
-	$user = $tab[0]['login'];
-	if(isset($tab[0]['droits']) && $tab[0]['droits'] == 1)
+	$user = $_SESSION['login'];
+	if (droits() == 1)
 	{
 		require('views/header-super-admin.phtml');
 	}
-	if(isset($tab[0]['droits']) && $tab[0]['droits'] == 2)
+	if (droits() == 1 || droits() == 2)
 	{
 		require('views/header-admin.phtml');
 	}

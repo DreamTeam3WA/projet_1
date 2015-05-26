@@ -65,9 +65,7 @@ $('document').ready(function()
 	$('.cliqueSupprCommentaire').click(function(){
 		$(this).next('.supprCommentaire').toggle(500);
 	})
-	$('.creerArticleSend').click(function(){
-		$('.article').css('display','none');
-	})
+
 	$('.nonPasSuppr').click(function(){
 		$('.supprArticle').css('display','none');
 	})
@@ -157,6 +155,27 @@ $('document').ready(function()
 			// });
 			return false;
 		});
+	// $('#addArticle').submit(function(info)
+	// {
+	// 	info.preventDefault();
+	// 		$title = $(this).find('#title').val();
+	// 		$description = $(this).find('#description').val();
+	// 		$lien = $(this).find('#lien').val();
+	// 		$user = $(this).find('#user').val();
+	// 		$.post($(this).attr('action'),{"titre":$title , "description":$description, "titre":$title, "lien":$lien, "user":$user}); 
+	// 		// function(data)
+	// 		// {
+	// 		// 	$('body').html(data);
+	// 		// });
+	// 		$.get('index.php?ajax=article',function(data)
+	// 		{
+	// 			$('#art').html(data);
+	// 		});
+	// 		$('.creerArticleSend').click(function(){
+	// 		$('.addArticle').css('display','none');
+	// })
+	// 		return false;
+	// }
 });
 
 /*

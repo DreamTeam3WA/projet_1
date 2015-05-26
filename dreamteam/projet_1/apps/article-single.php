@@ -15,7 +15,7 @@ if($_SESSION!= null){
 	$tab = $db->query("SELECT * FROM user WHERE id = '$id_user'")->fetchAll(PDO::FETCH_ASSOC);
 	/** Pascal : $tab[0] existe tjs, tjs bisounours land ? **/
 	$user = $tab[0]['login'];
-	if(isset($tab[0]['droits']) && ($tab[0]['droits'] == 1 || $tab[0]['droits'] == 2))
+	if (droits() == 1 || droits() == 2)
 	{
 		require('apps/article-modif.php');
 		require('views/article-suppr.phtml');

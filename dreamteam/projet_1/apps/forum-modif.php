@@ -1,6 +1,6 @@
 <?php
 /** Pascal : D'abord vérifier que la case 0 de $tab existe avant de vérifier des cases dans $tab[0] **/
-if(isset($tab[0]['droits']) && $tab[0]['droits'] == 1 || $tab[0]['droits'] == 2)
+if (droits() == 1 || droits() == 2 || droits() == 4)
 {
 	/** Pascal : $_POST ne sera jamais égal a null, mais plutôt a un tableau vide **/
 if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifSujet")

@@ -9,8 +9,8 @@ if($_SESSION!= null){
 	/** Pascal : CONCATENATION BORDELLLLL **/
 	$tab = $db->query("SELECT * FROM user WHERE id = '$id'")->fetchAll(PDO::FETCH_ASSOC);
 	/** Pascal : Partir du principe que tab[0] existe c'est bien, mais on vit pas dans un monde de bisounours **/
-	$user = $tab[0]['login'];
-	if($tab[0]['droits'] == 1 || $tab[0]['droits'] == 2)
+	$user = $_SESSION['login'];
+	if (droits() == 1 || droits() == 2)
 	{
 		require('views/forum-admin.phtml');
 	}

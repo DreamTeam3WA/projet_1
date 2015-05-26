@@ -1,5 +1,5 @@
- <?php if(isset($_SESSION['id'])) ?>
-<form method="POST" action="" class="article notvisibleart ">
+
+<form method="POST" action="" class="article" id="addArticle" notvisibleart>
 		<p>Création d'un article</p>
 		<label for="title">Titre :</label>
 		<input id="title" name="titre" type="text" placeholder="Entrez votre titre">
@@ -8,7 +8,7 @@
 		<label for="lien">Source :</label>
 		<input id="lien" name="lien" type="text" placeholder="La source/lien">
 		<input type="hidden" value="addarticle" name="action">
-		<input type="hidden" value="<?=$_SESSION['login']?>" name="user">
+		<input type="hidden" value="<?=$_SESSION['login']?>" name="user" id="user">
 		<button class="creerArticleSend" type="submit">ENVOYER</button>
 </form>
 <?php require('./views/article.phtml'); ?>
