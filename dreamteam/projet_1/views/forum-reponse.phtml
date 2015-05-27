@@ -1,0 +1,12 @@
+<button class="buttonReponseCommentaire" type="submit">Répondre</button>
+	<div class="reponse-forum">
+		<form action="index.php?page=forum-reponse" method="POST">
+			<div class="clearfix"></div>
+			<div class="wrapper-mce clearfix">
+				<textarea name="description" class="mce" ></textarea>
+			</div>
+			<button class="repondre" type="submit">Répondre</button>
+			<input type="hidden" value="<?= $id_sujet; ?>" name="id_forum">
+			<input type="hidden" value="<?=$_SESSION['id'];?>" name="id_user">
+		</form>
+	</div>

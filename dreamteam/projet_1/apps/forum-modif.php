@@ -13,7 +13,6 @@ if (isset($_POST['action']) && $_POST['action']=="modifSujet"){
 		require('./views/erreur.phtml');
 		}
 }
-
 else if (droits() == 1 || droits() == 2 || $_SESSION['id']==$id_user ){
 	require('./views/forum-modif.phtml');
 }
