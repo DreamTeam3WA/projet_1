@@ -4,7 +4,7 @@ if (isset($_POST['action']) && $_POST['action']=="modifSujet"){
 			$sujet = $db->quote($_POST['sujet']);
 			$id_user = $db->quote($_SESSION['id']);
 			$description = $db->quote($_POST['description']);	
-			$db-> exec("UPDATE forum SET sujet=".$sujet.", id_user=".$id_user.", description=".$description."WHERE id=$id_sujet");
+			$db-> exec("UPDATE forum SET sujet=".$sujet.", id_user=".$id_user.", description=".$description."WHERE id=".$id_sujet);
 			require('./views/forum-base.phtml');
 	}
 

@@ -18,12 +18,6 @@ foreach ($tab as $tab2) {
 	$description = $tab2['description'];
 	$nbCommentaire = $tab2['nbCommentaire'];
 
-
-	$date_aff = ($tab2['date_commentaire']!="") ? $tab2['date_commentaire'] : $tab2['date_forum'];
-
-
-
-
 	if ($tab2['date_commentaire'] !=null){
 		$date= $tab2['date_commentaire'];
 	}
