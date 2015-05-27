@@ -10,8 +10,7 @@ while ($i<count($tab)){
 
 	$message = htmlentities($tab[$i]['message']);
 	$user = $tab[$i]['login'];
-	/** Pascal : $_SESSION ne sera jamais égal a null, mais plutôt a un tableau vide **/
-		if($_SESSION!= null && $tab[$i]['user_id'] == $_SESSION['id']){
+		if($_SESSION && $tab[$i]['user_id'] == $_SESSION['id']){
 			$class='tchat-impair';
 		}
 		else{
