@@ -23,7 +23,7 @@ if (empty($prenom) == true ) {
 if (empty($avatar) == true ) {
 	$avatar = 'http://www.google.fr/url?source=imglanding&ct=img&q=http://2.bp.blogspot.com/-omUBwmauN5o/UzVo2kr-NaI/AAAAAAAAAD0/lHpilGBoKoU/s1600/profileholder.gif&sa=X&ei=19hgVbCyF8T6UvjFgNAF&ved=0CAkQ8wc&usg=AFQjCNEjhQzaRNZcHzHLJHf7vq7CJAZDlw';
 }
-if (droits() == 1 || droits() == 2 || droits() == 4)
+if (droits() == 1 || droits() == 2 || $_SESSION['id']==$id_user)
 {
 	require('apps/profil-modif.php');
 	

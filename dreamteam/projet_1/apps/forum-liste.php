@@ -20,8 +20,8 @@ foreach ($tab as $tab2) {
 
 
 	$date_aff = ($tab2['date_commentaire']!="") ? $tab2['date_commentaire'] : $tab2['date_forum'];
-/** Pascal : Pas de echo dans les fichiers php :) **/
-	echo $date_aff."<br>";
+
+
 
 
 	if ($tab2['date_commentaire'] !=null){

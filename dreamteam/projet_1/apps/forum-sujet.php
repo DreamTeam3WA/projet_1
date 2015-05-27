@@ -13,15 +13,14 @@ WHERE forum.id= '$id_sujet'
 	$description = $tab[0]['description'];
 	$id_user = $tab[0]['id_user'];
 
-	
 /** Pascal : $_SESSION ne sera jamais égal a null, mais plutôt a un tableau vide **/
-if($_SESSION!= null){
+if($_SESSION){
 	$user_id = $_SESSION['id'];
 	/** Pascal : CONCATENATION BAHHHHHHHHHHHHHHHHHHHHHHHHHHHH **/
 	$tab = $db->query("SELECT * FROM user WHERE id = '$user_id'")->fetchAll(PDO::FETCH_ASSOC);
 	/** Pascal : Qui vous dis que l'id en question existe ? **/
 	$user = $_SESSION['login'];
-	if (droits() == 1 || droits() == 2 || droits() == 4)
+	if (droits() == 1 || droits() == 2 || $_SESSION['id']==$id_user)
 	{
 		require('apps/forum-modif.php');
 		require('views/forum-suppr.phtml');

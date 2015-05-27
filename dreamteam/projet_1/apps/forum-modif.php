@@ -1,25 +1,23 @@
 <?php
-/** Pascal : D'abord vérifier que la case 0 de $tab existe avant de vérifier des cases dans $tab[0] **/
-if (droits() == 1 || droits() == 2 || droits() == 4)
-{
-	/** Pascal : $_POST ne sera jamais égal a null, mais plutôt a un tableau vide **/
-if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifSujet")
-{
-	$req = "";
-	$exclude_key = array("action");
-	foreach($_POST as $key => $val)
-	{
-		if(!in_array($key, $exclude_key)){
-		$_POST[$key] = $db->quote($val);
-		$req .= $key."=".$_POST[$key].", ";
-		}
+if (isset($_POST['action']) && $_POST['action']=="modifSujet"){ 
+	if(isset($_POST['sujet']) && $_POST['sujet']!= NULL && isset($_POST['description']) && $_POST['description']!= NULL && isset($_SESSION['id']) && $_SESSION['id']!= NULL){
+			$sujet = $db->quote($_POST['sujet']);
+			$id_user = $db->quote($_SESSION['id']);
+			$description = $db->quote($_POST['description']);	
+			$db-> exec("UPDATE forum SET sujet=".$sujet.", id_user=".$id_user.", description=".$description."WHERE id=$id_sujet");
+			require('./views/forum-base.phtml');
 	}
 
-	$req = substr($req,0,-2);
-	/** Pascal : CONCATENATIONNNNNNNNNNNNNNNNNNNNN CCCHHHHHHHHHHHHHHHHHHH + securité **/
-	$db->exec("UPDATE forum SET $req WHERE id='$id_sujet'");
+	else {
+		$commentaire="Il n'y a pas de sujet ou de description !";
+		require('./views/erreur.phtml');
+		}
 }
 
+else if (droits() == 1 || droits() == 2 || $_SESSION['id']==$id_user ){
 	require('./views/forum-modif.phtml');
+}
+else {	
+	require('views/forum-base.phtml');
 }
 ?>

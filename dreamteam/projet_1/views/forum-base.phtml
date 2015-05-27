@@ -22,20 +22,7 @@
 	</div>
 	<div class="newsujetforum">
 		<button class="returnforum">Retourner sur le forum</button>
-
-
-		<form action="index.php?page=forum-sujet-submit" method="POST">
-			<div class="titrenewsujetforum">
-				<input name="sujet" type="text" class="titresujet" placeholder="Sujet" required>
-			</div>
-			<div class="clearfix"></div>
-
-			<div class="wrapper-mce clearfix">
-				<textarea name="description" class="mce" ></textarea>
-			</div>
-			<input type="hidden" value="<?=$_SESSION['id'];?>" name="id_user">
-			<button class="creerSujet" type="submit">CREER SUJET</button>
-		</form>
+		
 	</div>
 </div>
 <div>

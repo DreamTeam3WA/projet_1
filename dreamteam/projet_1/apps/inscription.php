@@ -5,7 +5,7 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action'] == "register"){
 	// $db->quote(...) => permet de protéger les strings (en rajoutant des quotes avant et apres)
 	// ici je créé des variables qui préparent les informations à envoyer dans la future requète...
 	/** Pascal : Par contre là il faut faire un isset($_POST['login']) etc... **/
-	if (isset($_POST['login']) && isset($_POST['password']) && isset($_POST['password2']) && isset($_POST['email']) && isset($_POST['date_naissance']) ){
+	if (isset($_POST['login']) && $_POST['login']!= NULL && isset($_POST['password']) && $_POST['password']!= NULL && isset($_POST['password2']) && $_POST['password2']!= NULL && isset($_POST['email']) && $_POST['email']!= NULL && isset($_POST['date_naissance']) && $_POST['date_naissance']!= NULL ){
 		$login = $db->quote($_POST['login']);
 		$email = $db->quote($_POST['email']);
 		$date_naissance = $_POST['date_naissance'];	

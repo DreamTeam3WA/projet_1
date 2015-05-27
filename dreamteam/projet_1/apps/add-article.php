@@ -1,25 +1,19 @@
 <?php
-/** Pascal : $tab[0] et les bisounours sont sur un bateau.... **/
-if (droits() == 1 || droits() == 2){
-	/** Pascal : $_POST ne sera jamais égal a null, mais plutôt a un tableau vide **/
-if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="addarticle")
-{
-	$req = "";
-	$exclude_key = array("action");
-	foreach($_POST as $key => $val)
-	{
-		if(!in_array($key, $exclude_key)){
-		$_POST[$key] = $db->quote($val);
-		$req .= $key."=".$_POST[$key].", ";
-		}
+if (isset($_POST['action']) && $_POST['action']=="addarticle"){ 
+	if(isset($_POST['titre']) && $_POST['titre']!= NULL && isset($_POST['description']) && $_POST['description']!= NULL && isset($_SESSION['login']) && $_SESSION['login']!= NULL){
+			$titre = $db->quote($_POST['titre']);
+			$user = $db->quote($_SESSION['login']);
+			$description = $db->quote($_POST['description']);	
+			$lien = $db->quote($_POST['lien']);
+			$db-> exec("INSERT INTO articles SET titre=".$titre.", lien=".$lien.", user=".$user.", description=".$description);
+			require('./views/article.phtml');
 	}
-
-	$req = substr($req,0,-2);
-	//var_dump($req);
-	/** Pascal : Sécurité **/
-	$db->exec("INSERT INTO articles SET $req");
+	else {
+		$commentaire="Il n'y a pas de titre ou de description !";
+		require('./views/erreur.phtml');
+		}
 }
-
+else if (droits() == 1 || droits() == 2){
 	require('./views/add-article.phtml');
 }
 else {

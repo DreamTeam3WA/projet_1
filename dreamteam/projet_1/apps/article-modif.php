@@ -1,25 +1,20 @@
 <?php
-/** Pascal : $tab[0] existe ? **/
+if (isset($_POST['action']) && $_POST['action']=="modifarticle"){ 
+	if(isset($_POST['titre']) && $_POST['titre']!= NULL && isset($_POST['description']) && $_POST['description']!= NULL && isset($_SESSION['login']) && $_SESSION['login']!= NULL){
+			$titre = $db->quote($_POST['titre']);
+			$user = $db->quote($_SESSION['login']);
+			$description = $db->quote($_POST['description']);	
+			$lien = $db->quote($_POST['lien']);
+			$db-> exec("UPDATE articles SET titre=".$titre.", lien=".$lien.", user=".$user.", description=".$description." WHERE id=$id_article");
+			require('./views/article.phtml');
+	}
+	else {
+		$commentaire="Il n'y a pas de titre ou de description !";
+		require('./views/erreur.phtml');
+		}
+}
 if (droits() == 1 || droits() == 2)
 {
-	/** Pascal : $_POST ne sera jamais égal a null, mais plutôt a un tableau vide **/
-if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifarticle")
-{
-	$req = "";
-	$exclude_key = array("action");
-	foreach($_POST as $key => $val)
-	{
-		if(!in_array($key, $exclude_key)){
-		$_POST[$key] = $db->quote($val);
-		$req .= $key."=".$_POST[$key].", ";
-		}
-	}
-
-	$req = substr($req,0,-2);
-	/** Pascal : Securité + CONCATENATION BORDELLLLLLLLL **/
-	$db->exec("UPDATE articles SET $req WHERE id='$id_article'");
-}
-
 	require('./views/article-modif.phtml');
 }
 else {
