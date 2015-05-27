@@ -13,4 +13,29 @@ if (isset($_POST) && isset($_POST['message']) && !empty($_POST['message']))
 	$db-> exec("INSERT INTO tchat ".$req);
 
 }
+
+// if (isset($_POST['message']) && !empty($_POST['message']))
+// {
+// 	print_r($message);
+// 	if (isset($_POST['message']) && $_POST['message']!= NULL && isset($_POST['id_user']) && $_POST['id_user']!= NULL) {
+// 			$message=$db->quote($_POST['message']);
+// 			$id_user=$db->quote($_POST['id_user']);
+// 			print_r($message);
+// 			print_r($_SESSION['id']);
+// 			print_r($id_user);
+// 			if ($_SESSION['id']==$id_user){
+// 				$db-> exec("INSERT INTO tchat SET message=".$message);	
+// 			}
+// 			else {
+// 				$commentaire= "Vous n'avez pas les droits !";
+// 				require('./views/erreur.phtml');
+// 			}
+// 	}
+// 	else {
+// 		$commentaire="Formulaire incomplet !";
+// 		require('./views/erreur.phtml');
+// 		}
+
+
+// }
 ?>
