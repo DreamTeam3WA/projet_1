@@ -1,4 +1,5 @@
 <?php
+if (droits() == 1 || droits() == 2 || droits() == 3){
 if (isset($_POST['action']) && $_POST['action']=="reponseCommentaire"){ 
 	if(isset($_POST['description']) && !empty($_POST['description']) && isset($_SESSION['id']) && !empty($_SESSION['id'])){
 			$id_user = $db->quote($_SESSION['id']);
@@ -13,10 +14,10 @@ if (isset($_POST['action']) && $_POST['action']=="reponseCommentaire"){
 		require('./views/erreur.phtml');
 		}
 }
-else if (droits() == 1 || droits() == 2 || droits() == 3){
 	require('./views/forum-reponse.phtml');
 }
 else {	
-	require('views/forum-base.phtml');
+	$commentaire="Vous n'avez pas les droits.";
+	require('views/erreur.phtml');
 }
 ?>
