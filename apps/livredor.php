@@ -12,7 +12,10 @@ if (isset($_POST["nomldo"]) && isset($_POST["titreldo"]) && isset($_POST["descri
 	}
 	else
 	{
-		
+	
+		header('Location: localhost/git/dreamteam/erreur/404.php');
+		exit();
+
 	}
 }
 require('./views/livredor.phtml');
