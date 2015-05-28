@@ -8,7 +8,8 @@
 		$_SESSION = array();
 		session_destroy();
 
-		header('Location: index.php?page=home');	
+		header('Location: index.php?page=home');
+		die();	
 	}
 
 if (isset($_GET['ajax']))
@@ -39,6 +40,11 @@ else
 	$page = 'home';
 	if (isset($_GET['page']) && !empty($_GET['page'])){
 		$page = $_GET['page'];
+	}
+	else {
+		$commentaire="Mauvaise page";
+		require('./views/erreur.phtml');
+		die();
 	}
 	require('./views/skel.phtml');
 }

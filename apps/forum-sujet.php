@@ -4,15 +4,23 @@ if (isset($id_sujet)){
 	$tab = $db->query("SELECT forum.*, user.login
 	FROM forum
 	JOIN user ON user.id=forum.id_user
-	WHERE forum.id= ".$id_sujet )->fetchAll(PDO::FETCH_ASSOC);
+	WHERE forum.id= ".$id_sujet )->fetch(PDO::FETCH_ASSOC);
+	if (isset($tab) && !empty($tab)) {
 
-		$id_sujet = $tab[0]['id'];
-		$user_pseudo = htmlentities($tab[0]['login']);
-		$sujet = htmlentities($tab[0]['sujet']);
-		$date = $tab[0]['date'];
+	
+		$id_sujet = $tab['id'];
+		$user_pseudo = htmlentities($tab['login']);
+		$sujet = htmlentities($tab['sujet']);
+		$date = $tab['date'];
 
-		$description = balise($tab[0]['description']);
-		$id_user = $tab[0]['id_user'];
+		$description = balise($tab['description']);
+		$id_user = $tab['id_user'];
+	}
+	else {
+	$commentaire="Sujet non trouvé. ";
+	require('./views/erreur.phtml');
+	die();
+	}
 }
 else {
 	$commentaire="Vous n'avez pas le droit d'accéder directement sans passer par la page d'accueil en haut à gauche, angle 180° à droite de là bas, en haut enfin tu vois ce que je veux dire non ?";

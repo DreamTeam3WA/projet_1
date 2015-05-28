@@ -14,6 +14,7 @@ $tab = $db->query("SELECT * FROM articles WHERE id=".$id_article)->fetch(PDO::FE
 	else {
 		$commentaire = "Erreur lecture base de données";
 		require('./views/erreur.phtml');
+		die();
 	}
 	
 	if (droits() == 1 || droits() == 2)
