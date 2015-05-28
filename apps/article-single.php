@@ -9,7 +9,7 @@ $tab = $db->query("SELECT * FROM articles WHERE id=".$id_article)->fetch(PDO::FE
 		$date = $tab['date'];
 		$user = $tab['user'];
 		$lien = htmlentities($tab['lien']);
-		$description = htmlentities($tab['description']);
+		$description = balise($tab['description']);
 	}
 	else {
 		$commentaire = "Erreur lecture base de données";

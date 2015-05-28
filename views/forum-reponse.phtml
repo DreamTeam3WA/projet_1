@@ -1,13 +1,13 @@
 <button class="buttonReponseCommentaire" type="submit">Répondre</button>
 	<div class="reponse-forum">
-		<form action="index.php?page=forum-reponse" method="POST">
+		<form action="index.php?ajax=forum-reponse" method="POST" id="reponse-form">
 			<div class="clearfix"></div>
 			<div class="wrapper-mce clearfix">
-				<textarea name="description" class="mce" ></textarea>
+				<textarea name="description" id="description-reponse" class="mce" ></textarea>
 			</div>
-			<button class="repondre" type="submit">Répondre</button>
-			<input type="hidden" value="<?= $id_sujet; ?>" name="id_forum">
-			<input type="hidden" value="reponseCommentaire" name="action">
+			<button class="repondre" type="submit">Envoyer le commentaire</button>
+			<input type="hidden" value="<?= $id_sujet; ?>" name="id_forum" id="id_forum-reponse">
+			<input type="hidden" value="reponseCommentaire" name="action" id="action-reponse">
 
 		</form>
 	</div>

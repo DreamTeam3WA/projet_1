@@ -15,7 +15,7 @@ foreach ($tab as $tab2) {
 	$id_sujet = $tab2['id'];
 	$sujet = htmlentities($tab2['sujet']);
 	$date = $tab2['date'];
-	$description = htmlentities($tab2['description']);
+	$description = balise($tab2['description']);
 	$nbCommentaire = $tab2['nbCommentaire'];
 
 	if ($tab2['date_commentaire'] !=null){

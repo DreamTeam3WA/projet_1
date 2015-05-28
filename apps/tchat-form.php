@@ -1,6 +1,5 @@
  <?php
-/** Pascal : Vérifier si : isset($_POST) est pas utile, vous devez vérifier ce qu'il y a a l'intérieur plutot **/ 
-var_dump($_POST);
+
 if (isset($_POST['message']) && !empty(trim($_POST['message']," \t\n\r\0\x0B")) && isset($_POST['id_user']) && !empty($_POST['id_user']))
 {
 	$message=$db->quote($_POST['message']);

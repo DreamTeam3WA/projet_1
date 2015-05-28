@@ -8,7 +8,7 @@ foreach ($tab as $key => $value) {
 	$date = $tab[$key]['date'];
 	$user = htmlentities($tab[$key]['user']);
 	$lien = htmlentities($tab[$key]['lien']);
-	$description = htmlentities($tab[$key]['description']);
+	$description = balise($tab[$key]['description']);
 	$id_article = $tab[$key]['id'];
 	require('views/article-liste.phtml');
 }

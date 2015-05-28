@@ -8,7 +8,7 @@ while ($i<2 && isset($tab[$i])){
 	$date = $tab[$i]['date'];
 	$user = htmlentities($tab[$i]['user']);
 	$lien = htmlentities($tab[$i]['lien']);
-	$description = htmlentities(substr($tab[$i]['description'], 0, 250));
+	$description = balise(substr($tab[$i]['description'], 0, 250));
 	$id_article = $tab[$i]['id'];
 	require('views/home-article.phtml');
 	$i++;

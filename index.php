@@ -13,6 +13,9 @@
 
 if (isset($_GET['ajax']))
 {
+	if (isset($_GET['id_sujet'])){
+		$id_sujet = $_GET['id_sujet'];
+	}
 	$page = $_GET['ajax'];
 	require('apps/'.$page.'.php');
 }
@@ -34,7 +37,7 @@ else
 		$id_sujet = $_GET['id_sujet'];
 	}
 	$page = 'home';
-	if (isset($_GET['page'])){
+	if (isset($_GET['page']) && !empty($_GET['page'])){
 		$page = $_GET['page'];
 	}
 	require('./views/skel.phtml');

@@ -73,11 +73,11 @@ $('document').ready(function()
 		 $( "div.tchat-wd" ).toggle(500);
 	});
 
-	$('.navforum .newsujet').click(function(){
-		$('.forum').css('display','none');
-		$('.sujetforum').css('display','none');
-		$('.newsujetforum').css('display','block');
-	});
+	// $('.navforum .newsujet').click(function(){
+	// 	$('.forum').css('display','none');
+	// 	$('.sujetforum').css('display','none');
+	// 	$('.newsujetforum').css('display','block');
+	// });
 
 	$('.sujetforum .newsujet').click(function(){
 		$('.forum').css('display','none');
@@ -127,7 +127,7 @@ $('document').ready(function()
 			{
 				$('#tchat-content').html(data);
 			});
-	},500);
+	},1000);
 
 
 	$('#contact-form').submit(function(info)
@@ -150,36 +150,34 @@ $('document').ready(function()
 			{
 				$('#contact-content').html(data);
 			});
-			// function(data)
-			// {
-			// 	$('body').html(data);
-			// });
+
+			return false;
+		});
+
+
+		$('#reponse-form').submit(function(info)
+		{
+			info.preventDefault();
+			$description = tinyMCE.get('description-reponse').getContent();
+			
+			$id_forum = $(this).find('#id_forum-reponse').val();
+			$action = $(this).find('#action-reponse').val();
+			$.post($(this).attr('action'),
+				{"description":$description ,
+				 "id_forum":$id_forum,
+				 "action":$action
+				}); 
+
+
+				void window.location.reload();
+
+
+
 			return false;
 		});
 });
 
-/*
-$('document').ready(function()
-{
-	$('.header .signin').click(function(){
-		$('.notvisiblein').css('display','none');
-		$('.notvisiblelog').css('display','block');
-		$('.notvisibleart').css('display','none');
-	});
 
-	$('.header .signup').click(function(){
-		$('.notvisiblelog').css('display','none');
-		$('.notvisiblein').css('display','block');
-		$('.notvisibleart').css('display','none');
-	});
-
-	$('.fermer').click(function(){
-		$('.notvisiblein').css('display','none');
-		$('.notvisiblelog').css('display','none');
-		$('.notvisibleart').css('display','none');
-	})
-});
-*/
 
 
 // SCROLL TCHAT-----------------------------------------

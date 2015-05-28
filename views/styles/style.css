@@ -398,7 +398,6 @@ font-weight: bold;
 border: none;
 border-radius: 5px;
 position: absolute;
-bottom: -3.2%;
 right: 0%;
 }
 .dateSujet {
@@ -442,8 +441,7 @@ color: white;
 font-weight: bold;
 border: none;
 border-radius: 5px;
-position: absolute;
-bottom: -2.5%;
+position: relative;
 right: 0%;
 }
 .creerSujet{
