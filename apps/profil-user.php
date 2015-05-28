@@ -2,14 +2,14 @@
 if (isset($id_user)) {
 	$tab = $db->query("SELECT user.*, COUNT(forum.id_user) as NbrSujets FROM user JOIN forum ON user.id = forum.id_user WHERE user.id= ".$id_user)->fetch(PDO::FETCH_ASSOC);
 		
-		$login = $tab['login'];
-		$email = $tab['email'];
+		$login = htmlentities($tab['login']);
+		$email = htmlentities($tab['email']);
 		$date_register = $tab['date_register'];
-		$nom = $tab['nom'];
-		$prenom = $tab['prenom'];
+		$nom = htmlentities($tab['nom']);
+		$prenom = htmlentities($tab['prenom']);
 		$date_naissance = $tab['date_naissance'];
 		$nbr_sujets = $tab['nbr_sujets'];
-		$avatar = $tab['avatar'];
+		$avatar = htmlentities($tab['avatar']);
 		$nbr_sujets= $tab['NbrSujets'];
 
 	if (empty($nom) == true ) {
