@@ -7,7 +7,7 @@
 foreach ($tab as $tab2) {
 	$id_commentaire=htmlentities($tab2['id']);
 	$id_user=$tab2['id_user'];
-	$user_pseudo = $tab2['login'];
+	$user_pseudo = htmlentities($tab2['login']);
 	$date = $tab2['date'];
 	$description = htmlentities($tab2['description']);
 

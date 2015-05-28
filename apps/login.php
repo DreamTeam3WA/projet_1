@@ -5,7 +5,7 @@ if (isset($_POST['user']) && isset($_POST['pass'])) {
 
 		$tab = $db->query("SELECT * FROM user WHERE login = ".$user)->fetch(PDO::FETCH_ASSOC);
 
-		if ($tab !=null){
+		if (isset($tab['password']) && isset($tab['login']) && isset($tab['id']) && isset($tab['droits']) ){
 			if (password_verify($pass,$tab['password'])){
 				$_SESSION['id'] = $tab['id'];
 				$_SESSION['login'] = $tab['login'];
