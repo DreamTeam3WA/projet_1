@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['action']) && $_POST['action']=="addarticle"){ 
-	if(isset($_POST['titre']) && $_POST['titre']!= NULL && isset($_POST['description']) && $_POST['description']!= NULL && isset($_SESSION['login']) && $_SESSION['login']!= NULL){
+	if(isset($_POST['titre']) && !empty($_POST['titre']) && isset($_POST['description']) && !empty($_POST['description']) && isset($_SESSION['login']) && !empty($_SESSION['login'])){
 			$titre = $db->quote($_POST['titre']);
 			$user = $db->quote($_SESSION['login']);
 			$description = $db->quote($_POST['description']);	

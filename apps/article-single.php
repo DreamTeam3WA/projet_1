@@ -1,15 +1,15 @@
 <?php
 
 $tab = $db->query("SELECT * FROM articles WHERE id=".$id_article)->fetch(PDO::FETCH_ASSOC);
-	if (isset($tab['titre']) && $tab['titre']!= NULL &&
-		 isset($tab['date']) && $tab['date']!= NULL && 
-		 isset($tab['user']) && $tab['user']!= NULL &&
-		 isset($tab['description']) && $tab['description']!= NULL && isset($tab['lien'])){
-		$titre = $tab['titre'];
+	if (isset($tab['titre']) && !empty($tab['titre']) &&
+		 isset($tab['date']) && !empty($tab['date']) && 
+		 isset($tab['user']) && !empty($tab['user']) &&
+		 isset($tab['description']) && !empty($tab['description']) && isset($tab['lien'])){
+		$titre = htmlentities($tab['titre']);
 		$date = $tab['date'];
 		$user = $tab['user'];
-		$lien = $tab['lien'];
-		$description = $tab['description'];
+		$lien = htmlentities($tab['lien']);
+		$description = htmlentities($tab['description']);
 	}
 	else {
 		$commentaire = "Erreur lecture base de données";

@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['action']) && $_POST['action']=="modifProfil"){
-	if(isset($_POST['login']) && $_POST['login']!= NULL && isset($_POST['email']) && $_POST['email']!= NULL && isset($_POST['date_naissance']) && $_POST['date_naissance']!= NULL && isset($_POST['avatar']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['id_user']) && $_POST['id_user']!=NULL){
+	if(isset($_POST['login']) && !empty($_POST['login']) && isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['date_naissance']) && !empty($_POST['date_naissance']) && isset($_POST['avatar']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['id_user']) && !empty($_POST['id_user'])){
 			$login = $db->quote($_POST['login']);
 			$email = $db->quote($_POST['email']);
 			$nom = $db->quote($_POST['nom']);

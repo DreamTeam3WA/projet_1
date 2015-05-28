@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['action']) && $_POST['action']=="modifarticle"){ 
-	if(isset($_POST['titre']) && $_POST['titre']!= NULL && isset($_POST['description']) && $_POST['description']!= NULL && isset($_SESSION['login']) && $_SESSION['login']!= NULL && isset($_POST['lien']) && isset($_POST['id_article']) && $_POST['id_article']!=NULL){
+	if(isset($_POST['titre']) && !empty($_POST['titre']) && isset($_POST['description']) && !empty($_POST['description']) && isset($_SESSION['login']) && !empty($_SESSION['login']) && isset($_POST['lien']) && isset($_POST['id_article']) && !empty($_POST['id_article'])){
 			$titre = $db->quote($_POST['titre']);
 			$user = $db->quote($_SESSION['login']);
 			$description = $db->quote($_POST['description']);

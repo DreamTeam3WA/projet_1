@@ -1,6 +1,6 @@
 <?php
 if (isset($_POST['action']) && $_POST['action']=="reponseCommentaire"){ 
-	if(isset($_POST['description']) && $_POST['description']!= NULL && isset($_SESSION['id']) && $_SESSION['id']!= NULL){
+	if(isset($_POST['description']) && !empty($_POST['description']) && isset($_SESSION['id']) && !empty($_SESSION['id'])){
 			$id_user = $db->quote($_SESSION['id']);
 			$id_forum = $db->quote($_POST['id_forum']);
 			$description = $db->quote($_POST['description']);	
