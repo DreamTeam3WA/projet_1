@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>matrix3</title>
+</head>
+<body>
+	<style>
+	* {
+    padding:0;
+    margin:0;
+}
+body {
+    font-family:Calibri, sans-serif;
+    font-size:14px;
+    background-color:black;
+}
+
+
+h1{
+    text-align:center;
+    color: #F11F1F;
+    text-shadow: -2em -0.5em 2px #DDDDDD;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1;
+    font-size: 50px;
+    margin-top: 250px;
+}
+#matrix {
+    position:fixed;
+}
+
+
+.msg {
+    font-family: monospace;
+    color: rgb(177, 202, 0);
+    font-weight: bold;
+}
+.status {
+    color: gray;
+    font-style: italic;
+}
+</style>
+	<canvas id="matrix">Texte alternatif. Votre navigateur ne supporte pas encore le dessin sur toile !</canvas>
+	<div>
+	 	<h1><?=$erreur?><br/> Vous vous êtes perdu(e) dans la matrice, veuillez raffraichir votre page ou cliquez <br/><a href="http://localhost/git/dreamteam/">ici</a><br/> pour revenir à l'acceuil</h1>
+	</div>
+	
+	 
+	 
+
+
+	<script>/*
+ * Une lettre blanche sur la matrice.
+ * \param c Le caractère à afficher
+ * \param x L'abscisse
+ * \param y L'ordonnée
+ */
+WLetter = function(c, x, y)
+{
+	var _c = c;
+	var _x = x;
+	var _y = y;
+	var _is_displayed = false; /* La lettre n'est pas dessinée à la création */
+	var _timestamp = new Date().getTime(); /* Moment de l'instanciation */
+
+	var _opacity = 0;
+
+	/**
+	 * \brief Dessine le caractère.
+	 * \param ctx Le contexte de dessin 
+	 * \param with_shadow true pour afficher l'ombrage
+	 */
+	this.Refresh = function(ctx, with_shadow)
+	{
+		_is_displayed = true;
+
+		ctx.save();
+
+		if(true === with_shadow)
+		{
+			ctx.shadowOffsetX = 0;
+			ctx.shadowOffsetY = 0;
+			ctx.shadowBlur = 15;
+			ctx.shadowColor = "rgba(255, 255, 255, " + _opacity + ")";
+		}
+
+		ctx.fillStyle = "white";
+		ctx.fillText(_c, _x, _y);
+		ctx.restore();
+	};
+
+	/**
+	 * \brief Compare la position demandée avec la nôtre.
+	 * \return this si notre lettre est sur ce point, false sinon.
+	 */
+	this.IsMyPosition = function(x, y)
+	{
+		return (_x == x && _y == y) ? this : null;
+	};
+
+	/**
+	 * \brief Accesseur lecture/écriture.
+	 * \param opacity L'opacité entre 0 et 1
+	 * \return L'opacité si opacity n'est pas renseigné.
+	 */
+	this.Opacity = function(opacity)
+	{
+		if(undefined !== opacity)
+		{
+			if(opacity < 0)
+				_opacity = 0;
+			else
+				_opacity = opacity;
+			//console.log("Je passe de " + _opacity + ", à " + opacity);
+		}
+		else
+			return _opacity;
+	};
+
+	/**
+	 * \brief Accesseur en lecture.
+	 * \return true si la lettre a déjà été dessinée, false sinon.
+	 */
+	this.IsDisplayed = function()
+	{
+		return _is_displayed;
+	};
+
+	/**
+	 * \brief Accesseur en lecture.
+	 * \return Le moment de l'instanciation.
+	 */
+	this.Timestamp = function()
+	{
+		return _timestamp;
+	};
+};
+
+/**
+ * \brief Gère l'affichage sur la matrice.
+ * \param ctx Le contexte de dessin.
+ * \param ttl Le nombre de secondes de vie des lettres blanches.
+ * \param canvas La toile 
+ * \param ch La hauteur d'une cellule fictive, en pixels
+ */
+WMessage = function(ctx, ttl, canvas, ch)
+{
+	var _ctx = ctx;
+	var _ttl = ttl;
+	var _wletters = []; /* Message */
+	var _canvas = canvas;
+
+	var _w_min_x = 1 * cw;
+	var _w_max_x = _canvas.width - 20 - cw;
+	var _w_min_y = 10 * ch;
+	var _ch = ch;
+	var _delta_y = 1; /* Dispersion verticale */
+	var _nb_lines = 10; /* Nombre de lignes à utiliser pour répartir le message*/
+	var _lines = []; /* Ordonnées de ces lignes */
+	for(var i = 0; i < _nb_lines; i++)
+	{
+		_lines.push(
+				_w_min_y + /* Ordonnée de la base */
+				_delta_y * ch * i*2 + /* + la largeur des lignes intermédiaires */
+				2 * ch /* + un espace entre les lignes */
+        );
+	}
+
+	var _x = _w_min_x; /* Abscisse de la dernière insertion */
+	var _cline = 0;
+
+	/**
+	 * \brief Ajout d'une lettre au message.
+	 * La lettre est placée automatiquement en fin de message. Sa durée de vie est spécifiée à la construction de WMessage.
+	 */
+	this.Add = function(c)
+	{
+		var wl = locate(c);
+		_wletters.push(wl);
+	};
+
+	/**
+	 * \brief Compare une lettre de position (x,y).
+	 * \param x Abscisse recherchée
+	 * \param y Ordonnée recherchée
+	 * \return true si une lettre a ces coordonnées, false sinon.
+	 */
+	this.IsLetter = function(x, y)
+	{
+		for(var i = 0; i < _wletters.length; i++)
+		{
+			if(null !== _wletters[i].IsMyPosition(x, y))
+				return true;
+		}
+		return false;
+	};
+
+	/*
+	 * \brief Maintient les lettres déjà dessinées à une opacité maximale.
+	 * Cette fonction compense l'ombre appliquée à chaque étape de l'animation.
+	 */
+	this.KeepBright = function()
+	{
+		for(var i = 0; i < _wletters.length; i++)
+		{
+			if(_wletters[i].IsDisplayed())
+				_wletters[i].Refresh(_ctx, false);
+		}
+	};
+
+	/**
+	 * \brief Force le dessin du caractère à la position (x, y)
+	 * \param x Abscisse à redessiner.
+	 * \param y Ordonnée à redessiner.
+	 */
+	this.Refresh = function(x, y)
+	{
+		removeOld();
+
+		var wl = null;
+		for(var i = 0; i < _wletters.length; i++)
+		{
+			if(null !== (wl = _wletters[i].IsMyPosition(x, y)))
+				break;
+		}
+
+		if(null === wl)
+		{
+			console.log("Nothing to refresh.");
+			return;
+		}
+		else
+		{
+			wl.Opacity(1);
+			wl.Refresh(_ctx, true);
+		}
+	};
+
+	/**
+	 * \brief Décrémente le compteur d'opacité interne de chaque lettre, pour suivre les modifications de la toile.
+	 * \param opacity Le degré d'opacité supplémentaire (entre 0 et 1).
+	 */
+	this.Fade = function(opacity)
+	{
+		for(var i = 0; i < _wletters.length; i++)
+		{
+			_wletters[i].Opacity(_wletters[i].Opacity() - opacity);
+			_wletters[i].Refresh(_ctx, true);
+		}
+	};
+
+	/**
+	 * \brief Removes the letters that have been displayed at least nbs seconds.
+	 */
+	function removeOld() 
+	{
+		for(var i = 0; i < _wletters.length; i++)
+		{
+			var ts = _wletters[i].Timestamp();
+
+			var now = new Date().getTime();
+
+			if((now - ts) > _ttl * 1000)
+				_wletters.splice(i, 1);
+		}
+	}
+
+	/**
+	 * \brief Calcule la position du caractère c.
+	 * \param c Le caractère à dessiner.
+	 * \return Un nouvel objet WLetter.
+	 */
+	function locate(c)
+	{
+		//Dispersion horizontale, finalement je ne l'utilise pas
+		//_x += cw * Math.ceil(Math.random() * 2);
+		_x += cw;
+
+		if(_x > _w_max_x) //Too far on the line, take a new one
+		{
+			_x = _w_min_x;
+			_cline++;	
+		}
+
+		var cline_y = _lines[_cline%_lines.length];
+		var y = Math.random() * _delta_y * _ch;
+
+		y /= ch;
+		y = Math.floor(y);
+		y *= ch;
+		y += cline_y;
+
+		return new WLetter(c, _x, y);
+	}
+
+	/**
+	 * \brief Change de ligne. Une fois arrivé à la dernière ligne, l'affichage reprend sur la première.
+	 */
+	this.NextLine = function()
+	{
+		_x = _w_min_x;
+		_cline++;
+	};
+};
+
+//original source :  http://timelessname.com/sandbox/matrix.html
+var matrix = document.getElementById('matrix');
+var ctx = matrix.getContext('2d');
+
+/* La toile prend tout l'espace à l'écran */
+matrix.height = window.screen.availHeight;
+matrix.width = window.screen.availWidth;
+
+var ypositions = []; /* Ordonnée courante pour chaque colonne */
+var chars = ['0', '1'];
+
+/*
+ * Nous calculons le nombre de colonnes à dessiner en fonction
+ * de la largeur du plus gros caractère.
+ * Il est inutile de dessiner des colonnes qui sortent de la toile.
+ */
+ctx.font = "10pt monospace";
+ctx.fillStyle = "#00FF00";
+ctx.textAlign = "start";
+ctx.textBaseline = "top";
+var cw = ctx.measureText("0").width;
+var ch = 9;
+var nbc = Math.floor(matrix.width / cw); /* nbc pour "number of columns" */
+
+/* Une petite initialisation */
+for (i = 0; i < nbc; i++) {
+    var y = Math.random() * matrix.height * 3;
+    y /= ch;
+    y = Math.floor(y);
+    y *= ch;
+
+    ypositions[i] = y;
+}
+
+/* L'objet qui gère l'affichage des messages. */
+var message = new WMessage(ctx, 3, matrix, ch);
+
+/*
+ * Effets sonores
+ */
+var skey = new Audio("sounds/key.mp3"); //Un bruit de clavier
+skey.preload = "auto";
+skey.loop = false;
+var sbackground = new Audio("sounds/fond.mp3"); //Un fond de Matrix
+sbackground.preload = "auto";
+sbackground.autoplay = true;
+sbackground.loop = true;
+
+
+/* Fournit le caractère de l'évènement 'e', s'il existe. */
+function getChar(e) {
+    if (null === e.which) //IE
+    return String.fromCharCode(e.keyCode);
+    else if (0 !== e.which && 0 !== e.charCode) //Autres navigateurs
+    return String.fromCharCode(e.which);
+    else return null; //Caractère non imprimable
+}
+
+/*
+ * On récetionne les appuis claviers.
+ * La touche Retour Arrière est capturée pour éviter de revenir sur la page précédente.
+ * La touche Entrée provoque un changement de ligne.
+ */
+
+
+function step() {
+    /*
+     * Dessin d'un rectangle très transparent.
+     * Tous les points précédemment tracés deviennent 5% plus transparents.
+     * Après 20 appels nous retrouvons du noir.
+     */
+    var opacity = 0.05;
+    ctx.save();
+    ctx.globalAlpha = opacity;
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, matrix.width, matrix.height);
+    ctx.restore();
+
+    /* On maintient tous les caractères blancs opaques */
+    message.KeepBright();
+    message.Fade(opacity);
+
+    ypositions.map(function (y, i) {
+        if (message.IsLetter(i * cw, y)) { //On doit dessiner une lettre blanche
+            message.Refresh(i * cw, y);
+        } else {
+            ctx.fillText(String.fromCharCode(97 + Math.floor(Math.random() * 26)), i * cw, y);
+        }
+
+        /*
+         * Lorsque le caractère le plus récent (donc celui que nous venons de tracer)
+         * sort de la toile, sa colonne a 1% de chances d'être remise à zéro
+         * et de reprendre le tracé depuis le haut de la toile.
+         *
+         * S'il n'y a pas d'aléa toutes les colonnes repassent en haut en même temps.
+         * Le motif initial serait alors répété sans fin.
+         *
+         * En ne remettant à zéro qu'après avoir dépassé la toile nous sommes
+         * certains que toutes les colonnes traversent l'écran de haut en bas.
+         */
+        if (y > matrix.height) {
+            if (Math.ceil(Math.random() * 100) > 98) {
+                ypositions[i] = 0;
+            } else {
+                this[i] += ch; /* Plus bas ! */
+            }
+        } else {
+            this[i] += ch; /* Toujours plus bas ! */
+        }
+    }, ypositions);
+
+    if (window.requestAnimationFrame) requestAnimationFrame(step);
+    else //Pour toi IE
+    setTimeout(step, 33);
+}
+
+/*
+ * Nous réalisons le premier appel à step(). Les suivants
+ * seront initiés par requestAnimationFrame().
+ */
+step();</script>
+</body>
+</html>
