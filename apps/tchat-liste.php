@@ -6,7 +6,7 @@ $tab = $db->query("SELECT tchat.*, user.login, user.id AS user_id FROM tchat
 	")->fetchAll(PDO::FETCH_ASSOC);
 
 $i=0;
-while ($i<count($tab)){
+while (isset($tab[$i]['message']) && isset($tab[$i]['login']) && isset($tab[$i]['user_id'])){
 
 	$message = htmlentities($tab[$i]['message']);
 	$user = htmlentities($tab[$i]['login']);

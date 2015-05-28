@@ -1,5 +1,5 @@
 <?php
-if($_SESSION){
+if($_SESSION && isset($_SESSION['login'])){
 	$user = $_SESSION['login'];
 	if (droits() == 1)
 	{

@@ -5,7 +5,7 @@ $i=0;
 while ($i<2 && isset($tab[$i])){
 
 	$titre = htmlentities($tab[$i]['titre']);
-	$date = htmlentities($tab[$i]['date']);
+	$date = $tab[$i]['date'];
 	$user = htmlentities($tab[$i]['user']);
 	$lien = htmlentities($tab[$i]['lien']);
 	$description = htmlentities(substr($tab[$i]['description'], 0, 250));
