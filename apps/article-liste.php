@@ -4,11 +4,11 @@ $tab = $db->query("SELECT * FROM articles ORDER BY date DESC")->fetchAll(PDO::FE
 
 
 foreach ($tab as $key => $value) {
-	$titre = $tab[$key]['titre'];
+	$titre = htmlentities($tab[$key]['titre']);
 	$date = $tab[$key]['date'];
 	$user = $tab[$key]['user'];
-	$lien = $tab[$key]['lien'];
-	$description = $tab[$key]['description'];
+	$lien = htmlentities($tab[$key]['lien']);
+	$description = htmlentities($tab[$key]['description']);
 	$id_article = $tab[$key]['id'];
 	require('views/article-liste.phtml');
 }

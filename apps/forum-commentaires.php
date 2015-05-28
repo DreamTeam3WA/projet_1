@@ -5,11 +5,11 @@
 	 WHERE id_forum=".$id_sujet." ORDER BY id ASC")->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($tab as $tab2) {
-	$id_commentaire=$tab2['id'];
+	$id_commentaire=htmlentities($tab2['id']);
 	$id_user=$tab2['id_user'];
 	$user_pseudo = $tab2['login'];
 	$date = $tab2['date'];
-	$description = $tab2['description'];
+	$description = htmlentities($tab2['description']);
 
 	require('views/forum-commentaires.phtml');
 	if (droits() == 1 || droits() == 2 || $_SESSION['id']==$id_user)

@@ -5,10 +5,10 @@ if (isset($id_sujet)){
 	JOIN user ON user.id=forum.id_user
 	WHERE forum.id= ".$id_sujet )->fetchAll(PDO::FETCH_ASSOC);
 		$id_sujet = $tab[0]['id'];
-		$user_pseudo = $tab[0]['login'];
-		$sujet = $tab[0]['sujet'];
+		$user_pseudo = htmlentities($tab[0]['login']);
+		$sujet = htmlentities($tab[0]['sujet']);
 		$date = $tab[0]['date'];
-		$description = $tab[0]['description'];
+		$description = htmlentities($tab[0]['description']);
 		$id_user = $tab[0]['id_user'];
 }
 else {
