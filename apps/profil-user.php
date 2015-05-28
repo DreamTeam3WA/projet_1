@@ -1,5 +1,5 @@
 <?php
-if (isset($id_user)) {
+if (isset($id_user) && !empty($id_user)) {
 	$tab = $db->query("SELECT user.*, COUNT(forum.id_user) as NbrSujets FROM user JOIN forum ON user.id = forum.id_user WHERE user.id= ".$id_user)->fetch(PDO::FETCH_ASSOC);
 		
 		$login = htmlentities($tab['login']);

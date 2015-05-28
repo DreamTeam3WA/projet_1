@@ -116,6 +116,7 @@ $('document').ready(function()
 			// {
 			// 	$('body').html(data);
 			// });
+	
 			$('#tchat_message').val('');
 			return false;
 		});
