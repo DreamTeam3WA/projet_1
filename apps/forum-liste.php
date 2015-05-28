@@ -11,18 +11,12 @@ ORDER BY date_commentaire DESC, f.id DESC
 
 foreach ($tab as $tab2) {
 	$id_user = $tab2['id_user'];
-	$user_pseudo = $tab2['login'];
+	$user_pseudo = htmlentities($tab2['login']);
 	$id_sujet = $tab2['id'];
-	$sujet = $tab2['sujet'];
+	$sujet = htmlentities($tab2['sujet']);
 	$date = $tab2['date'];
-	$description = $tab2['description'];
+	$description = htmlentities($tab2['description']);
 	$nbCommentaire = $tab2['nbCommentaire'];
-
-
-	$date_aff = ($tab2['date_commentaire']!="") ? $tab2['date_commentaire'] : $tab2['date_forum'];
-
-
-
 
 	if ($tab2['date_commentaire'] !=null){
 		$date= $tab2['date_commentaire'];

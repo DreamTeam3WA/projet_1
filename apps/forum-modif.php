@@ -1,10 +1,10 @@
 <?php
 if (isset($_POST['action']) && $_POST['action']=="modifSujet"){ 
-	if(isset($_POST['sujet']) && $_POST['sujet']!= NULL && isset($_POST['description']) && $_POST['description']!= NULL && isset($_SESSION['id']) && $_SESSION['id']!= NULL){
+	if(isset($_POST['sujet']) && !empty($_POST['sujet']) && isset($_POST['description']) && !empty($_POST['description']) && isset($_SESSION['id']) && !empty($_SESSION['id'])){
 			$sujet = $db->quote($_POST['sujet']);
 			$id_user = $db->quote($_SESSION['id']);
 			$description = $db->quote($_POST['description']);	
-			$db-> exec("UPDATE forum SET sujet=".$sujet.", id_user=".$id_user.", description=".$description."WHERE id=$id_sujet");
+			$db-> exec("UPDATE forum SET sujet=".$sujet.", id_user=".$id_user.", description=".$description."WHERE id=".$id_sujet);
 			require('./views/forum-base.phtml');
 	}
 

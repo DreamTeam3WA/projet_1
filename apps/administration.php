@@ -18,7 +18,7 @@ if (isset($_POST) && isset($_POST['action']) && $_POST['action']=="modifProfil")
 
 	$req = substr($req,0,-2);
 	/** Pascal : Sécurité + CONCATENATION BORRRRRRRRDELLLLLLLLLLLLLLLLLLLLLLLLLLLL **/
-	$db->exec("UPDATE user SET $req WHERE id='$id_user'");
+	$db->exec("UPDATE user SET $req WHERE id=".$id_user);
 }
 
 

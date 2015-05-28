@@ -1,16 +1,23 @@
  <?php
 /** Pascal : Vérifier si : isset($_POST) est pas utile, vous devez vérifier ce qu'il y a a l'intérieur plutot **/ 
-if (isset($_POST) && isset($_POST['message']) && !empty($_POST['message']))
+var_dump($_POST);
+if (isset($_POST['message']) && !empty(trim($_POST['message']," \t\n\r\0\x0B")) && isset($_POST['id_user']) && !empty($_POST['id_user']))
 {
-	$req = "SET ";
-	foreach($_POST as $key => $val){
-		$_POST[$key] = $db -> quote($val);
-		$req .= $key."=".$_POST[$key].", ";
+	$message=$db->quote($_POST['message']);
+	$id_user=$_POST['id_user'];
+
+	if ($_SESSION['id']==$id_user){
+		$db-> exec("INSERT INTO tchat SET message=".$message.", id_user=".$id_user);	
 	}
-
-	$req = substr($req,0,-2);
-	/** Pascal : Très dangereux niveau sécurité... **/
-	$db-> exec("INSERT INTO tchat ".$req);
-
+	else {
+		$commentaire= "Vous n'avez pas les droits !";
+		require('./views/erreur.phtml');
+	}
 }
+else {
+	$commentaire="Formulaire incomplet !";
+	require('./views/erreur.phtml');
+}
+
+
 ?>
