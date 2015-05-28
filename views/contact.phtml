@@ -16,22 +16,25 @@
 			</div>
 			<div class="col-md-4"></div>
 		</div>
-		<div id="contact-content" class="col-md-6">	
+		<div id="contact-content" class="col-md-6">
+			
 			<form action="index.php?ajax=contact-form" method="POST" id="contact-form" >
+
 				<div class="formcontact">
-					<label><span class="labeltxt" >Email :</span><input id="contact-email" class="inputstyle" type="email" name="emailcontact" placeholder="votre mail" required></label>
+					<p>(Champs obligatoire *)</p>
+					<label><span class="labeltxt" >Email *:</span><input id="contact-email" class="inputstyle" type="email" name="emailcontact" placeholder="votre mail" required></label>
 				</div>
 				<div class="formcontact">
-					<label><span class="labeltxt">Nom :</span><input id="contact-nom" class="inputstyle" type="text" name="nomcontact" placeholder="votre nom" required></label>
+					<label><span class="labeltxt">Nom *:</span><input id="contact-nom" class="inputstyle" type="text" name="nomcontact" placeholder="votre nom" required></label>
 				</div >
 				<div class="formcontact">
-					<label><span class="labeltxt">Prénom :</span><input id="contact-prenom" class="inputstyle" type="text" name="prenomcontact" placeholder="votre prénom" required></label>
+					<label><span class="labeltxt">Prénom *:</span><input id="contact-prenom" class="inputstyle" type="text" name="prenomcontact" placeholder="votre prénom" required></label>
 				</div >
 				<div class="formcontact">
-					<label><span class="labeltxt">Objet :</span><input id="contact-objet" class="inputstyle" type="text" name="objetcontact" placeholder="votre objet" required></label>
+					<label><span class="labeltxt">Objet *:</span><input id="contact-objet" class="inputstyle" type="text" name="objetcontact" placeholder="votre objet" required></label>
 				</div>
 				<div class="formcontact">
-					<label><span class="labeltxt">Message :</span><textarea id="contact-message" class="inputstyle" name="messagecontact" placeholder="votre message" required></textarea></label>
+					<label><span class="labeltxt">Message *:</span><textarea id="contact-message" class="inputstyle" name="messagecontact" placeholder="votre message" required></textarea></label>
 				</div>
 				<button type="envoyer" class="btn">Submit</button>	
 			</form>
