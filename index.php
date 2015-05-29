@@ -41,11 +41,11 @@ else
 	if (isset($_GET['page']) && !empty($_GET['page'])){
 		$page = $_GET['page'];
 	}
-	else {
-		$commentaire="Mauvaise page";
-		require('./views/erreur.phtml');
-		die();
-	}
+	// else {
+	// 	$commentaire="Mauvaise page";
+	// 	require('./views/erreur.phtml');
+	// 	die();
+	// }
 	require('./views/skel.phtml');
 }
 ?>
